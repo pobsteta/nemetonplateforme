@@ -10,7 +10,7 @@
 > mission propre à un projet qui a son `pilotage/` reste dans le kanban de ce projet ;
 > ici, sa carte y renvoie par un lien, sans la recopier.
 
-**Dernier cycle :** 13 _(augmenté de 1 à la fin de chaque `/boucle`, même quand elle n'a
+**Dernier cycle :** 14 _(augmenté de 1 à la fin de chaque `/boucle`, même quand elle n'a
 rien lancé. Une carte est immobile quand dernier cycle − N ≥ 2.)_
 
 _Modèle de carte :_
@@ -31,7 +31,24 @@ _Modèle de carte :_
 
 ## En cours
 
+- [039-nemeton-era5-timeseries](missions/039-nemeton-era5-timeseries.md) · nemeton · depuis le cycle 15
+  - Homme : `dev` d'une session ouverte dans `nemeton` (sonnet, ADR 0001), relu par le `relecteur`
+  - Mission : forçage ERA5 horaire (microclimf et BILJOU) par le jeu CDS `timeseries` par défaut, même data.frame, ancien chemin en repli
+  - Moyens : budget 3 $ ; worktree depuis `origin/main`
+  - Dépend de : rien
+
 ## Terminé
+
+- [038-nemeton-ci-cache-gdal](missions/038-nemeton-ci-cache-gdal.md) · nemeton · depuis le cycle 14 · PR #669 fusionnée (8d025e8)
+  - Homme : `dev` d'une session ouverte dans `nemeton` (sonnet, ADR 0001), relu par le `relecteur`
+  - Mission : clé du cache R de la CI avec les versions GDAL/GEOS/PROJ du runner ; tests adaptés à terra 1.9-60 (`init()`)
+  - Moyens : budget 3 $ (1,33 $ dépensés)
+  - Dépend de : rien
+- [037-nemeton-relief-cvat-houppiers-foret](missions/037-nemeton-relief-cvat-houppiers-foret.md) · nemeton · depuis le cycle 14 · PR #668 fusionnée par Pascal (c2bc12d, 2026-11-22)
+  - Homme : `dev` d'une session ouverte dans `nemeton` (sonnet, ADR 0001), relu par le `relecteur`
+  - Mission : schéma 1.7.0 (dalles MNT de 1 km, relief CVAT, houppiers avec sommet sur toute la forêt, dans le `.qgz`)
+  - Moyens : budget 3 $ (2,87 $ dépensés)
+  - Dépend de : rien
 
 - [036-terrain-agent-ntrip-obligatoire](missions/036-terrain-agent-ntrip-obligatoire.md) · terrain · depuis le cycle 13 · PR #36 fusionnée (73a0d54), tag `v2026.11.2` publié (release et JitPack)
   - Homme : `dev` d'une session ouverte dans `terrain` (sonnet, ADR 0001), relu par le `relecteur`

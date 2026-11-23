@@ -106,10 +106,13 @@
 | [034](missions/034-plateforme-base-de-test-utile.md) base de test seulement où elle sert | `nemetonplateforme` | `dev` | sonnet | appuyer | 3 oui | 12 |
 | [035](missions/035-groma-terrain-gnss-2026-11-1.md) Groma sur `terrain-gnss` v2026.11.1 | `groma` | `dev` | sonnet | appuyer | 3 oui | 12 |
 | [036](missions/036-terrain-agent-ntrip-obligatoire.md) agent NTRIP obligatoire | `terrain` | `dev` | sonnet | appuyer | 3 oui | 13 |
+| [037](missions/037-nemeton-relief-cvat-houppiers-foret.md) relief CVAT, dalles MNT, houppiers sur la forêt | `nemeton` | `dev` | sonnet | appuyer | 3 oui | 14 |
+| [038](missions/038-nemeton-ci-cache-gdal.md) cache de CI lié à GDAL | `nemeton` | `dev` | sonnet | appuyer | 3 oui | 14 |
+| [039](missions/039-nemeton-era5-timeseries.md) forçage ERA5 par le jeu `timeseries` | `nemeton` | `dev` | sonnet | appuyer | 3 oui | 15 |
 
 Chaque mission est exécutée par une session ouverte dans le dépôt du projet (ADR 0001),
 relue par le `relecteur`, puis prouvée et fusionnée par l'orchestrateur (spec § 5).
 Les missions 001 à 003 étaient indépendantes : elles sont parties en parallèle, dans le plafond
 de 3 PR. Pour les missions 004 à 013, la validation est inscrite au journal le jour où chacune a
-été ouverte (sous la délégation, ou sur le « oui » de Pascal). Missions 014 à 026 : délégation élargie du 2026-11-18 ; 027 : cap de Pascal du 2026-11-19 ; 028 et 029 : caps de Pascal au bilan du 2026-11-20 ; 030 à 032 : délégation élargie (journal) ; 033, 035 et 036 : caps de Pascal du 2026-11-20 ; 034 : délégation élargie. Tableau complété le 2026-11-18 (mission 012), puis aux bilans du 2026-11-20 (le second, cycles 10 à 13 : délégation gardée telle quelle, aucune défaite) ; la
+été ouverte (sous la délégation, ou sur le « oui » de Pascal). Missions 014 à 026 : délégation élargie du 2026-11-18 ; 027 : cap de Pascal du 2026-11-19 ; 028 et 029 : caps de Pascal au bilan du 2026-11-20 ; 030 à 032 : délégation élargie (journal) ; 033, 035 et 036 : caps de Pascal du 2026-11-20 ; 034 : délégation élargie ; 037 : cap de Pascal du 2026-11-20 ; 038 : délégation (porte n° 3) ; 039 : consigne de Pascal du 2026-11-23 (« lis et code les briefs »). Tableau complété le 2026-11-18 (mission 012), puis aux bilans du 2026-11-20 (le second, cycles 10 à 13 : délégation gardée telle quelle, aucune défaite) ; la
 colonne « Cycle » donne le cycle où la mission a été lancée.
