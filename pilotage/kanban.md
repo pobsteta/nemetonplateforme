@@ -31,14 +31,13 @@ _Modèle de carte :_
 
 ## En cours
 
-- [039-nemeton-era5-timeseries](missions/039-nemeton-era5-timeseries.md) · nemeton · depuis le cycle 15
-  - Homme : `dev` d'une session ouverte dans `nemeton` (sonnet, ADR 0001), relu par le `relecteur`
-  - Mission : forçage ERA5 horaire (microclimf et BILJOU) par le jeu CDS `timeseries` par défaut, même data.frame, ancien chemin en repli
-  - Moyens : budget 3 $ ; worktree depuis `origin/main`
-  - Dépend de : rien
-
 ## Terminé
 
+- [039-nemeton-era5-timeseries](missions/039-nemeton-era5-timeseries.md) · nemeton · depuis le cycle 15 · PR #684 fusionnée (e55239b), release de nemeton à venir
+  - Homme : `dev` d'une session ouverte dans `nemeton` (sonnet, ADR 0001), relu par le `relecteur`
+  - Mission : forçage ERA5 horaire (microclimf et BILJOU) par le jeu CDS `timeseries` par défaut, même data.frame ; diffus juste (`ssrd − fdir`), caches séparés, pas de repli automatique (choix de Pascal et de l'orchestrateur, journal)
+  - Moyens : budget 3 $, porté à 4 $ par Pascal pour la reprise 3 (3,65 $ dépensés, 3 allers-retours)
+  - Dépend de : rien
 - [038-nemeton-ci-cache-gdal](missions/038-nemeton-ci-cache-gdal.md) · nemeton · depuis le cycle 14 · PR #669 fusionnée (8d025e8)
   - Homme : `dev` d'une session ouverte dans `nemeton` (sonnet, ADR 0001), relu par le `relecteur`
   - Mission : clé du cache R de la CI avec les versions GDAL/GEOS/PROJ du runner ; tests adaptés à terra 1.9-60 (`init()`)
