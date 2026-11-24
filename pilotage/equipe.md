@@ -117,6 +117,7 @@
 | [045](missions/045-plateforme-regle-reponse-reelle.md) règle de la réponse réelle dans la spec | `nemetonplateforme` | `archiviste` | sonnet | appuyer | 3 oui | 16 |
 | [046](missions/046-plateforme-rangement-bilan-era5.md) rangement du test du successeur | `nemetonplateforme` | `archiviste` | sonnet | appuyer | 3 oui | 16 |
 | [047](missions/047-plateforme-charge-restes-044.md) restes de la 044 (raison de mesure, ADR) | `nemetonplateforme` | `dev` | sonnet | appuyer | 3 oui | 16 |
+| [048](missions/048-plateforme-plafond-reprise.md) plafond de reprise à 4 $ | `nemetonplateforme` | `dev` | sonnet | appuyer | 3 oui | 16 |
 
 Chaque mission est exécutée par une session ouverte dans le dépôt du projet (ADR 0001),
 relue par le `relecteur`, puis prouvée et fusionnée par l'orchestrateur (spec § 5).
