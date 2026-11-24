@@ -4,7 +4,11 @@
 . "$(dirname "$0")/commun.sh"
 n=$1; repo=$2; fiche=$3; M=$CACHE/m$n
 controle_charge || exit $?
-if [ -z "$A_BLANC" ]; then mkdir -p "$M"; cp "$OUTILS/schema.json" "$M/"; cp "$DEPOT/pilotage/missions/$fiche" "$M/fiche.md"; fi
+# Pas de session sans sa fiche (mission 044) : fiche absente ou copie en échec = arrêt, rien n'est lancé.
+[ -f "$DEPOT/pilotage/missions/$fiche" ] || { echo "ERREUR : fiche introuvable : $DEPOT/pilotage/missions/$fiche ; rien n'est lancé." >&2; exit 1; }
+if [ -z "$A_BLANC" ]; then
+  mkdir -p "$M" && cp "$OUTILS/schema.json" "$M/" && cp "$DEPOT/pilotage/missions/$fiche" "$M/fiche.md" || { echo "ERREUR : copie de la fiche ou du schéma impossible dans $M ; rien n'est lancé." >&2; exit 1; }
+fi
 read -r -d '' CONSIGNE <<EOC
 Tu es l'agent \`dev\` de la mission $n, confiée par l'orchestrateur de nemetonplateforme (méthode de l'Impératrice, plugin imperatrice). Lis d'abord la fiche : $M/fiche.md, puis chaque brief qu'elle cite, en entier. Lis le CLAUDE.md de ce dépôt et son pilotage/ s'il existe, et respecte-les (langue, conventions, version, NEWS/CHANGELOG).
 
