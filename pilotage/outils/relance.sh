@@ -5,6 +5,7 @@
 . "$(dirname "$0")/commun.sh"
 n=$1; repo=$2; k=$3; msg=$4; M=$CACHE/m$n
 controle_charge || exit $?
+[ -f "$msg" ] || { echo "ERREUR : fichier message introuvable : $msg ; rien n'est lancé." >&2; exit 1; }
 sid=$(grep -ho '"session_id":"[^"]*"' "$M"/flux*.jsonl | tail -1 | cut -d'"' -f4)
 cd "$DEV/$repo/.claude/worktrees/mission-$n" || exit 1
 if depot_a_base "$repo" && charge_renviron; then export SOMMIER_TEST_DB=sommier_test_m$n; export R_ENVIRON_USER=$M/Renviron; fi
