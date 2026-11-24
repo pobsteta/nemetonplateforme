@@ -7,7 +7,7 @@
 
 **En une phrase (quoi, et pourquoi) :** Faire que `relance.sh` relise le coût déjà dépensé par une mission et refuse une reprise quand il atteint le plafond de 4 $, et sinon borne la passe à ce qui reste sous ce plafond, pour qu'aucune mission ne dépasse plus le budget que Pascal a fixé (039 : 3,65 $ cumulés pour 3 $, puis 4 $ accordés au cas par cas).
 
-**Redite par l'agent :** _à compléter par l'agent avant d'agir — s'il n'y arrive pas, il s'arrête._
+**Redite par l'agent :** Faire que `relance.sh` refuse (code 4) toute reprise d'une mission dont le coût cumulé (maximum des `total_cost_usd` de ses flux) atteint 4 $ (`PLAFOND_REPRISE`), et borne sinon la passe à ce qui reste sous ce plafond sans dépasser 3 $, pour qu'aucune mission ne dépasse le budget fixé par Pascal.
 
 ## Les sources à lire avant d'agir
 
