@@ -19,6 +19,8 @@
 #   DISKSTATS_FICHIER2  2e relevé : s'il est fourni, on ne dort pas et on le lit à la place d'un
 #                       second passage sur DISKSTATS_FICHIER (pour les essais)
 #   SYS_BLOCK           dossier des disques entiers (défaut /sys/block ; une partition n'y figure pas)
+#   PLAFOND_REPRISE     plafond de coût cumulé d'une mission, en dollars, au-delà duquel relance.sh
+#                       refuse une reprise (défaut 4 ; mission 048)
 #   A_BLANC=1           affiche la commande au lieu de la lancer
 OUTILS=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 DEPOT=$(cd "$OUTILS/../.." && pwd)
@@ -112,4 +114,38 @@ prepare_base() {
   if [ "$(psql -d postgres -tAc "SELECT 1 FROM pg_database WHERE datname='$base'")" != 1 ]; then
     psql -d postgres -qc "CREATE DATABASE $base" && psql -d "$base" -qc "CREATE EXTENSION postgis; CREATE EXTENSION pgcrypto"
   fi
+}
+
+# Coût déjà dépensé par la mission $1 : le MAXIMUM de total_cost_usd des lignes « result » de
+# $CACHE/m$1/flux*.jsonl (le coût d'une reprise est cumulé, jamais la somme ; ADR 0001).
+# Écrit le nombre sur stdout ; aucun flux ou aucun coût lisible : 0, avec un avertissement
+# sur stderr (mission 048).
+cout_cumule() {
+  local M=$CACHE/m$1 c=
+  if compgen -G "$M/flux*.jsonl" >/dev/null; then
+    c=$(cat "$M"/flux*.jsonl | python3 -I -c '
+import json, sys
+m = None
+for l in sys.stdin:
+    try:
+        d = json.loads(l)
+        v = d["total_cost_usd"]
+        if d.get("type") == "result" and isinstance(v, (int, float)) and not isinstance(v, bool):
+            m = v if m is None else max(m, v)
+    except Exception:
+        pass
+if m is not None:
+    print(repr(float(m)))
+' 2>/dev/null)
+  fi
+  if [ -z "$c" ]; then echo "plafond de reprise : aucun coût lisible dans $M/flux*.jsonl, coût cumulé compté pour 0" >&2; c=0; fi
+  echo "$c"
+}
+
+# Plafond de coût cumulé d'une mission (dollars) : PLAFOND_REPRISE, défaut 4 ; non numérique
+# ou négatif : avertissement et 4 (mission 048).
+plafond_reprise() {
+  local p=${PLAFOND_REPRISE:-4} num='^[0-9]+([.][0-9]+)?$'
+  if [[ ! $p =~ $num ]]; then echo "plafond de reprise : PLAFOND_REPRISE='$p' non numérique, plafond par défaut (4)" >&2; p=4; fi
+  echo "$p"
 }

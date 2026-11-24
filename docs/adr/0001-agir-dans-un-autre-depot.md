@@ -340,3 +340,17 @@ disque), et rien d'autre : `dm-*` (LVM, chiffrement) et `md*` (RAID logiciel) pr
 `/sys/block` comptent comme des disques entiers. Par ailleurs l'avertissement « non mesurable »
 donne désormais sa raison (relevé illisible, dossier des disques absent, aucun disque entier
 relevé, second relevé illisible, aucun disque comparable).
+
+**Note du 2026-11-24 (mission 048) : un plafond de reprise à 4 $ (cause E).** Décision de
+Pascal le même jour, après le bilan ERA5 (mission 039 : 3,65 $ cumulés pour un budget de 3 $).
+`relance.sh` relit désormais le coût déjà dépensé par la mission : le **maximum** de
+`total_cost_usd` des lignes `result` de `$CACHE/mNNN/flux*.jsonl`, jamais la somme (fonction
+`cout_cumule` de `commun.sh` ; aucun flux ou aucun coût lisible : 0, avec un avertissement).
+Si ce coût atteint ou dépasse `PLAFOND_REPRISE` (défaut 4 dollars ; valeur non numérique :
+avertissement et 4), la reprise est **refusée** avec le code 4, y compris à blanc : le message
+donne le coût cumulé, le plafond et la marche à suivre, la décision d'accorder un dépassement
+revenant à Pascal (qui relance alors avec `PLAFOND_REPRISE=<montant>`). Sinon la passe reçoit
+`--max-budget-usd` = plafond moins coût cumulé, arrondi au centime inférieur et jamais plus de
+3 ; l'essai à blanc affiche le coût cumulé, le plafond et ce budget. `lance.sh` (première
+passe) garde `--max-budget-usd 3`. Codes de sortie de `relance.sh` : 0, 1, 3 (charge), 4
+(plafond de reprise atteint).

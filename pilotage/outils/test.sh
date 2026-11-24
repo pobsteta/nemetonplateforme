@@ -83,4 +83,27 @@ env -u A_BLANC bash "$O/lance.sh" 999 projet inexistante.md >"$T/sortie" 2>&1; c
 { [ $c != 0 ] && [ ! -e "$T/cache/m999/pid" ] && [ ! -e "$T/cache/m999/fiche.md" ]; } && ok "lance.sh : fiche absente (code $c), rien de lancé" || ko "lance.sh : fiche absente, réel (code $c)"
 bash "$O/relance.sh" 999 projet 2 "$T/absent.md" >"$T/sortie" 2>&1; c=$?
 { [ $c != 0 ] && grep -q "message introuvable" "$T/sortie"; } && ok "relance.sh : message absent (code $c)" || ko "relance.sh : message absent (code $c)"
+# Plafond de reprise (mission 048) : coût cumulé = maximum des total_cost_usd, jamais la somme.
+res(){ printf '{"type":"result","subtype":"success","total_cost_usd":%s,"session_id":"s%s"}\n' "$1" "$1"; }
+mk(){ mkdir -p "$T/dev/projet/.claude/worktrees/mission-$1" "$T/cache/m$1"; }
+rl(){ bash "$O/relance.sh" "$1" projet 2 "$T/msg.md" >"$T/sortie" 2>&1; c=$?; }
+mk 901; res 3.65 > "$T/cache/m901/flux.jsonl"
+rl 901; { [ $c = 0 ] && grep -q "coût cumulé 3.65" "$T/sortie" && grep -q "budget de la passe 0.35" "$T/sortie" && grep -q -- "--max-budget-usd 0.35" "$T/sortie"; } && ok "plafond : coût sous le plafond, budget 0.35" || ko "plafond : coût sous le plafond (code $c)"
+rl 999; { [ $c = 0 ] && grep -q "budget de la passe 3.00" "$T/sortie"; } && ok "plafond : budget jamais plus de 3 (coût 1)" || ko "plafond : budget plafonné à 3 (code $c)"
+mk 902; res 4 > "$T/cache/m902/flux.jsonl"
+rl 902; { [ $c = 4 ] && grep -q "REFUS" "$T/sortie" && grep -q "PLAFOND_REPRISE" "$T/sortie" && ! grep -q "claude -p" "$T/sortie"; } && ok "plafond : coût égal au plafond, refus (code 4)" || ko "plafond : coût égal (code $c)"
+mk 903; res 4.5 > "$T/cache/m903/flux.jsonl"
+rl 903; { [ $c = 4 ] && grep -q "4.5" "$T/sortie"; } && ok "plafond : coût au-dessus, refus (code 4)" || ko "plafond : coût au-dessus (code $c)"
+env -u A_BLANC bash "$O/relance.sh" 903 projet 2 "$T/msg.md" >"$T/sortie" 2>&1; c=$?
+{ [ $c = 4 ] && [ ! -e "$T/cache/m903/pid2" ] && [ ! -e "$T/cache/m903/flux2.jsonl" ]; } && ok "plafond : refus réel, rien de lancé" || ko "plafond : refus réel (code $c)"
+mk 904; { res 1; } > "$T/cache/m904/flux.jsonl"; res 3.2 > "$T/cache/m904/flux2.jsonl"; res 1.5 > "$T/cache/m904/flux3.jsonl"
+rl 904; { [ $c = 0 ] && grep -q "coût cumulé 3.2 " "$T/sortie" && grep -q "budget de la passe 0.80" "$T/sortie"; } && ok "plafond : plusieurs flux, maximum et non somme" || ko "plafond : plusieurs flux (code $c)"
+mk 905
+rl 905; { [ $c = 0 ] && grep -q "coût cumulé 0 " "$T/sortie" && grep -q "aucun coût lisible" "$T/sortie" && grep -q "budget de la passe 3.00" "$T/sortie"; } && ok "plafond : aucun flux, coût 0 avec avertissement" || ko "plafond : aucun flux (code $c)"
+PLAFOND_REPRISE=5 bash "$O/relance.sh" 903 projet 2 "$T/msg.md" >"$T/sortie" 2>&1; c=$?
+{ [ $c = 0 ] && grep -q "budget de la passe 0.50" "$T/sortie"; } && ok "plafond : PLAFOND_REPRISE=5 accorde 0.50" || ko "plafond : PLAFOND_REPRISE=5 (code $c)"
+PLAFOND_REPRISE=abc bash "$O/relance.sh" 902 projet 2 "$T/msg.md" >"$T/sortie" 2>&1; c=$?
+{ [ $c = 4 ] && grep -q "non numérique" "$T/sortie"; } && ok "plafond : PLAFOND_REPRISE non numérique, défaut 4 (refus)" || ko "plafond : non numérique (code $c)"
+PLAFOND_REPRISE=abc bash "$O/relance.sh" 901 projet 2 "$T/msg.md" >"$T/sortie" 2>&1; c=$?
+{ [ $c = 0 ] && grep -q "non numérique" "$T/sortie" && grep -q "budget de la passe 0.35" "$T/sortie"; } && ok "plafond : non numérique, défaut 4 (budget 0.35)" || ko "plafond : non numérique budget (code $c)"
 exit $rc
