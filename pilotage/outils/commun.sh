@@ -40,6 +40,8 @@ controle_charge() {
     # Seconde mesure : occupation réelle du disque entier le plus occupé (mission 044).
     local sd=${SEUIL_DISQUE:-50} occ
     if [[ ! $sd =~ $num ]]; then echo "contrôle de charge : SEUIL_DISQUE='$sd' non numérique, seuil par défaut (50)" >&2; sd=50; fi
+    # Le code de retour décide ; sur échec, la sortie de occupation_disque porte la raison
+    # (une variable posée dans le sous-shell $(...) ne remonterait pas jusqu'ici).
     if occ=$(occupation_disque); then
       if awk -v o="$occ" -v s="$sd" 'BEGIN{exit !(o+0>s+0)}'; then
         echo "ARRÊT : pression d'E/S ($fen) à $v % (seuil $seuil %), disque le plus occupé à $occ % (seuil $sd %) ; attendre que le disque se libère ou régler SEUIL_CHARGE_IO / SEUIL_DISQUE (ADR 0001, « Les outils d'exécution »)." >&2
@@ -48,7 +50,7 @@ controle_charge() {
       echo "contrôle de charge : pression à $v %, disque le plus occupé à $occ % : départ accepté" >&2
       return 0
     fi
-    echo "contrôle de charge : occupation des disques non mesurable ($DISQUE_RAISON), repli sur la seule pression" >&2
+    echo "contrôle de charge : occupation des disques non mesurable (${occ:-raison inconnue}), repli sur la seule pression" >&2
     echo "ARRÊT : pression d'E/S ($fen) à $v % pour un seuil de $seuil % ; attendre que le disque se libère ou régler SEUIL_CHARGE_IO (ADR 0001, « Les outils d'exécution »)." >&2
     return 3
   fi
@@ -67,19 +69,23 @@ releve_disques() {
   done < "$f"
 }
 
-# Écrit sur stdout l'occupation (%) du disque entier le plus occupé entre deux relevés ; code 1 et
-# DISQUE_RAISON si la mesure est impossible (jamais bloquant en soi).
+# Écrit sur stdout l'occupation (%) du disque entier le plus occupé entre deux relevés ; si la
+# mesure est impossible, code 1 et la RAISON sur stdout à la place de la valeur (jamais bloquant
+# en soi).
 occupation_disque() {
   local f1=${DISKSTATS_FICHIER:-/proc/diskstats} f2=${DISKSTATS_FICHIER2:-} iv=${INTERVALLE_DISQUE:-2} r1 r2 num='^[0-9]+([.][0-9]+)?$'
   [[ $iv =~ $num ]] && awk -v i="$iv" 'BEGIN{exit !(i+0>0)}' || iv=2
-  r1=$(releve_disques "$f1") && [ -n "$r1" ] || { DISQUE_RAISON="$f1 ou le dossier des disques illisible"; return 1; }
+  local sys=${SYS_BLOCK:-/sys/block}
+  [ -r "$f1" ] || { echo "relevé $f1 illisible"; return 1; }
+  [ -d "$sys" ] || { echo "dossier des disques $sys absent"; return 1; }
+  r1=$(releve_disques "$f1") && [ -n "$r1" ] || { echo "aucun disque entier relevé dans $f1"; return 1; }
   if [ -n "$f2" ]; then r2=$(releve_disques "$f2") || r2=; else sleep "$iv"; r2=$(releve_disques "$f1") || r2=; fi
-  [ -n "$r2" ] || { DISQUE_RAISON="second relevé illisible"; return 1; }
+  [ -n "$r2" ] || { echo "second relevé illisible (${f2:-$f1})"; return 1; }
   printf '%s\n--\n%s\n' "$r1" "$r2" | awk -v iv="$iv" '
     $1=="--"{s=1;next}
     !s{a[$1]=$2;next}
     ($1 in a) && $2+0>=a[$1]+0 {p=($2-a[$1])/(iv*1000)*100; if(p>100)p=100; if(!n||p>m)m=p; n=1}
-    END{if(!n)exit 1; printf "%.0f\n", m}' || { DISQUE_RAISON="aucun disque comparable entre les deux relevés"; return 1; }
+    END{if(!n)exit 1; printf "%.0f\n", m}' || { echo "aucun disque comparable entre les deux relevés"; return 1; }
 }
 
 # Charge l'environnement de la base (si le fichier existe) ; sinon le dit sur stderr.
