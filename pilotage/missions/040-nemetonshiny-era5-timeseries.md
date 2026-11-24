@@ -43,3 +43,9 @@ nemeton v2026.11.42 : signatures et noms d'événements inchangés. Sur le chemi
 - **Moyens :** budget 3 $ ; worktree depuis `origin/main`.
 - **Ce qui ne lui est pas demandé :** poser une release ; toucher nemeton ou un autre dépôt ; toucher la PR #323 ; lancer un vrai calcul ERA5 ; fusionner ; ranger le brief.
 - **Dépend de / rouge attendu jusqu'à :** nemeton v2026.11.42, publiée le 2026-11-23. Rien d'autre.
+
+## Fin
+
+> Ajoutée le 2026-11-24 (mission 046), d'après le journal et le kanban.
+
+PR nemetonshiny #324 (27bf76ae) fusionnée par commit de fusion le 2026-11-23, SHA de fusion non relevé ; publiée en v2026.11.6 (PR de release nemetonshiny #325, tag `v2026.11.6`). Coût : 1,00 $ pour 3 $ ; 0 aller-retour (relue « prête » au premier rendu).

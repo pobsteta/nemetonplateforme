@@ -294,6 +294,17 @@ passe), le `~/.Renviron` de l'utilisateur, les traces `mNNN/` (jetables) et les 
 d'échange `~/dev/briefs/`, dont le [`README.md`](../../README.md) du dépôt fait une dépendance
 déclarée du pilotage.
 
+**Note du 2026-11-24 (mission 046) : une trace `mNNN/` à conserver.** Le mot « jetables »
+ci-dessus vaut pour les traces ordinaires (flux, journaux d'erreur), pas pour toutes.
+`~/.cache/nemetonplateforme/m042/` garde la **vraie réponse du CDS** relevée à la mission 042
+(zip de 480 Ko, NetCDF-4 à variables `latitude` et `longitude` scalaires) : c'est une pièce de
+preuve, à conserver (elle fonde la fixture de la forme réelle et la règle du § 5 de
+`docs/spec.md`). Si elle disparaît, la refaire par une requête CDS `timeseries` sur la maille
+de la Colombière (point 5,05 E / 47,30 N, année 2018). Les briefs ERA5 que citent les fiches
+039 et 040 vivent dans `~/dev/briefs/vers-nemeton/` (brief d'origine de la 039, rangé dans
+`traites/`) et `~/dev/briefs/vers-nemetonshiny/` (brief de livraison de la 040) ; la fiche 041
+n'en cite aucun.
+
 **Note du 2026-11-20 (mission 034) : la base de test seulement pour qui s'en sert.**
 `lance.sh`, `relance.sh` et `preuve.sh` ne préparent la base PostgreSQL de test
 (`SOMMIER_TEST_DB`, fichier d'environnement, base `sommier_test_mNNN` ou

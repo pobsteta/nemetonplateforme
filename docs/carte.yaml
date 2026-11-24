@@ -160,16 +160,18 @@ liens:
   - aval: nemetonshiny
     amont: nemeton
     nature: code-r
-    par: "Imports: nemeton (>= 2026.11.35), installé depuis la dernière release"
-    source: nemetonshiny/DESCRIPTION:15   # relevé du 2026-11-17
+    par: "Imports: nemeton (>= 2026.11.44), installé depuis la dernière release"
+    source: nemetonshiny/DESCRIPTION:15   # relevé du 2026-11-24 (mission 043, main ac4cba6) ; relevé du 2026-11-17 : >= 2026.11.35
     confirme: oui
     test_contrat: nemetonshiny/tests/testthat/test-contrat_nemeton.R (mission 015, PR nemetonshiny #306)
+    note: "note du 2026-11-24 (mission 046) : le plancher fait foi dans nemetonshiny/DESCRIPTION, que le test de contrat lit depuis la mission 043 (PR nemetonshiny #326) ; ne pas le recopier à la main ici sans relire DESCRIPTION. nemeton 2026.11.42 et 2026.11.43 sont cassées en usage réel (le contrôle de cache rejette la vraie réponse du CDS, mission 042) : le plancher 2026.11.44 est le premier correct."
   - aval: nemetonshiny
     amont: foretaccess
     nature: code-r
-    par: "Imports: foretaccess (>= 2.4.0), installé depuis la dernière release"
-    source: nemetonshiny/DESCRIPTION:15
+    par: "Imports: foretaccess (>= 2.6.3), installé depuis la dernière release"
+    source: nemetonshiny/DESCRIPTION:15   # relevé du 2026-11-24 (main ac4cba6) ; ligne précédente : >= 2.4.0
     confirme: oui
+    note: "note du 2026-11-24 (mission 046) : plancher relevé dans DESCRIPTION, qui fait foi ; foretaccess 2.6.3 est additive (classe foretaccess_tuiles_perdues), voir le journal du cycle 16."
   - aval: nemetonmcp
     amont: nemetonshiny
     nature: code-r

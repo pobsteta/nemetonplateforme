@@ -7,7 +7,7 @@
 
 **En une phrase (quoi, et pourquoi) :** Combler les trous de mémoire relevés par le test du successeur sur le fil ERA5 (plancher périmé dans la carte, décisions de Pascal sur 039 seulement au journal, fiches sans état final ni coût, pièce `m042/` dite jetable), pour qu'un successeur reprenne depuis le dépôt seul sans croire sûres des versions cassées.
 
-**Redite par l'agent :** _à compléter par l'agent avant d'agir — s'il n'y arrive pas, il s'arrête._
+**Redite par l'agent :** Corriger le plancher périmé de la carte (nemeton → nemetonshiny, foretaccess → nemetonshiny), écrire dans les fiches 039 à 043 ce que le journal ne dit qu'ailleurs (décisions de Pascal sur la 039, état final et coût), dire dans l'ADR 0001 que `m042/` est une pièce à conserver, et remettre la carte 039 à sa place au kanban, par des ajouts datés seulement, pour qu'un successeur reprenne depuis le dépôt seul. (Agent `archiviste`, 2026-11-24.)
 
 ## Les sources à lire avant d'agir
 
