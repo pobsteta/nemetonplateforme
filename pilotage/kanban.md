@@ -33,7 +33,11 @@ _Modèle de carte :_
 
 ## Terminé
 
-- [039-nemeton-era5-timeseries](missions/039-nemeton-era5-timeseries.md) · nemeton · depuis le cycle 15 · PR #684 fusionnée (e55239b), release de nemeton à venir
+- [040-nemetonshiny-era5-timeseries](missions/040-nemetonshiny-era5-timeseries.md) · nemetonshiny · depuis le cycle 15 · PR nemetonshiny #324 fusionnée, publiée en v2026.11.6
+- [041-nemeton-era5-annee-en-cours](missions/041-nemeton-era5-annee-en-cours.md) · nemeton · depuis le cycle 15 · PR #687 fusionnée, publiée en v2026.11.43
+- [042-nemeton-era5ts-cache-scalaires](missions/042-nemeton-era5ts-cache-scalaires.md) · nemeton · depuis le cycle 15 · PR #689 fusionnée, publiée en v2026.11.44 ; essai réel de la Colombière vert (1,8 min par année)
+- [043-nemetonshiny-plancher-nemeton-44](missions/043-nemetonshiny-plancher-nemeton-44.md) · nemetonshiny · depuis le cycle 15 · PR nemetonshiny #326 fusionnée (ca5072a8), `main` en 2026.11.6.9000
+- [039-nemeton-era5-timeseries](missions/039-nemeton-era5-timeseries.md) · nemeton · depuis le cycle 15 · PR #684 fusionnée (e55239b), publiée en v2026.11.42
   - Homme : `dev` d'une session ouverte dans `nemeton` (sonnet, ADR 0001), relu par le `relecteur`
   - Mission : forçage ERA5 horaire (microclimf et BILJOU) par le jeu CDS `timeseries` par défaut, même data.frame ; diffus juste (`ssrd − fdir`), caches séparés, pas de repli automatique (choix de Pascal et de l'orchestrateur, journal)
   - Moyens : budget 3 $, porté à 4 $ par Pascal pour la reprise 3 (3,65 $ dépensés, 3 allers-retours)
