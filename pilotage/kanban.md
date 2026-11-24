@@ -10,7 +10,7 @@
 > mission propre à un projet qui a son `pilotage/` reste dans le kanban de ce projet ;
 > ici, sa carte y renvoie par un lien, sans la recopier.
 
-**Dernier cycle :** 16 _(augmenté de 1 à la fin de chaque `/boucle`, même quand elle n'a
+**Dernier cycle :** 17 _(augmenté de 1 à la fin de chaque `/boucle`, même quand elle n'a
 rien lancé. Une carte est immobile quand dernier cycle − N ≥ 2.)_
 
 _Modèle de carte :_
@@ -298,3 +298,4 @@ l'inscrit avec ce qu'elle nous apprend._
 - cycle 16 · nemeton 2026.11.44 et nemetonshiny 2026.11.6, installés et en service · Pascal dans l'onglet reGénération (Colombière) · le forçage climatique ERA5 horaire arrive par le jeu `timeseries` en 1,8 min par année, déjà en cache pour 2018 et 2020 ; la livraison précédente (cycle 13, terrain v2026.11.2) n'apportait rien de nouveau au forestier ; vaut si l'essai de Pascal dans l'app est concluant
 - bilan du 2026-11-24 (fil ERA5, cycles 14 à 16) · nemeton 2026.11.44 et nemetonshiny 2026.11.6 en service : forçage climatique ERA5 horaire par le jeu `timeseries`, 1,8 min par année, en cache pour 2018 et 2020 sur la Colombière · Pascal dans l'onglet reGénération · au bilan du 2026-11-20, les changements descendaient jusqu'aux applications de terrain ; celui-ci est le premier à changer le calcul de régénération lui-même
 - bilan du 2026-11-24 (fil ERA5) · mauvaise nouvelle : nemeton 2026.11.42 et 2026.11.43 ont été publiées et mises en service alors que leur chemin par défaut rejetait toute vraie réponse du CDS (variables `latitude` et `longitude` scalaires, absentes des fixtures) ; tests et CI verts, l'essai réel de la Colombière l'a trouvé, corrigé le jour même en 2026.11.44 · pour Pascal et un successeur · ce qu'elle nous apprend : un vert de tests ne prouve pas un chemin d'acquisition externe ; la fixture doit avoir la forme d'une vraie réponse, et une vraie réponse est lue une fois avant la fusion (règle de `docs/spec.md` § 5, mission 045)
+- cycle 17 · nemeton 2026.11.45 · Pascal dans l'app, après réinstallation de nemetonshiny (qui tire la dernière release du cœur) · les bandes Sentinel-2 distantes se lisent par fenêtre, 3,2 s au lieu de 87 s sur la Colombière, résultat identique ; la livraison précédente (cycle 16) apportait le forçage ERA5, pas la lecture Sentinel-2
