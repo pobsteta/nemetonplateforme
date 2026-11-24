@@ -3,6 +3,8 @@
 > Ouverte le 2026-11-23 au cycle 15, sur la consigne de Pascal (« lis et code les briefs »). Origine : brief `~/dev/briefs/vers-nemeton/2026-11-23-era5-timeseries-forcage-microclimf.md`, émis depuis nemetonshiny (priorité haute : l'acquisition ERA5 de la Colombière est estimée à ~48 h par la file CDS, contre ~2 min par année avec le jeu `timeseries`).
 > Dépôt : `nemeton` (session ouverte dans le projet, ADR 0001). Fusion par l'orchestrateur quand les contrôles sont verts. **La release de nemeton n'est pas posée par la mission** : `DESCRIPTION` reste en `.9000`.
 > L'autre brief du jour (`vers-nemetonshiny/2026-11-23-eobs-derniere-annee-complete.md`) n'entre pas dans le cycle : nemetonshiny le traite déjà (PR nemetonshiny #323, sa mission 047).
+>
+> **Note du 2026-11-24 (mission 046, rangement).** Décisions du 2026-11-23, prises après la relecture de la PR nemeton #684, qui l'emportent sur le texte de la fiche ci-dessous. Deux sont de Pascal (journal, lignes `039 · réponse`) : (a) diffus juste, `difrad = (ssrd − fdir)/3600`, sans recalage de `swdown` sur le ciel clair (« On part sur (a) ») ; (b) avec la source `timeseries`, le cache du chemin classique n'est plus relu (« On part sur a »). La troisième est de l'orchestrateur, **sous la délégation de Pascal, sans lui avoir été posée** (journal, ligne `039 · décision sous délégation`) : (c) **pas de repli automatique** vers le chemin classique : un échec est l'erreur `rsen_era5ts_echec`, qui dit comment passer au chemin classique par option, et le cas de repli de la fiche est caduc. La fiche reste telle qu'écrite le 2026-11-23.
 
 ## Mission
 
@@ -61,3 +63,9 @@
   - fusionner ;
   - déplacer le brief d'origine (l'orchestrateur le range).
 - **Dépend de / rouge attendu jusqu'à :** rien.
+
+## Fin
+
+> Ajoutée le 2026-11-24 (mission 046), d'après le journal et le kanban.
+
+PR nemeton #684 fusionnée par commit de fusion (e55239b) le 2026-11-23 ; publiée en v2026.11.42 (PR de release nemeton #685, fusionnée 5ecac20, tag `v2026.11.42`). Coût : 3,65 $ (budget 3 $, porté à 4 $ par Pascal pour la reprise 3) ; 3 allers-retours. Cas 13 mesuré à la main le 2026-11-24 (journal, essai Colombière) ; chemin cassé en usage réel jusqu'à la mission 042.

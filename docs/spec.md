@@ -122,6 +122,24 @@ Chaque fusion et chaque release faite par l'orchestrateur est inscrite au journa
 PR ou tag, contrôles verts) et dite à Pascal au bilan du cycle. Le plafond est celui
 de `pilotage/equipe.md` : 3 PR ouvertes par l'orchestrateur.
 
+> **Note du 2026-11-24 (bilan ERA5, Pascal) : la réponse réelle avant la fusion.** Pour
+> toute PR qui ouvre ou change un chemin d'accès à une source externe (API, service de
+> téléchargement, format reçu d'un tiers) :
+>
+> - (a) les fixtures reprennent la forme exacte d'une vraie réponse (dimensions, variables
+>   scalaires, types, en-têtes), tirée d'une réponse réelle gardée hors dépôt et citée par
+>   son chemin ;
+> - (b) une vraie réponse est lue une fois par le code de la PR, hors CI ; la commande et
+>   sa sortie figurent dans la PR ;
+> - (c) la fiche de mission le demande et le relecteur le contrôle ;
+> - (d) faute de quoi la fusion n'est pas déléguée : elle revient à Pascal.
+>
+> Cette règle s'ajoute aux six contrôles sans les réécrire. Elle vient des missions 039 et
+> 042 : nemeton 2026.11.42 et 2026.11.43 ont été mises en service avec des fixtures sans les
+> variables scalaires `latitude` et `longitude` de la réponse réelle du CDS, et le chemin
+> par défaut ne marchait pas en vrai (voir `pilotage/journal.md`, 2026-11-24 : l'essai de la
+> Colombière, puis la mission 042).
+
 ## 6. Une alerte de rupture de contrat
 
 **Proposé :** les quatre temps de la fiche n° 8, adressés à **Pascal**, le seul à
@@ -246,7 +264,8 @@ La spec est tenue quand :
 5. jamais plus de 3 PR (ou relectures de branche locale) ouvertes par l'orchestrateur à
    la fois ;
 6. aucune fusion ni aucune release n'est faite par l'orchestrateur sans les six contrôles
-   verts du § 5, et aucune qui déclare une rupture ;
+   verts du § 5, et aucune qui déclare une rupture (voir aussi la note du 2026-11-24 du § 5 :
+   la réponse réelle avant la fusion) ;
 7. avant toute mission « Agir » : les ADR sur les tests et les worktrees d'un dépôt à
    l'autre sont tranchées par Pascal, et l'inventaire des `.claude/test-command` des
    treize projets est fait.

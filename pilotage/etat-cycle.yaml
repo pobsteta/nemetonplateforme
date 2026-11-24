@@ -10,34 +10,34 @@
 # lu_sur         : github (lecture seule, sans toucher aux clones) | clone local
 
 nemeton:
-  dernier_tag_vu: v2026.11.36
-  main_lu: 70618fd8928d7a25a6d9281e304bfc18f34c9c06
-  lu_le: 2026-11-18
+  dernier_tag_vu: v2026.11.45
+  main_lu: 361c799b01834cd014a39b26c84aee05214bfe5b
+  lu_le: 2026-11-24
   lu_sur: github
 foretaccess:
-  dernier_tag_vu: v2.6.0
-  main_lu: 6c15472f2e1d5fc6b22d2ab767ad3edcc76297fc
-  lu_le: 2026-11-18
+  dernier_tag_vu: v2.6.3
+  main_lu: 746ee9109c960b1f67b1004f835923f1d1ef5e77
+  lu_le: 2026-11-24
   lu_sur: github
 nemetonshiny:
-  dernier_tag_vu: v2026.11.2
-  main_lu: c6f94cf70ac7af126e509a0177eb82a3822f0cfa
-  lu_le: 2026-11-20
+  dernier_tag_vu: v2026.11.6
+  main_lu: ac4cba6daf90a6d47733e8704810090cd61cf3a2
+  lu_le: 2026-11-24
   lu_sur: github
 nemetonmcp:
   dernier_tag_vu: v2026.11.13
   main_lu: 0159b24cd97a73e3d8230b7ed3bc40415be2386b
-  lu_le: 2026-11-20
+  lu_le: 2026-11-24
   lu_sur: github
 victor:
   dernier_tag_vu: null
   main_lu: 1ac4ccec6b888801c679a977f2514a7117b68276
-  lu_le: 2026-11-18
+  lu_le: 2026-11-24
   lu_sur: github
 aigora:
   dernier_tag_vu: null
   main_lu: 4a816ab13768adefe4a48fbc0d3fb787923a5fbe
-  lu_le: 2026-11-18
+  lu_le: 2026-11-24
   lu_sur: github
 aigora-nemeton:
   dernier_tag_vu: null
@@ -47,35 +47,35 @@ aigora-nemeton:
 terrain:
   dernier_tag_vu: v2026.11.2
   main_lu: 73a0d54119f2f93198a6456f1eaef59bf3023d43
-  lu_le: 2026-11-20
+  lu_le: 2026-11-24
   lu_sur: github
 marculus:
   dernier_tag_vu: v2026.11.3
   main_lu: 41a01f78627aab78f81db6a4df1e71ab6bc11853
-  lu_le: 2026-11-20
+  lu_le: 2026-11-24
   lu_sur: github
 surculus:
   dernier_tag_vu: v0.7.133
   main_lu: 792cedd508e5efe239a8325c5fd2479a89700a73
-  lu_le: 2026-11-18
+  lu_le: 2026-11-24
   lu_sur: github
 ramulus:
   dernier_tag_vu: null
   main_lu: fb5739a99eac7bd3329fd6929509e7d1fd72ba1e
-  lu_le: 2026-11-18
+  lu_le: 2026-11-24
   lu_sur: github
 groma:
-  dernier_tag_vu: v2026.11.9
-  main_lu: 1dc68257a2308d22a39c604c17e718e8a5f2df5b
-  lu_le: 2026-11-20
+  dernier_tag_vu: v2026.11.12
+  main_lu: c9945b39b0e6ae73c48b85a46ae9eb1118edcab0
+  lu_le: 2026-11-24
   lu_sur: github
 sylvostation:
-  dernier_tag_vu: v2026.11.2
-  main_lu: 89672373a687a5931e92eb8f682300b60716b6a8
-  lu_le: 2026-11-20
+  dernier_tag_vu: v2026.11.3
+  main_lu: 2864d70ef807845496f0644ce7ee88a4e1dda449
+  lu_le: 2026-11-24
   lu_sur: github
 sommieR:
   dernier_tag_vu: v2026.11.2
   main_lu: fa558ed32cb91497c6cf9137f75551c3ab4acece
-  lu_le: 2026-11-20
+  lu_le: 2026-11-24
   lu_sur: github

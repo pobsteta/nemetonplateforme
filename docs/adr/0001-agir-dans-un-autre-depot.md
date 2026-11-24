@@ -294,6 +294,17 @@ passe), le `~/.Renviron` de l'utilisateur, les traces `mNNN/` (jetables) et les 
 d'échange `~/dev/briefs/`, dont le [`README.md`](../../README.md) du dépôt fait une dépendance
 déclarée du pilotage.
 
+**Note du 2026-11-24 (mission 046) : une trace `mNNN/` à conserver.** Le mot « jetables »
+ci-dessus vaut pour les traces ordinaires (flux, journaux d'erreur), pas pour toutes.
+`~/.cache/nemetonplateforme/m042/` garde la **vraie réponse du CDS** relevée à la mission 042
+(zip de 480 Ko, NetCDF-4 à variables `latitude` et `longitude` scalaires) : c'est une pièce de
+preuve, à conserver (elle fonde la fixture de la forme réelle et la règle du § 5 de
+`docs/spec.md`). Si elle disparaît, la refaire par une requête CDS `timeseries` sur la maille
+de la Colombière (point 5,05 E / 47,30 N, année 2018). Les briefs ERA5 que citent les fiches
+039 et 040 vivent dans `~/dev/briefs/vers-nemeton/` (brief d'origine de la 039, rangé dans
+`traites/`) et `~/dev/briefs/vers-nemetonshiny/` (brief de livraison de la 040) ; la fiche 041
+n'en cite aucun.
+
 **Note du 2026-11-20 (mission 034) : la base de test seulement pour qui s'en sert.**
 `lance.sh`, `relance.sh` et `preuve.sh` ne préparent la base PostgreSQL de test
 (`SOMMIER_TEST_DB`, fichier d'environnement, base `sommier_test_mNNN` ou
@@ -302,3 +313,23 @@ déclarée du pilotage.
 exemple, ne touche plus à la base. En passant, `lance.sh` crée la base `sommier_test_mNNN`
 (avec `postgis` et `pgcrypto`) quand elle manque, comme `preuve.sh` le faisait déjà pour la
 sienne (écart de la mission 029). Interface inchangée pour le reste.
+
+**Note du 2026-11-24 (mission 044) : une seconde mesure, l'occupation réelle des disques, et
+pas de départ sans fiche.** Constat du bilan ERA5 : la pression d'E/S (`/proc/pressure/io`)
+compte aussi l'attente des autres sessions ; elle a monté à 74-93 % alors que `sda` n'était
+occupé qu'à 2 % puis 9 %, d'où 69 essais refusés à tort et trois levées du seuil par Pascal.
+Quand la pression dépasse `SEUIL_CHARGE_IO`, `controle_charge` (dans `commun.sh`) relève donc
+deux fois, à `INTERVALLE_DISQUE` secondes d'écart (défaut 2), le temps passé en E/S
+(`io_ticks`, champ 13) des **disques entiers** de `/proc/diskstats` (ceux de `/sys/block`,
+hors `loop` et `ram` ; une partition n'est pas comptée) et retient le plus occupé. Au plus de
+`SEUIL_DISQUE` % (défaut 50), arrêt avec le code 3 et un message qui donne les deux valeurs ;
+en dessous, le départ est **accepté** avec l'avertissement « pression à X %, disque le plus
+occupé à Y % : départ accepté ». Quand la mesure du disque est impossible, le comportement
+d'avant s'applique (arrêt au-dessus du seuil de pression) avec un avertissement : une mesure
+impossible ne bloque jamais à elle seule. Réglages pour les essais : `DISKSTATS_FICHIER`,
+`DISKSTATS_FICHIER2` (second relevé fourni, sans attente) et `SYS_BLOCK`. Par ailleurs,
+`lance.sh` s'arrête (code 1, rien n'est lancé, essai à blanc compris) quand la fiche
+`pilotage/missions/<fiche>` est absente ou que la copie de la fiche ou du schéma échoue
+(départ sans fiche de la mission 043), et `relance.sh` quand le fichier message est absent.
+Interface et codes de sortie inchangés pour le reste. Reste à décider par Pascal, hors de cette
+note : le budget des reprises (cause E).

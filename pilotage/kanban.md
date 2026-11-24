@@ -10,7 +10,7 @@
 > mission propre à un projet qui a son `pilotage/` reste dans le kanban de ce projet ;
 > ici, sa carte y renvoie par un lien, sans la recopier.
 
-**Dernier cycle :** 14 _(augmenté de 1 à la fin de chaque `/boucle`, même quand elle n'a
+**Dernier cycle :** 16 _(augmenté de 1 à la fin de chaque `/boucle`, même quand elle n'a
 rien lancé. Une carte est immobile quand dernier cycle − N ≥ 2.)_
 
 _Modèle de carte :_
@@ -29,14 +29,30 @@ _Modèle de carte :_
 
 ## Planifié
 
+
 ## En cours
 
 ## Terminé
 
-- [040-nemetonshiny-era5-timeseries](missions/040-nemetonshiny-era5-timeseries.md) · nemetonshiny · depuis le cycle 15 · PR nemetonshiny #324 fusionnée, publiée en v2026.11.6
-- [041-nemeton-era5-annee-en-cours](missions/041-nemeton-era5-annee-en-cours.md) · nemeton · depuis le cycle 15 · PR #687 fusionnée, publiée en v2026.11.43
-- [042-nemeton-era5ts-cache-scalaires](missions/042-nemeton-era5ts-cache-scalaires.md) · nemeton · depuis le cycle 15 · PR #689 fusionnée, publiée en v2026.11.44 ; essai réel de la Colombière vert (1,8 min par année)
+- [046-plateforme-rangement-bilan-era5](missions/046-plateforme-rangement-bilan-era5.md) · nemetonplateforme · depuis le cycle 16 · relue « prête » après un aller-retour, intégrée à la PR #55
+  - Homme : `archiviste` dans un worktree de ce dépôt (sonnet), relu par le `relecteur`
+  - Mission : trous de mémoire du test du successeur (carte, fiches 039 à 043, ADR 0001, kanban)
+  - Moyens : budget 1,5 $
+  - Dépend de : fin de 044 (ADR 0001)
+- [045-plateforme-regle-reponse-reelle](missions/045-plateforme-regle-reponse-reelle.md) · nemetonplateforme · depuis le cycle 16 · relue « prête », intégrée à la PR #55
+  - Homme : `archiviste` dans un worktree de ce dépôt (sonnet), relu par le `relecteur`
+  - Mission : règle « fixture de la forme réelle, vraie réponse vérifiée hors CI » dans `docs/spec.md` § 5
+  - Moyens : budget 1 $
+  - Dépend de : rien
+- [044-plateforme-charge-disque-et-lanceur](missions/044-plateforme-charge-disque-et-lanceur.md) · nemetonplateforme · depuis le cycle 16 · relue « prête », intégrée à la PR #55
+  - Homme : `dev` dans un worktree de ce dépôt (sonnet), relu par le `relecteur`
+  - Mission : seconde mesure du contrôle de charge (occupation réelle du disque), `lance.sh` qui s'arrête sans fiche
+  - Moyens : budget 2 $ ; PR de pilotage, hors plafond
+  - Dépend de : rien
 - [043-nemetonshiny-plancher-nemeton-44](missions/043-nemetonshiny-plancher-nemeton-44.md) · nemetonshiny · depuis le cycle 15 · PR nemetonshiny #326 fusionnée (ca5072a8), `main` en 2026.11.6.9000
+- [042-nemeton-era5ts-cache-scalaires](missions/042-nemeton-era5ts-cache-scalaires.md) · nemeton · depuis le cycle 15 · PR #689 fusionnée, publiée en v2026.11.44 ; essai réel de la Colombière vert (1,8 min par année)
+- [041-nemeton-era5-annee-en-cours](missions/041-nemeton-era5-annee-en-cours.md) · nemeton · depuis le cycle 15 · PR #687 fusionnée, publiée en v2026.11.43
+- [040-nemetonshiny-era5-timeseries](missions/040-nemetonshiny-era5-timeseries.md) · nemetonshiny · depuis le cycle 15 · PR nemetonshiny #324 fusionnée, publiée en v2026.11.6
 - [039-nemeton-era5-timeseries](missions/039-nemeton-era5-timeseries.md) · nemeton · depuis le cycle 15 · PR #684 fusionnée (e55239b), publiée en v2026.11.42
   - Homme : `dev` d'une session ouverte dans `nemeton` (sonnet, ADR 0001), relu par le `relecteur`
   - Mission : forçage ERA5 horaire (microclimf et BILJOU) par le jeu CDS `timeseries` par défaut, même data.frame ; diffus juste (`ssrd − fdir`), caches séparés, pas de repli automatique (choix de Pascal et de l'orchestrateur, journal)
@@ -52,13 +68,12 @@ _Modèle de carte :_
   - Mission : schéma 1.7.0 (dalles MNT de 1 km, relief CVAT, houppiers avec sommet sur toute la forêt, dans le `.qgz`)
   - Moyens : budget 3 $ (2,87 $ dépensés)
   - Dépend de : rien
-
 - [036-terrain-agent-ntrip-obligatoire](missions/036-terrain-agent-ntrip-obligatoire.md) · terrain · depuis le cycle 13 · PR #36 fusionnée (73a0d54), tag `v2026.11.2` publié (release et JitPack)
   - Homme : `dev` d'une session ouverte dans `terrain` (sonnet, ADR 0001), relu par le `relecteur`
   - Mission : `agent` obligatoire dans `Ntrip.requete`, validé (vide, blanc, espace, caractère de contrôle refusés) ; rupture déclarée, briefs à Marculus et Surculus
   - Moyens : budget 2 $ (0,52 $ dépensés)
   - Dépend de : rien
-- [035-groma-terrain-gnss-2026-11-1](missions/035-groma-terrain-gnss-2026-11-1.md) · groma · depuis le cycle 12 · PR #116 fusionnée en squash (f6e7c22) après un aller-retour ; release 2026.11.9 (PR release-please #114) à décider
+- [035-groma-terrain-gnss-2026-11-1](missions/035-groma-terrain-gnss-2026-11-1.md) · groma · depuis le cycle 12 · PR #116 fusionnée en squash (f6e7c22) après un aller-retour ; release 2026.11.9 publiée par groma (jusqu'à 2026.11.12 au cycle 16)
   - Homme : `dev` d'une session ouverte dans `groma` (sonnet, ADR 0001), relu par le `relecteur`
   - Mission : terrain v2026.11.1 et `terrain-gnss` à la place de la copie GNSS de Groma, noms de terrain dans le code, GeoPackage inchangé (voie A)
   - Moyens : budget 3 $ (1,85 $ dépensés, coût cumulé)
@@ -73,191 +88,165 @@ _Modèle de carte :_
   - Mission : tags, releases et versions de terrain en `vAAAA.M.N`, première v2026.11.1 (porte la 030) ; tag posé par l'orchestrateur après fusion
   - Moyens : budget 3 $ ; worktree depuis `origin/main`
   - Dépend de : rien
-- [028-sommier-import-comptages](missions/028-sommier-import-comptages.md) · sommieR · depuis le cycle 10 · PR #86 fusionnée en squash (fa558ed) après deux allers-retours ; release v2026.11.2
-  - Homme : `dev` d'une session ouverte dans `sommieR` (sonnet, ADR 0001), relu par le `relecteur`
-  - Mission : l'import QField lit `nb_plants_vivants` et `nb_plants_concurrences`
-  - Moyens : budget 3 $
-  - Dépend de : fusion de 029 (mêmes fichiers de version)
-- [029-sommier-version-calendaire](missions/029-sommier-version-calendaire.md) · sommieR · depuis le cycle 10 · PR #85 fusionnée en squash (df94a39) ; release v2026.11.1
-  - Homme : `dev` d'une session ouverte dans `sommieR` (sonnet, ADR 0001), relu par le `relecteur`
-  - Mission : versions, tags et releases en `AAAA.M.N` (convention de `nemeton`), première 2026.11.1
-  - Moyens : budget 3 $ ; vert prouvé par l'orchestrateur sur le SHA exact
-  - Dépend de : rien
-- [030-terrain-fix-horodate-lecteur-nmea](missions/030-terrain-fix-horodate-lecteur-nmea.md) · terrain · depuis le cycle 10 · PR #34 fusionnée (e49186a) ; tag v0.8.0 à poser par Pascal
-  - Homme : `dev` d'une session ouverte dans `terrain` (sonnet, ADR 0001), relu par le `relecteur`
-  - Mission : heure UTC du fix et lecteur NMEA demandés par Groma, additifs, aux noms de terrain
-  - Moyens : budget 3 $ ; vert prouvé par l'orchestrateur sur le SHA exact
+- [032-plateforme-outils-execution](missions/032-plateforme-outils-execution.md) · nemetonplateforme · depuis le cycle 10 · PR #40 fusionnée (9d6c16d), un aller-retour
+  - Homme : `archiviste`, relu par le `relecteur`
+  - Mission : outils d'exécution versés au dépôt et décrits dans l'ADR 0001 ; état de la plateforme à jour
+  - Moyens : worktree de ce dépôt ; PR de pilotage, hors plafond
   - Dépend de : rien
 - [031-nemetonshiny-hebergeur-hostinger](missions/031-nemetonshiny-hebergeur-hostinger.md) · nemetonshiny · depuis le cycle 10 · PR #307 fusionnée (c6f94cf7), documentation seule
   - Homme : `dev` d'une session ouverte dans `nemetonshiny` (sonnet, ADR 0001), relu par le `relecteur`
   - Mission : note datée Hostinger dans le brief et l'ADR 0003, documentation seule
   - Moyens : budget 1 $
   - Dépend de : rien
-- [032-plateforme-outils-execution](missions/032-plateforme-outils-execution.md) · nemetonplateforme · depuis le cycle 10 · PR #40 fusionnée (9d6c16d), un aller-retour
-  - Homme : `archiviste`, relu par le `relecteur`
-  - Mission : outils d'exécution versés au dépôt et décrits dans l'ADR 0001 ; état de la plateforme à jour
-  - Moyens : worktree de ce dépôt ; PR de pilotage, hors plafond
+- [030-terrain-fix-horodate-lecteur-nmea](missions/030-terrain-fix-horodate-lecteur-nmea.md) · terrain · depuis le cycle 10 · PR #34 fusionnée (e49186a) ; tag v0.8.0 à poser par Pascal
+  - Homme : `dev` d'une session ouverte dans `terrain` (sonnet, ADR 0001), relu par le `relecteur`
+  - Mission : heure UTC du fix et lecteur NMEA demandés par Groma, additifs, aux noms de terrain
+  - Moyens : budget 3 $ ; vert prouvé par l'orchestrateur sur le SHA exact
   - Dépend de : rien
-
+- [029-sommier-version-calendaire](missions/029-sommier-version-calendaire.md) · sommieR · depuis le cycle 10 · PR #85 fusionnée en squash (df94a39) ; release v2026.11.1
+  - Homme : `dev` d'une session ouverte dans `sommieR` (sonnet, ADR 0001), relu par le `relecteur`
+  - Mission : versions, tags et releases en `AAAA.M.N` (convention de `nemeton`), première 2026.11.1
+  - Moyens : budget 3 $ ; vert prouvé par l'orchestrateur sur le SHA exact
+  - Dépend de : rien
+- [028-sommier-import-comptages](missions/028-sommier-import-comptages.md) · sommieR · depuis le cycle 10 · PR #86 fusionnée en squash (fa558ed) après deux allers-retours ; release v2026.11.2
+  - Homme : `dev` d'une session ouverte dans `sommieR` (sonnet, ADR 0001), relu par le `relecteur`
+  - Mission : l'import QField lit `nb_plants_vivants` et `nb_plants_concurrences`
+  - Moyens : budget 3 $
+  - Dépend de : fusion de 029 (mêmes fichiers de version)
 - [027-sommier-import-sans-blocage](missions/027-sommier-import-sans-blocage.md) · sommieR · depuis le cycle 9 · PR #84 fusionnée en squash (2ca88d8), 0.44.0 ; 3,15 $ pour un budget de 3 $ (coût cumulé de la dernière passe)
   - Homme : `dev` d'une session ouverte dans `sommieR` (sonnet, ADR 0001), relu par le `relecteur`
   - Mission : aucun écart de forme d'une tournée de terrain ne fait refuser l'import ; accepté et signalé
   - Moyens : quatre passes ; vert prouvé par l'orchestrateur sur 6a24a90 (568 s)
   - Dépend de : rien
-
-- [025-sommier-ortho-tuilee](missions/025-sommier-ortho-tuilee.md) · sommieR · depuis le cycle 9 · PR #83 fusionnée en squash (ab21e89), 0.43.0 ; remplace #79 ; rupture acceptée par Pascal
-  - Homme : `dev` d'une session ouverte dans `sommieR` (sonnet, ADR 0001), relu par le `relecteur`
-  - Mission : ortho de la tournée des travaux en MBTiles EPSG:3857, zooms 12 à 18, PNG à bords transparents, attribution et date
-  - Moyens : budget 3 $ par passe ; cinq passes ; vert prouvé par l'orchestrateur sur le SHA exact
-  - Dépend de : rien
-
-- [014-contrat-nemeton-sommier](missions/014-contrat-nemeton-sommier.md) · sommieR · depuis le cycle 9 · PR #73 fusionnée en squash
-  - Homme : `testeur` d'une session ouverte dans `sommieR` (sonnet, ADR 0001), relu par le `relecteur`
-  - Mission : test de contrat de ce que sommieR lit dans nemeton
-  - Moyens : budget 3 $ par passe ; vert prouvé par l'orchestrateur sur le SHA exact
-  - Dépend de : rien
-
-- [015-contrat-nemeton-nemetonshiny](missions/015-contrat-nemeton-nemetonshiny.md) · nemetonshiny · depuis le cycle 9 · PR #306 fusionnée (6fe1df4d)
-  - Homme : `testeur` d'une session ouverte dans `nemetonshiny` (sonnet, ADR 0001), relu par le `relecteur`
-  - Mission : test de contrat de ce que nemetonshiny lit dans nemeton ; R-CMD-check et coverage relancés deux fois (runners lents)
-  - Moyens : budget 3 $ par passe ; vert prouvé par l'orchestrateur sur le SHA exact
-  - Dépend de : rien
-
-- [016-contrat-nemeton-nemetonmcp](missions/016-contrat-nemeton-nemetonmcp.md) · nemetonmcp · depuis le cycle 9 · PR #37 fusionnée en squash
-  - Homme : `testeur` d'une session ouverte dans `nemetonmcp` (sonnet, ADR 0001), relu par le `relecteur`
-  - Mission : test de contrat de ce que nemetonmcp lit dans nemeton ; enable_rag et ingest verrouillés
-  - Moyens : budget 3 $ par passe ; vert prouvé par l'orchestrateur sur le SHA exact
-  - Dépend de : rien
-
-- [017-nemetonmcp-suivre-nemeton](missions/017-nemetonmcp-suivre-nemeton.md) · nemetonmcp · depuis le cycle 9 · PR #38 fusionnée en squash (0f5c666)
-  - Homme : `dev` d'une session ouverte dans `nemetonmcp` (sonnet, ADR 0001), relu par le `relecteur`
-  - Mission : suivre nemeton 2026.11.32-34 : froid d'hiver en tâche de fond, erreur si E-OBS manque, cache avant le choix d'UG
-  - Moyens : budget 3 $ par passe ; vert prouvé par l'orchestrateur sur le SHA exact
-  - Dépend de : rien
-
-- [018-marculus-tarifs-et-style](missions/018-marculus-tarifs-et-style.md) · marculus · depuis le cycle 9 · PR #80 fusionnée en squash (8255b8f)
-  - Homme : `dev` d'une session ouverte dans `marculus` (sonnet, ADR 0001), relu par le `relecteur`
-  - Mission : tarifs IFN et style commun ; issue #2 fermée
-  - Moyens : budget 3 $ par passe ; vert prouvé par l'orchestrateur sur le SHA exact
-  - Dépend de : rien
-
-- [019-groma-texte-et-heure-utc](missions/019-groma-texte-et-heure-utc.md) · groma · depuis le cycle 9 · PR #113 fusionnée en squash (8859705)
-  - Homme : `dev` d'une session ouverte dans `groma` (sonnet, ADR 0001), relu par le `relecteur`
-  - Mission : styles typographiques Material3 communs ; heure UTC complète du fix GNSS
-  - Moyens : budget 3 $ par passe ; vert prouvé par l'orchestrateur sur le SHA exact
-  - Dépend de : rien
-
-- [020-groma-modules-terrain](missions/020-groma-modules-terrain.md) · groma · depuis le cycle 9 · PR #115 fusionnée en squash (4cff183)
-  - Homme : `dev` d'une session ouverte dans `groma` (sonnet, ADR 0001), relu par le `relecteur`
-  - Mission : Position, Projections, Geodesie et FormatGpkg repris de terrain ; brief retour vers terrain (horodate et lecteur NMEA)
-  - Moyens : budget 3 $ par passe ; vert prouvé par l'orchestrateur sur le SHA exact
-  - Dépend de : rien
-
-- [021-sommier-actions-realisees](missions/021-sommier-actions-realisees.md) · sommieR · depuis le cycle 9 · PR #80 fusionnée en squash (02702cc), 0.41.0 ; remplace #74
-  - Homme : `dev` d'une session ouverte dans `sommieR` (sonnet, ADR 0001), relu par le `relecteur`
-  - Mission : sommier_actions_realisees() et action_id en liste de valeurs QField ; lien nemetonshiny ← sommieR confirmé
-  - Moyens : budget 3 $ par passe ; vert prouvé par l'orchestrateur sur le SHA exact
-  - Dépend de : rien
-
-- [022-sommier-niveaux-concurrence](missions/022-sommier-niveaux-concurrence.md) · sommieR · depuis le cycle 9 · PR #78 fusionnée en squash (7db28dd), 0.40.0 ; remplace #76
-  - Homme : `dev` d'une session ouverte dans `sommieR` (sonnet, ADR 0001), relu par le `relecteur`
-  - Mission : trois niveaux de concurrence et règle plant → placette ; réponse à Surculus
-  - Moyens : budget 3 $ par passe ; vert prouvé par l'orchestrateur sur le SHA exact
-  - Dépend de : rien
-
-- [023-sommier-symbologie-travaux](missions/023-sommier-symbologie-travaux.md) · sommieR · depuis le cycle 9 · PR #75 fusionnée en squash (14c54f4), 0.38.0
-  - Homme : `dev` d'une session ouverte dans `sommieR` (sonnet, ADR 0001), relu par le `relecteur`
-  - Mission : symbologie des travaux comme Marculus ; CI épinglée sur ubuntu-24.04
-  - Moyens : budget 3 $ par passe ; vert prouvé par l'orchestrateur sur le SHA exact
-  - Dépend de : rien
-
-- [024-sommier-demo-marsannay](missions/024-sommier-demo-marsannay.md) · sommieR · depuis le cycle 9 · PR #77 fusionnée en squash (f909f2e), 0.39.0
-  - Homme : `dev` d'une session ouverte dans `sommieR` (sonnet, ADR 0001), relu par le `relecteur`
-  - Mission : démo Marsannay : parcelles communales réelles, écritures inventées
-  - Moyens : budget 3 $ par passe ; vert prouvé par l'orchestrateur sur le SHA exact
-  - Dépend de : rien
-
 - [026-sommier-photos-terrain](missions/026-sommier-photos-terrain.md) · sommieR · depuis le cycle 9 · PR #82 fusionnée en squash (88f7bdd), 0.42.0 ; remplace #81
   - Homme : `dev` d'une session ouverte dans `sommieR` (sonnet, ADR 0001), relu par le `relecteur`
   - Mission : photos de placette et de plant : EXIF (repère, précision, fuseau) et photos_terrain au schéma de Surculus ; réponse à Surculus
   - Moyens : budget 3 $ par passe ; vert prouvé par l'orchestrateur sur le SHA exact
   - Dépend de : rien
-
-- [012-rangement-memoire](missions/012-rangement-memoire.md) · nemetonplateforme · depuis le cycle 8 · PR #27 fusionnée (120ccfe)
-  - Homme : `archiviste` (sonnet)
-  - Mission : README, renvois à l'ADR 0001, `fusion:` par projet dans la carte, projets observés, comptes, tableau des missions, boîtes de `~/dev/briefs/`
-  - Moyens : un worktree de ce dépôt ; un écart relevé au passage (foretaccess #166 fusionnée en squash à tort)
+- [025-sommier-ortho-tuilee](missions/025-sommier-ortho-tuilee.md) · sommieR · depuis le cycle 9 · PR #83 fusionnée en squash (ab21e89), 0.43.0 ; remplace #79 ; rupture acceptée par Pascal
+  - Homme : `dev` d'une session ouverte dans `sommieR` (sonnet, ADR 0001), relu par le `relecteur`
+  - Mission : ortho de la tournée des travaux en MBTiles EPSG:3857, zooms 12 à 18, PNG à bords transparents, attribution et date
+  - Moyens : budget 3 $ par passe ; cinq passes ; vert prouvé par l'orchestrateur sur le SHA exact
+  - Dépend de : rien
+- [024-sommier-demo-marsannay](missions/024-sommier-demo-marsannay.md) · sommieR · depuis le cycle 9 · PR #77 fusionnée en squash (f909f2e), 0.39.0
+  - Homme : `dev` d'une session ouverte dans `sommieR` (sonnet, ADR 0001), relu par le `relecteur`
+  - Mission : démo Marsannay : parcelles communales réelles, écritures inventées
+  - Moyens : budget 3 $ par passe ; vert prouvé par l'orchestrateur sur le SHA exact
+  - Dépend de : rien
+- [023-sommier-symbologie-travaux](missions/023-sommier-symbologie-travaux.md) · sommieR · depuis le cycle 9 · PR #75 fusionnée en squash (14c54f4), 0.38.0
+  - Homme : `dev` d'une session ouverte dans `sommieR` (sonnet, ADR 0001), relu par le `relecteur`
+  - Mission : symbologie des travaux comme Marculus ; CI épinglée sur ubuntu-24.04
+  - Moyens : budget 3 $ par passe ; vert prouvé par l'orchestrateur sur le SHA exact
+  - Dépend de : rien
+- [022-sommier-niveaux-concurrence](missions/022-sommier-niveaux-concurrence.md) · sommieR · depuis le cycle 9 · PR #78 fusionnée en squash (7db28dd), 0.40.0 ; remplace #76
+  - Homme : `dev` d'une session ouverte dans `sommieR` (sonnet, ADR 0001), relu par le `relecteur`
+  - Mission : trois niveaux de concurrence et règle plant → placette ; réponse à Surculus
+  - Moyens : budget 3 $ par passe ; vert prouvé par l'orchestrateur sur le SHA exact
+  - Dépend de : rien
+- [021-sommier-actions-realisees](missions/021-sommier-actions-realisees.md) · sommieR · depuis le cycle 9 · PR #80 fusionnée en squash (02702cc), 0.41.0 ; remplace #74
+  - Homme : `dev` d'une session ouverte dans `sommieR` (sonnet, ADR 0001), relu par le `relecteur`
+  - Mission : sommier_actions_realisees() et action_id en liste de valeurs QField ; lien nemetonshiny ← sommieR confirmé
+  - Moyens : budget 3 $ par passe ; vert prouvé par l'orchestrateur sur le SHA exact
+  - Dépend de : rien
+- [020-groma-modules-terrain](missions/020-groma-modules-terrain.md) · groma · depuis le cycle 9 · PR #115 fusionnée en squash (4cff183)
+  - Homme : `dev` d'une session ouverte dans `groma` (sonnet, ADR 0001), relu par le `relecteur`
+  - Mission : Position, Projections, Geodesie et FormatGpkg repris de terrain ; brief retour vers terrain (horodate et lecteur NMEA)
+  - Moyens : budget 3 $ par passe ; vert prouvé par l'orchestrateur sur le SHA exact
+  - Dépend de : rien
+- [019-groma-texte-et-heure-utc](missions/019-groma-texte-et-heure-utc.md) · groma · depuis le cycle 9 · PR #113 fusionnée en squash (8859705)
+  - Homme : `dev` d'une session ouverte dans `groma` (sonnet, ADR 0001), relu par le `relecteur`
+  - Mission : styles typographiques Material3 communs ; heure UTC complète du fix GNSS
+  - Moyens : budget 3 $ par passe ; vert prouvé par l'orchestrateur sur le SHA exact
+  - Dépend de : rien
+- [018-marculus-tarifs-et-style](missions/018-marculus-tarifs-et-style.md) · marculus · depuis le cycle 9 · PR #80 fusionnée en squash (8255b8f)
+  - Homme : `dev` d'une session ouverte dans `marculus` (sonnet, ADR 0001), relu par le `relecteur`
+  - Mission : tarifs IFN et style commun ; issue #2 fermée
+  - Moyens : budget 3 $ par passe ; vert prouvé par l'orchestrateur sur le SHA exact
+  - Dépend de : rien
+- [017-nemetonmcp-suivre-nemeton](missions/017-nemetonmcp-suivre-nemeton.md) · nemetonmcp · depuis le cycle 9 · PR #38 fusionnée en squash (0f5c666)
+  - Homme : `dev` d'une session ouverte dans `nemetonmcp` (sonnet, ADR 0001), relu par le `relecteur`
+  - Mission : suivre nemeton 2026.11.32-34 : froid d'hiver en tâche de fond, erreur si E-OBS manque, cache avant le choix d'UG
+  - Moyens : budget 3 $ par passe ; vert prouvé par l'orchestrateur sur le SHA exact
+  - Dépend de : rien
+- [016-contrat-nemeton-nemetonmcp](missions/016-contrat-nemeton-nemetonmcp.md) · nemetonmcp · depuis le cycle 9 · PR #37 fusionnée en squash
+  - Homme : `testeur` d'une session ouverte dans `nemetonmcp` (sonnet, ADR 0001), relu par le `relecteur`
+  - Mission : test de contrat de ce que nemetonmcp lit dans nemeton ; enable_rag et ingest verrouillés
+  - Moyens : budget 3 $ par passe ; vert prouvé par l'orchestrateur sur le SHA exact
+  - Dépend de : rien
+- [015-contrat-nemeton-nemetonshiny](missions/015-contrat-nemeton-nemetonshiny.md) · nemetonshiny · depuis le cycle 9 · PR #306 fusionnée (6fe1df4d)
+  - Homme : `testeur` d'une session ouverte dans `nemetonshiny` (sonnet, ADR 0001), relu par le `relecteur`
+  - Mission : test de contrat de ce que nemetonshiny lit dans nemeton ; R-CMD-check et coverage relancés deux fois (runners lents)
+  - Moyens : budget 3 $ par passe ; vert prouvé par l'orchestrateur sur le SHA exact
+  - Dépend de : rien
+- [014-contrat-nemeton-sommier](missions/014-contrat-nemeton-sommier.md) · sommieR · depuis le cycle 9 · PR #73 fusionnée en squash
+  - Homme : `testeur` d'une session ouverte dans `sommieR` (sonnet, ADR 0001), relu par le `relecteur`
+  - Mission : test de contrat de ce que sommieR lit dans nemeton
+  - Moyens : budget 3 $ par passe ; vert prouvé par l'orchestrateur sur le SHA exact
   - Dépend de : rien
 - [013-sommier-ci-dependances](missions/013-sommier-ci-dependances.md) · sommieR · depuis le cycle 8 · PR #72 fusionnée en squash (99984d6)
   - Homme : `dev` d'une session ouverte dans `sommieR` (sonnet, ADR 0001), relu par le `relecteur`
   - Mission : cause trouvée (apt des paquets -dev des Suggests, 117 Mo à 171 kB/s, hors du cache R) ; `PKG_SYSREQS=false` ; installation R de 12-20 min à 23-40 s
   - Moyens : budget 3 $ ; deux passes, environ 2,8 $ cumulés
   - Dépend de : rien
-
+- [012-rangement-memoire](missions/012-rangement-memoire.md) · nemetonplateforme · depuis le cycle 8 · PR #27 fusionnée (120ccfe)
+  - Homme : `archiviste` (sonnet)
+  - Mission : README, renvois à l'ADR 0001, `fusion:` par projet dans la carte, projets observés, comptes, tableau des missions, boîtes de `~/dev/briefs/`
+  - Moyens : un worktree de ce dépôt ; un écart relevé au passage (foretaccess #166 fusionnée en squash à tort)
+  - Dépend de : rien
 - [011-sommier-demarrer](missions/011-sommier-demarrer.md) · sommieR · depuis le cycle 6 · PR #70 fusionnée en squash (cce46d0)
   - Homme : orchestrateur d'une session ouverte dans `sommieR` (`/imperatrice:demarrer`, sonnet, ADR 0001)
   - Mission : méthode installée (brief et ADR dans `pilotage/`), plugin, `.claude/test-command` en niveau rapide (30 fichiers sur 45, base PostGIS jointe)
   - Moyens : budget 3 $ ; entre 1,55 et 2,18 $ estimés, trois passes, environ 78 min
   - Dépend de : rien
-
-- [009-nemetonshiny-availablecores-tests](missions/009-nemetonshiny-availablecores-tests.md) · nemetonshiny · depuis le cycle 5 · PR #305 fusionnée (50de1fd)
-  - Homme : `dev` (sonnet), dans une session ouverte dans `nemetonshiny` (ADR 0001)
-  - Mission : les deux derniers `future::availableCores()` des tests passés à `parallelly`
-  - Moyens : budget 3 $, 5400 s ; 0,43 $ et 261 s
-  - Dépend de : 005 (fusionnée)
-
 - [010-confirmer-liens-carte](missions/010-confirmer-liens-carte.md) · nemetonplateforme · depuis le cycle 5 · PR #20 fusionnée (691ebaa)
   - Homme : `archiviste` (sonnet), sous-agent dans un worktree de ce dépôt
   - Mission : 6 liens `confirme: non` relus dans le code : 2 retirés, 4 laissés à `non` avec une question pour Pascal
   - Moyens : lecture seule des clones et de `~/dev/briefs/`
   - Dépend de : 007 et 008 (fusionnées)
-
+- [009-nemetonshiny-availablecores-tests](missions/009-nemetonshiny-availablecores-tests.md) · nemetonshiny · depuis le cycle 5 · PR #305 fusionnée (50de1fd)
+  - Homme : `dev` (sonnet), dans une session ouverte dans `nemetonshiny` (ADR 0001)
+  - Mission : les deux derniers `future::availableCores()` des tests passés à `parallelly`
+  - Moyens : budget 3 $, 5400 s ; 0,43 $ et 261 s
+  - Dépend de : 005 (fusionnée)
 - [008-etat-cycle-yaml](missions/008-etat-cycle-yaml.md) · nemetonplateforme · depuis le cycle 4 · PR #18 fusionnée (562542d)
   - Homme : `archiviste` (sonnet), sous-agent dans un worktree de ce dépôt
   - Mission : `pilotage/etat-cycle.yaml`, état lu des 13 projets ; tags et versions retirés de la carte en prose
   - Moyens : `git ls-remote` et `gh` en lecture seule
   - Dépend de : 007 (fusionnée)
-
 - [007-carte-yaml](missions/007-carte-yaml.md) · nemetonplateforme · depuis le cycle 4 · PR #17 fusionnée (37f507a)
   - Homme : `archiviste` (sonnet), sous-agent dans un worktree de ce dépôt
   - Mission : `docs/carte.yaml`, 13 projets et 20 liens (6 à confirmer), source unique des liens
   - Moyens : `docs/carte-dependances.md`, lecture seule des clones
   - Dépend de : rien
-
-- [005-nemetonshiny-service-monitoring-wiring](missions/005-nemetonshiny-service-monitoring-wiring.md) · nemetonshiny · depuis le cycle 3 · PR #304 fusionnée (3a00990)
-  - Homme : `dev` (sonnet), dans une session ouverte dans `nemetonshiny` (ADR 0001)
-  - Mission : `parallelly::availableCores()` au lieu de `future::availableCores()`, `service_monitoring_wiring` revenu dans le niveau rapide
-  - Moyens : budget 3 $, 5400 s ; 0,56 $ et 464 s à la relance
-  - Dépend de : rien
-
 - [006-victor-tests-et-ci](missions/006-victor-tests-et-ci.md) · victor · depuis le cycle 3 · PR #1 fusionnée (1ac4cce)
   - Homme : `dev` (sonnet), dans une session ouverte dans `victor` (ADR 0001)
   - Mission : premiers tests `pytest` du cœur, `.claude/test-command`, plugin, CI minimale ; Pascal fusionne
   - Moyens : `uv` du projet ; budget 3 $, 3600 s
   - Dépend de : rien
-
+- [005-nemetonshiny-service-monitoring-wiring](missions/005-nemetonshiny-service-monitoring-wiring.md) · nemetonshiny · depuis le cycle 3 · PR #304 fusionnée (3a00990)
+  - Homme : `dev` (sonnet), dans une session ouverte dans `nemetonshiny` (ADR 0001)
+  - Mission : `parallelly::availableCores()` au lieu de `future::availableCores()`, `service_monitoring_wiring` revenu dans le niveau rapide
+  - Moyens : budget 3 $, 5400 s ; 0,56 $ et 464 s à la relance
+  - Dépend de : rien
+- [004-nemetonshiny-commande-de-tests](missions/004-nemetonshiny-commande-de-tests.md) · nemetonshiny · depuis le cycle 2 · PR #303 fusionnée (5b58734)
+  - Homme : `testeur` (sonnet), dans une session ouverte dans `nemetonshiny` (ADR 0001)
+  - Mission : versionner la `.claude/test-command` (niveau rapide, suite complète en CI)
+  - Moyens : missions 001 et 002 en modèles ; budget 3 $
+  - Dépend de : rien
 - [003-nemetonmcp-plugin-et-tests](missions/003-nemetonmcp-plugin-et-tests.md) · nemetonmcp · depuis le cycle 1 · PR #36 fusionnée (cf89cd3)
   - Homme : `testeur` (sonnet), dans une session ouverte dans `nemetonmcp` (ADR 0001)
   - Mission : activer le plugin, versionner une `.claude/test-command` (JS et R)
   - Moyens : la CI du projet comme modèle ; budget 3 $ (provisoire)
   - Dépend de : rien
-
-- [001-nemeton-commande-de-tests](missions/001-nemeton-commande-de-tests.md) · nemeton · depuis le cycle 1 · PR #667 fusionnée (70618fd)
-  - Homme : `testeur` (sonnet), dans une session ouverte dans `nemeton` (ADR 0001)
-  - Mission : versionner une `.claude/test-command` (niveau rapide, suite complète en CI)
-  - Moyens : la CI du projet comme modèle ; budget 3 $ (provisoire)
-  - Dépend de : rien
-
 - [002-foretaccess-plugin-et-tests](missions/002-foretaccess-plugin-et-tests.md) · foretaccess · depuis le cycle 1 · PR #166 fusionnée (6c15472)
   - Homme : `testeur` (sonnet), dans une session ouverte dans `foretaccess` (ADR 0001)
   - Mission : activer le plugin, versionner une `.claude/test-command` (niveau rapide, suite complète en CI)
   - Moyens : la CI du projet comme modèle ; budget 3 $ (provisoire)
   - Dépend de : rien
-
-- [004-nemetonshiny-commande-de-tests](missions/004-nemetonshiny-commande-de-tests.md) · nemetonshiny · depuis le cycle 2 · PR #303 fusionnée (5b58734)
-  - Homme : `testeur` (sonnet), dans une session ouverte dans `nemetonshiny` (ADR 0001)
-  - Mission : versionner la `.claude/test-command` (niveau rapide, suite complète en CI)
-  - Moyens : missions 001 et 002 en modèles ; budget 3 $
+- [001-nemeton-commande-de-tests](missions/001-nemeton-commande-de-tests.md) · nemeton · depuis le cycle 1 · PR #667 fusionnée (70618fd)
+  - Homme : `testeur` (sonnet), dans une session ouverte dans `nemeton` (ADR 0001)
+  - Mission : versionner une `.claude/test-command` (niveau rapide, suite complète en CI)
+  - Moyens : la CI du projet comme modèle ; budget 3 $ (provisoire)
   - Dépend de : rien
 
 ## Abandonné
@@ -296,3 +285,4 @@ l'inscrit avec ce qu'elle nous apprend._
 - cycle 12 · Groma 2026.11.9 · le forestier qui fait l'inventaire vidéo · première version de Groma sur la bibliothèque GNSS commune de terrain (v2026.11.1, heure UTC du fix), sans changement de fichier ni d'écran ; la livraison du cycle 11 était la bibliothèque elle-même
 - cycle 13 · terrain v2026.11.2 · les applications de terrain (Groma, Marculus, Surculus) · livraison technique : chaque application doit donner son propre nom au caster NTRIP, aucune ne peut plus se présenter sous le nom d'une autre ; rien de nouveau pour le forestier, Groma 2026.11.9 se nommait déjà
 - bilan du 2026-11-20 (cycles 10 à 13) · terrain v2026.11.1 et v2026.11.2 (bibliothèque GNSS commune, heure UTC du fix, agent NTRIP obligatoire), Groma 2026.11.9 dessus, sommieR v2026.11.2 (comptages de plants, versions calendaires) · le forestier en inventaire vidéo et Pascal sur le terrain · pour la première fois, un changement d'une bibliothèque commune descend jusqu'à une application publiée sans casser le fichier lu par nemeton ; au bilan précédent, les changements s'arrêtaient à sommieR ; appris : les comptages lus par sommieR ne servent pas tant que Surculus ne les écrit pas
+- cycle 16 · nemeton 2026.11.44 et nemetonshiny 2026.11.6, installés et en service · Pascal dans l'onglet reGénération (Colombière) · le forçage climatique ERA5 horaire arrive par le jeu `timeseries` en 1,8 min par année, déjà en cache pour 2018 et 2020 ; la livraison précédente (cycle 13, terrain v2026.11.2) n'apportait rien de nouveau au forestier ; vaut si l'essai de Pascal dans l'app est concluant

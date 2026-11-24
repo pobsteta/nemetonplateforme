@@ -113,6 +113,9 @@
 | [041](missions/041-nemeton-era5-annee-en-cours.md) année ERA5 pas encore couverte | `nemeton` | `dev` | sonnet | appuyer | 3 oui | 15 |
 | [042](missions/042-nemeton-era5ts-cache-scalaires.md) cache ERA5 sur la vraie réponse du CDS | `nemeton` | `dev` | sonnet | appuyer | 3 oui | 15 |
 | [043](missions/043-nemetonshiny-plancher-nemeton-44.md) plancher nemeton 2026.11.44 dans l'app | `nemetonshiny` | `dev` | sonnet | appuyer | 3 oui | 15 |
+| [044](missions/044-plateforme-charge-disque-et-lanceur.md) charge mesurée sur le disque, lanceur qui s'arrête sans fiche | `nemetonplateforme` | `dev` | sonnet | appuyer | 3 oui | 16 |
+| [045](missions/045-plateforme-regle-reponse-reelle.md) règle de la réponse réelle dans la spec | `nemetonplateforme` | `archiviste` | sonnet | appuyer | 3 oui | 16 |
+| [046](missions/046-plateforme-rangement-bilan-era5.md) rangement du test du successeur | `nemetonplateforme` | `archiviste` | sonnet | appuyer | 3 oui | 16 |
 
 Chaque mission est exécutée par une session ouverte dans le dépôt du projet (ADR 0001),
 relue par le `relecteur`, puis prouvée et fusionnée par l'orchestrateur (spec § 5).
