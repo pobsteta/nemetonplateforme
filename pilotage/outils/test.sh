@@ -68,9 +68,12 @@ dsk "partition ignorée (seul sda1 bouge) : départ accepté" 0 "disque le plus 
 dsk "SEUIL_DISQUE=5 : 10 % devient trop occupé" 3 "disque le plus occupé à 10 %" DISKSTATS_FICHIER=$T/d0 DISKSTATS_FICHIER2=$T/d_libre SEUIL_DISQUE=5
 dsk "SEUIL_DISQUE=80 : 70 % accepté" 0 "départ accepté" DISKSTATS_FICHIER=$T/d0 DISKSTATS_FICHIER2=$T/d_occupe SEUIL_DISQUE=80
 dsk "SEUIL_DISQUE non numérique : défaut 50" 3 "SEUIL_DISQUE='beaucoup' non numérique" DISKSTATS_FICHIER=$T/d0 DISKSTATS_FICHIER2=$T/d_occupe SEUIL_DISQUE=beaucoup
-dsk "mesure impossible (fichier absent) : arrêt comme avant, avec avertissement" 3 "non mesurable" DISKSTATS_FICHIER=$T/absent-diskstats
-dsk "mesure impossible (second relevé absent)" 3 "non mesurable" DISKSTATS_FICHIER=$T/d0 DISKSTATS_FICHIER2=$T/absent-diskstats
-dsk "mesure impossible (dossier des disques absent)" 3 "non mesurable" DISKSTATS_FICHIER=$T/d0 DISKSTATS_FICHIER2=$T/d_libre SYS_BLOCK=$T/nexiste-pas
+dsk "mesure impossible (fichier absent) : arrêt comme avant, avec avertissement" 3 "non mesurable (relevé $T/absent-diskstats illisible)" DISKSTATS_FICHIER=$T/absent-diskstats
+dsk "mesure impossible (second relevé absent)" 3 "non mesurable (second relevé illisible ($T/absent-diskstats))" DISKSTATS_FICHIER=$T/d0 DISKSTATS_FICHIER2=$T/absent-diskstats
+dsk "mesure impossible (dossier des disques absent)" 3 "non mesurable (dossier des disques $T/nexiste-pas absent)" DISKSTATS_FICHIER=$T/d0 DISKSTATS_FICHIER2=$T/d_libre SYS_BLOCK=$T/nexiste-pas
+mkdir -p "$T/sys2/sdz" "$T/sys2/sdy"
+echo "   8       0 sdz 0 0 0 0 0 0 0 0 0 1000 0" > "$T/d_sdz"; echo "   8      16 sdy 0 0 0 0 0 0 0 0 0 2000 0" > "$T/d_sdy"
+dsk "mesure impossible (aucun disque comparable)" 3 "non mesurable (aucun disque comparable entre les deux relevés)" DISKSTATS_FICHIER=$T/d_sdz DISKSTATS_FICHIER2=$T/d_sdy SYS_BLOCK=$T/sys2
 # Pression basse : pas de seconde mesure, départ accepté sans avertissement de disque.
 env DISKSTATS_FICHIER=$T/absent-diskstats bash "$O/lance.sh" 999 projet "$F" >"$T/sortie" 2>&1; { [ $? = 0 ] && ! grep -q disque "$T/sortie"; } && ok "pression basse : pas de mesure de disque" || ko "pression basse"
 # Fiche absente : code non nul, rien n'est lancé, même à blanc ; sans A_BLANC, aucune trace non plus.
