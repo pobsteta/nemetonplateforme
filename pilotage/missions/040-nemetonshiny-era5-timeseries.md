@@ -48,4 +48,4 @@ nemeton v2026.11.42 : signatures et noms d'événements inchangés. Sur le chemi
 
 > Ajoutée le 2026-11-24 (mission 046), d'après le journal et le kanban.
 
-PR nemetonshiny #324 (27bf76ae) fusionnée par commit de fusion le 2026-11-23, SHA de fusion non relevé ; publiée en v2026.11.6 (PR de release nemetonshiny #325, tag `v2026.11.6`). Coût : 1,00 $ pour 3 $ ; 0 aller-retour (relue « prête » au premier rendu).
+PR nemetonshiny #324 (27bf76ae) fusionnée par commit de fusion (8b63124) le 2026-11-23 ; publiée en v2026.11.6 (PR de release nemetonshiny #325, fusionnée bd2204d, tag `v2026.11.6`). Coût : 1,00 $ pour 3 $ ; 0 aller-retour (relue « prête » au premier rendu).
