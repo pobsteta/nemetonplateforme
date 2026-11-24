@@ -124,13 +124,13 @@ cout_cumule() {
   local M=$CACHE/m$1 c=
   if compgen -G "$M/flux*.jsonl" >/dev/null; then
     c=$(cat "$M"/flux*.jsonl | python3 -I -c '
-import json, sys
+import json, math, sys
 m = None
 for l in sys.stdin:
     try:
         d = json.loads(l)
         v = d["total_cost_usd"]
-        if d.get("type") == "result" and isinstance(v, (int, float)) and not isinstance(v, bool):
+        if d.get("type") == "result" and isinstance(v, (int, float)) and not isinstance(v, bool) and math.isfinite(v):
             m = v if m is None else max(m, v)
     except Exception:
         pass

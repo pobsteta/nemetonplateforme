@@ -2,6 +2,9 @@
 # Essai des outils : bash -n puis essai à blanc de chacun (n'appelle ni claude, ni gh, ni docker).
 # Tout se passe dans un dossier temporaire ; ne touche pas à ~/.cache/nemetonplateforme.
 O=$(cd "$(dirname "$0")" && pwd); T=$(mktemp -d); trap 'rm -rf "$T"' EXIT; rc=0
+# Garde (mission 048) : un faux claude en tête du PATH ; aucun cas de ce script ne peut lancer le vrai.
+mkdir "$T/bin"; printf '#!/bin/bash\necho "$@" >> "%s/CLAUDE_APPELE"\nexit 0\n' "$T" > "$T/bin/claude"; chmod +x "$T/bin/claude"
+export PATH="$T/bin:$PATH"
 ok(){ echo "ok    $1"; }; ko(){ echo "ECHEC $1"; rc=1; }
 for s in commun lance relance preuve resultat test; do bash -n "$O/$s.sh" && ok "bash -n $s.sh" || ko "bash -n $s.sh"; done
 grep -v '^#' "$O/renviron.exemple" | grep -q '=' && ko "renviron.exemple ne doit lister que des noms" || ok "renviron.exemple : noms seulement"
@@ -106,4 +109,13 @@ PLAFOND_REPRISE=abc bash "$O/relance.sh" 902 projet 2 "$T/msg.md" >"$T/sortie" 2
 { [ $c = 4 ] && grep -q "non numérique" "$T/sortie"; } && ok "plafond : PLAFOND_REPRISE non numérique, défaut 4 (refus)" || ko "plafond : non numérique (code $c)"
 PLAFOND_REPRISE=abc bash "$O/relance.sh" 901 projet 2 "$T/msg.md" >"$T/sortie" 2>&1; c=$?
 { [ $c = 0 ] && grep -q "non numérique" "$T/sortie" && grep -q "budget de la passe 0.35" "$T/sortie"; } && ok "plafond : non numérique, défaut 4 (budget 0.35)" || ko "plafond : non numérique budget (code $c)"
+mk 906; res 3.995 > "$T/cache/m906/flux.jsonl"
+rl 906; { [ $c = 4 ] && grep -q "REFUS" "$T/sortie" && ! grep -q "claude -p" "$T/sortie"; } && ok "plafond : budget sous le centime (3.995), refus (code 4)" || ko "plafond : budget sous le centime (code $c)"
+mk 907; res 3.99 > "$T/cache/m907/flux.jsonl"
+rl 907; { [ $c = 0 ] && grep -q "budget de la passe 0.01" "$T/sortie"; } && ok "plafond : coût 3.99, budget 0.01 accordé" || ko "plafond : coût 3.99 (code $c)"
+mk 908; printf '{"type":"result","subtype":"success","total_cost_usd":NaN,"session_id":"sn"}\n{"type":"result","subtype":"success","total_cost_usd":Infinity,"session_id":"si"}\n' > "$T/cache/m908/flux.jsonl"
+rl 908; { [ $c = 0 ] && grep -q "aucun coût lisible" "$T/sortie" && grep -q "coût cumulé 0 " "$T/sortie" && grep -q "budget de la passe 3.00" "$T/sortie"; } && ok "plafond : NaN et Infinity ignorés comme un coût illisible" || ko "plafond : NaN/Infinity (code $c)"
+# Garde : aucun cas ci-dessus n'a attendu un lancement réel ; le faux claude ne doit jamais avoir été appelé.
+[ "$(command -v claude)" = "$T/bin/claude" ] && ok "garde : claude est le faux du PATH" || ko "garde : claude n'est pas le faux"
+[ ! -e "$T/CLAUDE_APPELE" ] && ok "garde : claude jamais appelé (aucun cas ne lance réellement)" || { ko "garde : claude a été appelé"; cat "$T/CLAUDE_APPELE"; }
 exit $rc

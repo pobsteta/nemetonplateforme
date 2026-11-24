@@ -354,3 +354,8 @@ revenant à Pascal (qui relance alors avec `PLAFOND_REPRISE=<montant>`). Sinon l
 3 ; l'essai à blanc affiche le coût cumulé, le plafond et ce budget. `lance.sh` (première
 passe) garde `--max-budget-usd 3`. Codes de sortie de `relance.sh` : 0, 1, 3 (charge), 4
 (plafond de reprise atteint).
+Ajout du 2026-11-24 (reprise 1 de la mission 048) : la reprise est aussi refusée (code 4, même
+message) quand le budget de passe calculé serait inférieur à 0,01 $ (coût cumulé 3,995 pour un
+plafond de 4) ; un `total_cost_usd` non fini (`NaN`, `Infinity`) est ignoré comme un coût
+illisible ; `test.sh` place un faux `claude` en tête du PATH et échoue s'il est appelé, de sorte
+qu'aucun cas ne puisse lancer le vrai.
