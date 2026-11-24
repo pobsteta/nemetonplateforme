@@ -34,3 +34,9 @@
 - **Moyens :** budget 3 $ ; worktree depuis `origin/main`.
 - **Ce qui ne lui est pas demandé :** poser une release ; toucher nemeton ou un autre dépôt ; toucher la PR #323 ; fusionner.
 - **Dépend de / rouge attendu jusqu'à :** nemeton v2026.11.44, publiée le 2026-11-24. Rien d'autre.
+
+## Fin
+
+> Ajoutée le 2026-11-24 (mission 046), d'après le journal et le kanban.
+
+PR nemetonshiny #326 (db1e93dc) fusionnée (ca5072a8) le 2026-11-24 ; pas de release (cycle de développement 2026.11.6.9000). Coût : 0,71 $ pour 3 $ ; 0 aller-retour de relecture (un premier départ sans fiche, repris avec la fiche en place).

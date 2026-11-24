@@ -39,3 +39,9 @@ nemetonshiny appelle `regen_sensibilite()` et BILJOU ; il affiche le message d'u
 - **Moyens :** budget 3 $ (plafond du lanceur) ; worktree depuis `origin/main`.
 - **Ce qui ne lui est pas demandé :** release ; toucher un autre dépôt ; changer le chemin classique ; lancer un vrai calcul ERA5 ; fusionner.
 - **Dépend de / rouge attendu jusqu'à :** la PR nemeton #686 (cycle dev 2026.11.42.9000), fusionnée avant le départ.
+
+## Fin
+
+> Ajoutée le 2026-11-24 (mission 046), d'après le journal et le kanban.
+
+PR nemeton #687 fusionnée par commit de fusion (907c37e) le 2026-11-23 (dernier SHA de la branche : a1e3ca0) ; publiée en v2026.11.43 (PR de release nemeton #688, fusionnée 3e1e6b0, tag `v2026.11.43`). Coût : 1,11 $ cumulé pour 3 $ ; 1 aller-retour (reprise 1).

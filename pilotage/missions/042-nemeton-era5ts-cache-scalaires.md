@@ -40,3 +40,9 @@
 - **Moyens :** budget 3 $ ; worktree depuis `origin/main`.
 - **Ce qui ne lui est pas demandé :** release ; appel réel au CDS ; toucher un autre dépôt ; fusionner.
 - **Dépend de / rouge attendu jusqu'à :** rien.
+
+## Fin
+
+> Ajoutée le 2026-11-24 (mission 046), d'après le journal et le kanban.
+
+PR nemeton #689 (3e0171b97) fusionnée (718518b) le 2026-11-24 ; publiée en v2026.11.44 (PR de release nemeton #690, tag `v2026.11.44`). Coût : 0,81 $ pour 3 $ ; 0 aller-retour (relue « prête » au premier rendu). Essai réel de la Colombière vert : 1,8 min par année.
