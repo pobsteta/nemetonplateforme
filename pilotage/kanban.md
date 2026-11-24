@@ -42,14 +42,14 @@ _Modèle de carte :_
   - Mission : seconde mesure du contrôle de charge (occupation réelle du disque), `lance.sh` qui s'arrête sans fiche
   - Moyens : budget 2 $ ; PR de pilotage, hors plafond
   - Dépend de : rien
-- [045-plateforme-regle-reponse-reelle](missions/045-plateforme-regle-reponse-reelle.md) · nemetonplateforme · depuis le cycle 16
+
+## Terminé
+
+- [045-plateforme-regle-reponse-reelle](missions/045-plateforme-regle-reponse-reelle.md) · nemetonplateforme · depuis le cycle 16 · relue « prête », intégrée à la PR #55
   - Homme : `archiviste` dans un worktree de ce dépôt (sonnet), relu par le `relecteur`
   - Mission : règle « fixture de la forme réelle, vraie réponse vérifiée hors CI » dans `docs/spec.md` § 5
   - Moyens : budget 1 $
   - Dépend de : rien
-
-## Terminé
-
 - [040-nemetonshiny-era5-timeseries](missions/040-nemetonshiny-era5-timeseries.md) · nemetonshiny · depuis le cycle 15 · PR nemetonshiny #324 fusionnée, publiée en v2026.11.6
 - [041-nemeton-era5-annee-en-cours](missions/041-nemeton-era5-annee-en-cours.md) · nemeton · depuis le cycle 15 · PR #687 fusionnée, publiée en v2026.11.43
 - [042-nemeton-era5ts-cache-scalaires](missions/042-nemeton-era5ts-cache-scalaires.md) · nemeton · depuis le cycle 15 · PR #689 fusionnée, publiée en v2026.11.44 ; essai réel de la Colombière vert (1,8 min par année)
