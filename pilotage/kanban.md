@@ -29,7 +29,24 @@ _Modèle de carte :_
 
 ## Planifié
 
+- [046-plateforme-rangement-bilan-era5](missions/046-plateforme-rangement-bilan-era5.md) · nemetonplateforme · depuis le cycle 16
+  - Homme : `archiviste` dans un worktree de ce dépôt (sonnet), relu par le `relecteur`
+  - Mission : trous de mémoire du test du successeur (carte, fiches 039 à 043, ADR 0001, kanban)
+  - Moyens : budget 1,5 $
+  - Dépend de : fin de 044 (ADR 0001)
+
 ## En cours
+
+- [044-plateforme-charge-disque-et-lanceur](missions/044-plateforme-charge-disque-et-lanceur.md) · nemetonplateforme · depuis le cycle 16
+  - Homme : `dev` dans un worktree de ce dépôt (sonnet), relu par le `relecteur`
+  - Mission : seconde mesure du contrôle de charge (occupation réelle du disque), `lance.sh` qui s'arrête sans fiche
+  - Moyens : budget 2 $ ; PR de pilotage, hors plafond
+  - Dépend de : rien
+- [045-plateforme-regle-reponse-reelle](missions/045-plateforme-regle-reponse-reelle.md) · nemetonplateforme · depuis le cycle 16
+  - Homme : `archiviste` dans un worktree de ce dépôt (sonnet), relu par le `relecteur`
+  - Mission : règle « fixture de la forme réelle, vraie réponse vérifiée hors CI » dans `docs/spec.md` § 5
+  - Moyens : budget 1 $
+  - Dépend de : rien
 
 ## Terminé
 
