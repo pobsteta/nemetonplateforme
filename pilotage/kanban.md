@@ -32,6 +32,17 @@ _Modèle de carte :_
 
 ## En cours
 
+- [049-nemeton-era5-liste-annees-vide](missions/049-nemeton-era5-liste-annees-vide.md) · nemeton · depuis le cycle 18
+  - Homme : `dev` (sonnet) dans le clone de la session, relu par le `relecteur`
+  - Mission : liste d'années ERA5 vide refusée avec un message qui le dit (reste de 041) ; cycle dev 2026.11.45.9000, pas de release
+  - Moyens : clone `/home/user/nemeton`, branche `ccr-104aede3-7r3vop`, R installé dans le conteneur
+  - Dépend de : rien
+- [050-nemetonshiny-era5-textes-et-test](missions/050-nemetonshiny-era5-textes-et-test.md) · nemetonshiny · depuis le cycle 18
+  - Homme : `dev` (sonnet) dans le clone de la session, relu par le `relecteur`
+  - Mission : test d'échec ERA5 sur le vrai message du cœur, commentaires « douze téléchargements » et texte `regen_engine_tip` remis d'accord avec `timeseries` (restes de 040) ; 2026.11.6.9002, pas de release
+  - Moyens : clone `/home/user/nemetonshiny`, branche `ccr-104aede3-7r3vop` ; tests en CI seulement (`foretaccess` absent du conteneur)
+  - Dépend de : rien
+
 ## Terminé
 
 - [048-plateforme-plafond-reprise](missions/048-plateforme-plafond-reprise.md) · nemetonplateforme · depuis le cycle 16 · relue « prête » après un aller-retour, PR de pilotage fusionnée
