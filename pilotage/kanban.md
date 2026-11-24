@@ -32,6 +32,12 @@ _Modèle de carte :_
 
 ## En cours
 
+- [047-plateforme-charge-restes-044](missions/047-plateforme-charge-restes-044.md) · nemetonplateforme · depuis le cycle 16
+  - Homme : `dev` dans un worktree de ce dépôt (sonnet), relu par le `relecteur`
+  - Mission : raison dite dans l'avertissement « disque non mesurable », exclusions exactes dans l'ADR 0001
+  - Moyens : budget 1 $ ; PR de pilotage, hors plafond
+  - Dépend de : rien
+
 ## Terminé
 
 - [046-plateforme-rangement-bilan-era5](missions/046-plateforme-rangement-bilan-era5.md) · nemetonplateforme · depuis le cycle 16 · relue « prête » après un aller-retour, intégrée à la PR #55
