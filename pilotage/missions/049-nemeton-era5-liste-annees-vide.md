@@ -38,3 +38,7 @@
 - **Moyens :** le clone de la session ; R installé dans le conteneur par l'orchestrateur (paquets binaires r2u).
 - **Ce qui ne lui est pas demandé :** poser une release ; toucher un autre dépôt ou la PR #695 ; fusionner ; changer le chemin classique mcera5.
 - **Dépend de / rouge attendu jusqu'à :** rien.
+
+## Fin
+
+PR nemeton #697 (470972b) fusionnée (d653b75) le 2026-11-24, sur la demande de Pascal (« fusionne quand tout est vert ») ; pas de release (cycle de développement 2026.11.45.9000). 0 aller-retour de relecture. Mineurs laissés : titre du test « avant tout appel CDS » sans compteur de requêtes, cas 3 et 4 redondants avec l'existant.

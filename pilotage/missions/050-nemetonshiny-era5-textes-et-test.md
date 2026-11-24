@@ -40,3 +40,7 @@
 - **Moyens :** le clone de la session ; R installé dans le conteneur par l'orchestrateur.
 - **Ce qui ne lui est pas demandé :** écrire dans nemeton ; poser une release ; toucher les PR #323 et #328 ; fusionner ; changer un comportement de l'app.
 - **Dépend de / rouge attendu jusqu'à :** rien.
+
+## Fin
+
+PR nemetonshiny #329 (5157042) fusionnée (fb5a524) le 2026-11-24, sur la demande de Pascal (« Garde la formulation de l'infobulle, fusionne quand tout est vert ») ; pas de release (cycle de développement 2026.11.6.9002). 0 aller-retour de relecture. Mineurs laissés : commentaire de `mod_regeneration.R` l. 84-87 (`era5_mois` compte aussi les mailles-années sur `timeseries`), branche de repli morte dans le test d'échec, en-tête NEWS sans 050.
