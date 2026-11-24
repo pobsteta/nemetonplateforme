@@ -32,6 +32,12 @@ _Modèle de carte :_
 
 ## En cours
 
+- [048-plateforme-plafond-reprise](missions/048-plateforme-plafond-reprise.md) · nemetonplateforme · depuis le cycle 16
+  - Homme : `dev` dans un worktree de ce dépôt (sonnet), relu par le `relecteur`
+  - Mission : `relance.sh` refuse une reprise au-delà de 4 $ cumulés et borne la passe à ce qui reste
+  - Moyens : budget 2 $ ; PR de pilotage, hors plafond
+  - Dépend de : rien
+
 ## Terminé
 
 - [047-plateforme-charge-restes-044](missions/047-plateforme-charge-restes-044.md) · nemetonplateforme · depuis le cycle 16 · relue « prête », PR de pilotage fusionnée
