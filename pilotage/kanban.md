@@ -10,7 +10,7 @@
 > mission propre à un projet qui a son `pilotage/` reste dans le kanban de ce projet ;
 > ici, sa carte y renvoie par un lien, sans la recopier.
 
-**Dernier cycle :** 14 _(augmenté de 1 à la fin de chaque `/boucle`, même quand elle n'a
+**Dernier cycle :** 16 _(augmenté de 1 à la fin de chaque `/boucle`, même quand elle n'a
 rien lancé. Une carte est immobile quand dernier cycle − N ≥ 2.)_
 
 _Modèle de carte :_
@@ -58,7 +58,7 @@ _Modèle de carte :_
   - Mission : `agent` obligatoire dans `Ntrip.requete`, validé (vide, blanc, espace, caractère de contrôle refusés) ; rupture déclarée, briefs à Marculus et Surculus
   - Moyens : budget 2 $ (0,52 $ dépensés)
   - Dépend de : rien
-- [035-groma-terrain-gnss-2026-11-1](missions/035-groma-terrain-gnss-2026-11-1.md) · groma · depuis le cycle 12 · PR #116 fusionnée en squash (f6e7c22) après un aller-retour ; release 2026.11.9 (PR release-please #114) à décider
+- [035-groma-terrain-gnss-2026-11-1](missions/035-groma-terrain-gnss-2026-11-1.md) · groma · depuis le cycle 12 · PR #116 fusionnée en squash (f6e7c22) après un aller-retour ; release 2026.11.9 publiée par groma (jusqu'à 2026.11.12 au cycle 16)
   - Homme : `dev` d'une session ouverte dans `groma` (sonnet, ADR 0001), relu par le `relecteur`
   - Mission : terrain v2026.11.1 et `terrain-gnss` à la place de la copie GNSS de Groma, noms de terrain dans le code, GeoPackage inchangé (voie A)
   - Moyens : budget 3 $ (1,85 $ dépensés, coût cumulé)
