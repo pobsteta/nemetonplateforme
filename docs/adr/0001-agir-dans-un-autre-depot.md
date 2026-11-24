@@ -333,3 +333,10 @@ impossible ne bloque jamais à elle seule. Réglages pour les essais : `DISKSTAT
 (départ sans fiche de la mission 043), et `relance.sh` quand le fichier message est absent.
 Interface et codes de sortie inchangés pour le reste. Reste à décider par Pascal, hors de cette
 note : le budget des reprises (cause E).
+
+*Précision du 2026-11-24 (mission 047), sans réécrire ce qui précède :* le code exclut des
+disques entiers `loop*`, `ram*` et `zram*` (ces derniers sont de la mémoire compressée, pas un
+disque), et rien d'autre : `dm-*` (LVM, chiffrement) et `md*` (RAID logiciel) présents dans
+`/sys/block` comptent comme des disques entiers. Par ailleurs l'avertissement « non mesurable »
+donne désormais sa raison (relevé illisible, dossier des disques absent, aucun disque entier
+relevé, second relevé illisible, aucun disque comparable).
