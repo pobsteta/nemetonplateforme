@@ -32,6 +32,11 @@ _Modèle de carte :_
 
 ## En cours
 
+- [055-nemetonshiny-cvat-erreur-codage](missions/055-nemetonshiny-cvat-erreur-codage.md) · nemetonshiny · depuis le cycle 18
+  - Homme : `dev` dans un worktree de nemetonshiny (session cloud), relu par le `relecteur`
+  - Mission : reprise sans relief et message quand nemeton refuse le codage du CVAT
+  - Moyens : budget 2 $ ; branche `ccr-b52c1910-gjp34w` ; fusion par Pascal
+  - Dépend de : rien (cœur simulé) ; à fusionner avant la prochaine release de nemeton
 - [054-sommier-lot2-plants](missions/054-sommier-lot2-plants.md) · sommieR · depuis le cycle 18
   - Homme : `dev` dans un worktree de sommieR (session cloud), relu par le `relecteur`
   - Mission : plants pointés et suivis de Surculus au registre 6 (`plant`, `r6-1.3.0`), import des couches de plants
