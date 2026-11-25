@@ -37,14 +37,14 @@ _Modèle de carte :_
   - Mission : reprise sans relief et message quand nemeton refuse le codage du CVAT
   - Moyens : budget 2 $ ; branche `ccr-b52c1910-gjp34w` ; fusion par Pascal
   - Dépend de : rien (cœur simulé) ; à fusionner avant la prochaine release de nemeton
-- [054-sommier-lot2-plants](missions/054-sommier-lot2-plants.md) · sommieR · depuis le cycle 18
+
+## Terminé
+
+- [054-sommier-lot2-plants](missions/054-sommier-lot2-plants.md) · sommieR · depuis le cycle 18 · PR #88 fusionnée (29c3c62), pas de release
   - Homme : `dev` dans un worktree de sommieR (session cloud), relu par le `relecteur`
   - Mission : plants pointés et suivis de Surculus au registre 6 (`plant`, `r6-1.3.0`), import des couches de plants
   - Moyens : budget 4 $ ; PostGIS dans le conteneur ; branche `ccr-b52c1910-gjp34w`
   - Dépend de : rien (052 fusionnée)
-
-## Terminé
-
 - [051-nemeton-cvat-conversion-foretaccess](missions/051-nemeton-cvat-conversion-foretaccess.md) · nemeton · depuis le cycle 18 · PR #699 fusionnée (ae887f6), pas de release
   - Homme : `dev` dans un worktree de nemeton (session cloud), relu par le `relecteur`
   - Mission : `cvat.tif` au codage de Groma (source foretaccess + 1, 255 → 0, format Groma recopié, autre codage refusé)
