@@ -32,14 +32,14 @@ _Modèle de carte :_
 
 ## En cours
 
-- [060-nemeton-reconfort-spike-rust](missions/060-nemeton-reconfort-spike-rust.md) · nemeton · depuis le cycle 18
+
+## Terminé
+
+- [060-nemeton-reconfort-spike-rust](missions/060-nemeton-reconfort-spike-rust.md) · nemeton · depuis le cycle 18 · PR #702 fusionnée (890bc55), pas de release
   - Homme : `dev` dans un worktree de nemeton (session cloud), relu par le `relecteur`
   - Mission : crate Rust CRswir/CRre + repli R, pipeline d'apprentissage RECONFORT sur placettes synth_
   - Moyens : budget 5 $ ; branche `ccr-b52c1910-gjp34w` ; ADR 0003
   - Dépend de : rien (notes DEPERIS réelles : plus tard)
-
-## Terminé
-
 - [059-nemeton-projet-video-parallele-suite](missions/059-nemeton-projet-video-parallele-suite.md) · nemeton · depuis le cycle 18 · PR #701 fusionnée (12e74eb), pas de release
   - Homme : `dev` dans un worktree de nemeton (session cloud), relu par le `relecteur`
   - Mission : placettes et dalles MNT en parallèle, un seul cluster par création
