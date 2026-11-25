@@ -37,6 +37,7 @@ _Modèle de carte :_
   - Mission : itinéraires admissibles par UGF (raisons d'exclusion) et comparés sous le profil, poids provisoires
   - Moyens : budget 5 $ ; branche `ccr-b52c1910-gjp34w`
   - Dépend de : rien (#335 fusionnée)
+
 ## Terminé
 
 - [065-sommier-plants-aller-pointage](missions/065-sommier-plants-aller-pointage.md) · sommieR · depuis le cycle 18 · PR #91 fusionnée (a586121), pas de release
