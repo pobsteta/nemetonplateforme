@@ -32,6 +32,11 @@ _Modèle de carte :_
 
 ## En cours
 
+- [060-nemeton-reconfort-spike-rust](missions/060-nemeton-reconfort-spike-rust.md) · nemeton · depuis le cycle 18
+  - Homme : `dev` dans un worktree de nemeton (session cloud), relu par le `relecteur`
+  - Mission : crate Rust CRswir/CRre + repli R, pipeline d'apprentissage RECONFORT sur placettes synth_
+  - Moyens : budget 5 $ ; branche `ccr-b52c1910-gjp34w` ; ADR 0003
+  - Dépend de : rien (notes DEPERIS réelles : plus tard)
 
 ## Terminé
 
