@@ -37,11 +37,6 @@ _Modèle de carte :_
   - Mission : `cvat.tif` au codage de Groma (source foretaccess + 1, 255 → 0, format Groma recopié, autre codage refusé)
   - Moyens : budget 2 $ ; branche `ccr-b52c1910-gjp34w`
   - Dépend de : rien
-- [052-sommier-position-mesuree-controle](missions/052-sommier-position-mesuree-controle.md) · sommieR · depuis le cycle 18
-  - Homme : `dev` dans un worktree de sommieR (session cloud), relu par le `relecteur`
-  - Mission : position mesurée du contrôle de placette gardée, importée de `positions_controles` et exposée dans `v_controle_plantation`
-  - Moyens : budget 3 $ ; PostGIS dans le conteneur ; branche `ccr-b52c1910-gjp34w`
-  - Dépend de : rien
 - [050-nemetonshiny-inventaire-video-carte-parametres](missions/050-nemetonshiny-inventaire-video-carte-parametres.md) · nemetonshiny · depuis le cycle 18
   - Homme : `dev` dans un worktree de nemetonshiny (session cloud), relu par le `relecteur`
   - Mission : carte des placettes sélectionnées ou non (clic = bascule), paramètres de génération dans Sources & paramètres, état du CVAT à l'écran
@@ -50,6 +45,11 @@ _Modèle de carte :_
 
 ## Terminé
 
+- [052-sommier-position-mesuree-controle](missions/052-sommier-position-mesuree-controle.md) · sommieR · depuis le cycle 18 · PR #87 fusionnée (988d6c8), pas de release
+  - Homme : `dev` dans un worktree de sommieR (session cloud), relu par le `relecteur`
+  - Mission : position mesurée du contrôle de placette gardée, importée de `positions_controles` et exposée dans `v_controle_plantation`
+  - Moyens : budget 3 $ ; PostGIS dans le conteneur ; branche `ccr-b52c1910-gjp34w`
+  - Dépend de : rien
 - [049-nemeton-era5-restes-039-042](missions/049-nemeton-era5-restes-039-042.md) · nemeton · depuis le cycle 18 · PR #698 fusionnée (33e861a), défaut de cache corrigé, pas de release
   - Homme : `dev` dans un worktree de nemeton (session cloud), relu par le `relecteur`
   - Mission : deux tests laissés par 039 et 042 (défaut `timeseries` à travers `regen_sensibilite()`, variable illisible sur la forme réelle du CDS)
