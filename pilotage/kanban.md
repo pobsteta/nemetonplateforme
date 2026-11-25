@@ -32,6 +32,11 @@ _Modèle de carte :_
 
 ## En cours
 
+- [053-foretaccess-cvat-nodata-distinct](missions/053-foretaccess-cvat-nodata-distinct.md) · foretaccess · depuis le cycle 18
+  - Homme : `dev` dans un worktree de foretaccess (session cloud), relu par le `relecteur`
+  - Mission : CVAT précalculé en relief 0 à 254, 255 réservé au nodata déclaré (suite de la relecture de 051)
+  - Moyens : budget 2 $ ; branche `ccr-b52c1910-gjp34w`
+  - Dépend de : rien
 - [051-nemeton-cvat-conversion-foretaccess](missions/051-nemeton-cvat-conversion-foretaccess.md) · nemeton · depuis le cycle 18
   - Homme : `dev` dans un worktree de nemeton (session cloud), relu par le `relecteur`
   - Mission : `cvat.tif` au codage de Groma (source foretaccess + 1, 255 → 0, format Groma recopié, autre codage refusé)
