@@ -32,6 +32,11 @@ _Modèle de carte :_
 
 ## En cours
 
+- [056-nemeton-projet-video-rapide-et-suivi](missions/056-nemeton-projet-video-rapide-et-suivi.md) · nemeton · depuis le cycle 18
+  - Homme : `dev` dans un worktree de nemeton (session cloud), relu par le `relecteur`
+  - Mission : houppiers en parallèle, rasters ouverts une fois, progression par étape avec durée
+  - Moyens : budget 3 $ ; branche `ccr-b52c1910-gjp34w`
+  - Dépend de : rien
 
 ## Terminé
 
