@@ -32,6 +32,16 @@ _Modèle de carte :_
 
 ## En cours
 
+- [051-nemeton-cvat-conversion-foretaccess](missions/051-nemeton-cvat-conversion-foretaccess.md) · nemeton · depuis le cycle 18
+  - Homme : `dev` dans un worktree de nemeton (session cloud), relu par le `relecteur`
+  - Mission : `cvat.tif` au codage de Groma (source foretaccess + 1, 255 → 0, format Groma recopié, autre codage refusé)
+  - Moyens : budget 2 $ ; branche `ccr-b52c1910-gjp34w`
+  - Dépend de : rien
+- [052-sommier-position-mesuree-controle](missions/052-sommier-position-mesuree-controle.md) · sommieR · depuis le cycle 18
+  - Homme : `dev` dans un worktree de sommieR (session cloud), relu par le `relecteur`
+  - Mission : position mesurée du contrôle de placette gardée, importée de `positions_controles` et exposée dans `v_controle_plantation`
+  - Moyens : budget 3 $ ; PostGIS dans le conteneur ; branche `ccr-b52c1910-gjp34w`
+  - Dépend de : rien
 - [050-nemetonshiny-inventaire-video-carte-parametres](missions/050-nemetonshiny-inventaire-video-carte-parametres.md) · nemetonshiny · depuis le cycle 18
   - Homme : `dev` dans un worktree de nemetonshiny (session cloud), relu par le `relecteur`
   - Mission : carte des placettes sélectionnées ou non (clic = bascule), paramètres de génération dans Sources & paramètres, état du CVAT à l'écran
