@@ -32,6 +32,11 @@ _Modèle de carte :_
 
 ## En cours
 
+- [066-nemetonshiny-itineraires](missions/066-nemetonshiny-itineraires.md) · nemetonshiny · depuis le cycle 18
+  - Homme : `dev` dans un worktree de nemetonshiny, relu par le `relecteur`
+  - Mission : itinéraires admissibles par UGF (raisons d'exclusion) et comparés sous le profil, poids provisoires
+  - Moyens : budget 5 $ ; branche `ccr-b52c1910-gjp34w`
+  - Dépend de : rien (#335 fusionnée)
 - [064-nemeton-deperis-decisions](missions/064-nemeton-deperis-decisions.md) · nemeton · depuis le cycle 18
   - Homme : `dev` dans un worktree de nemeton, relu par le `relecteur`
   - Mission : décisions DEPERIS de Pascal (délai, 30 m, graine du code) et brief de retour vers Ramulus
@@ -42,14 +47,14 @@ _Modèle de carte :_
   - Mission : plants vivants versés à l'aller, `SOMMIER_METHODES_POINTAGE`
   - Moyens : budget 4 $ ; PostGIS dans le conteneur ; branche `ccr-b52c1910-gjp34w`
   - Dépend de : rien
-- [063-nemetonshiny-b5-stratification](missions/063-nemetonshiny-b5-stratification.md) · nemetonshiny · depuis le cycle 18
+
+## Terminé
+
+- [063-nemetonshiny-b5-stratification](missions/063-nemetonshiny-b5-stratification.md) · nemetonshiny · depuis le cycle 18 · PR #335 fusionnée (f71798b), pas de release
   - Homme : `dev` dans un worktree de nemetonshiny (session cloud), relu par le `relecteur`
   - Mission : B5 calculé avec le nuage, statuts traduits, couche carte, profil vertical dans la fiche UGF
   - Moyens : budget 5 $ ; branche `ccr-b52c1910-gjp34w`
   - Dépend de : rien (#334 fusionnée)
-
-## Terminé
-
 - [062-sommier-demo-couchey-plants](missions/062-sommier-demo-couchey-plants.md) · sommieR · depuis le cycle 18 · PR #90 fusionnée (afba50b), pas de release
   - Homme : `dev` dans un worktree de sommieR (session cloud), relu par le `relecteur`
   - Mission : plants pointés et contrôlés (2023, 2025) dans la démo Couchey
