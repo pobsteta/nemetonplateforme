@@ -20,6 +20,7 @@
 - **Carte** : Leaflet, dans le volet « Préparer », à côté de la liste des placettes (qui reste). Point vert plein = sélectionnée, point gris creux = désélectionnée. Un clic sur un point bascule sa sélection, et la liste et la carte restent d'accord dans les deux sens. Le fond et le relief se font comme les cartes voisines (`mod_desserte.R` vers l. 900, avec le CVAT en fond s'il existe). Les étiquettes portent l'identifiant de la placette (P001…).
 - **Paramètres** : rayon, diamètre minimal, unité d'azimut et déclinaison passent dans `mod_sources_config`, comme options de l'app. Les défauts sont ceux d'aujourd'hui : 15 m, 7,5 cm, degrés, déclinaison vide (WMM2025 par placette). La vue n'en garde qu'un rappel d'une ligne (valeurs en cours et « À modifier dans Paramètres › Sources & paramètres. »). **La coche « Inclure MNT, MNH et houppiers » reste dans la vue** : c'est un choix propre à chaque génération.
 - **CVAT** : aucun calcul déclenché par cette vue (le calcul prend des minutes, voire environ 350 s sur une mosaïque à 0,5 m, et Pascal n'a pas tranché). Sous la coche, une ligne d'état dit « Relief CVAT : joint au projet » ou « Relief CVAT : absent — le calculer dans Accessibilité ». Cette ligne s'appuie sur `.video_cvat_path()`.
+- **CVAT, changé par Pascal le 2026-11-25** (« Calcule le CVAT quand il manque », remplace la ligne ci-dessus) : à l'arrivée sur la vue, si le CVAT manque et que le MNT est un LiDAR HD natif (pas le repli WMS), calcul en tâche de fond selon le patron de `mod_accessibility.R` l. 665-700 (`ExtendedTask`, `build_cvat_precomputed()`, idempotent, échec récent non rejoué) ; ligne d'état à trois états (joint, en cours, absent avec la raison) ; tests sans vrai calcul.
 
 ## Les sources à lire avant d'agir
 
@@ -47,5 +48,5 @@
 
 - **Agent :** `dev` (rôle du plugin `imperatrice`), dans un worktree de nemetonshiny. Relu par le `relecteur`.
 - **Moyens :** budget 3 $. La carte reste visible dans le conteneur par Playwright (`golem` lancé en local) si le `dev` le juge utile ; ce n'est pas exigé.
-- **Ce qui ne lui est pas demandé :** calculer le CVAT depuis cette vue ; toucher `nemeton` ; release, tag ou fusion ; ouvrir la PR.
+- **Ce qui ne lui est pas demandé :** toucher `nemeton` ; release, tag ou fusion ; ouvrir la PR.
 - **Dépend de / rouge attendu jusqu'à :** rien (aucune API nouvelle du cœur).
