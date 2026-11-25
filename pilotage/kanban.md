@@ -32,11 +32,6 @@ _Modèle de carte :_
 
 ## En cours
 
-- [053-foretaccess-cvat-nodata-distinct](missions/053-foretaccess-cvat-nodata-distinct.md) · foretaccess · depuis le cycle 18
-  - Homme : `dev` dans un worktree de foretaccess (session cloud), relu par le `relecteur`
-  - Mission : CVAT précalculé en relief 0 à 254, 255 réservé au nodata déclaré (suite de la relecture de 051)
-  - Moyens : budget 2 $ ; branche `ccr-b52c1910-gjp34w`
-  - Dépend de : rien
 - [051-nemeton-cvat-conversion-foretaccess](missions/051-nemeton-cvat-conversion-foretaccess.md) · nemeton · depuis le cycle 18
   - Homme : `dev` dans un worktree de nemeton (session cloud), relu par le `relecteur`
   - Mission : `cvat.tif` au codage de Groma (source foretaccess + 1, 255 → 0, format Groma recopié, autre codage refusé)
@@ -50,6 +45,11 @@ _Modèle de carte :_
 
 ## Terminé
 
+- [053-foretaccess-cvat-nodata-distinct](missions/053-foretaccess-cvat-nodata-distinct.md) · foretaccess · depuis le cycle 18 · PR #173 fusionnée (1940e9c), pas de release
+  - Homme : `dev` dans un worktree de foretaccess (session cloud), relu par le `relecteur`
+  - Mission : CVAT précalculé en relief 0 à 254, 255 réservé au nodata déclaré (suite de la relecture de 051)
+  - Moyens : budget 2 $ ; branche `ccr-b52c1910-gjp34w`
+  - Dépend de : rien
 - [052-sommier-position-mesuree-controle](missions/052-sommier-position-mesuree-controle.md) · sommieR · depuis le cycle 18 · PR #87 fusionnée (988d6c8), pas de release
   - Homme : `dev` dans un worktree de sommieR (session cloud), relu par le `relecteur`
   - Mission : position mesurée du contrôle de placette gardée, importée de `positions_controles` et exposée dans `v_controle_plantation`
