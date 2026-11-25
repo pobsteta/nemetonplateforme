@@ -32,6 +32,11 @@ _Modèle de carte :_
 
 ## En cours
 
+- [062-sommier-demo-couchey-plants](missions/062-sommier-demo-couchey-plants.md) · sommieR · depuis le cycle 18
+  - Homme : `dev` dans un worktree de sommieR (session cloud), relu par le `relecteur`
+  - Mission : plants pointés et contrôlés (2023, 2025) dans la démo Couchey
+  - Moyens : budget 3 $ ; PostGIS dans le conteneur ; branche `ccr-b52c1910-gjp34w`
+  - Dépend de : rien
 
 ## Terminé
 
