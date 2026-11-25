@@ -32,6 +32,11 @@ _Modèle de carte :_
 
 ## En cours
 
+- [054-sommier-lot2-plants](missions/054-sommier-lot2-plants.md) · sommieR · depuis le cycle 18
+  - Homme : `dev` dans un worktree de sommieR (session cloud), relu par le `relecteur`
+  - Mission : plants pointés et suivis de Surculus au registre 6 (`plant`, `r6-1.3.0`), import des couches de plants
+  - Moyens : budget 4 $ ; PostGIS dans le conteneur ; branche `ccr-b52c1910-gjp34w`
+  - Dépend de : rien (052 fusionnée)
 - [051-nemeton-cvat-conversion-foretaccess](missions/051-nemeton-cvat-conversion-foretaccess.md) · nemeton · depuis le cycle 18
   - Homme : `dev` dans un worktree de nemeton (session cloud), relu par le `relecteur`
   - Mission : `cvat.tif` au codage de Groma (source foretaccess + 1, 255 → 0, format Groma recopié, autre codage refusé)
