@@ -29,14 +29,14 @@ _Modèle de carte :_
 
 ## Planifié
 
+
+## En cours
+
 - [063-nemetonshiny-b5-stratification](missions/063-nemetonshiny-b5-stratification.md) · nemetonshiny · depuis le cycle 18
   - Homme : `dev` dans un worktree de nemetonshiny (session cloud), relu par le `relecteur`
   - Mission : B5 calculé avec le nuage, statuts traduits, couche carte, profil vertical dans la fiche UGF
   - Moyens : budget 5 $ ; branche `ccr-b52c1910-gjp34w`
-  - Dépend de : fusion de nemetonshiny #334
-
-## En cours
-
+  - Dépend de : rien (#334 fusionnée)
 
 ## Terminé
 

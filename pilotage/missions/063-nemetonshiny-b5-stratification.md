@@ -37,7 +37,8 @@
 1. Code réparti services / modules selon `CLAUDE.md`, tests ci-dessus.
 2. `.claude/test-command` de nemetonshiny s'il existe, sinon `devtools::test(filter = "<fichiers touchés>|i18n", stop_on_failure = TRUE)` ; sha, commande, code, durée, réussis/échoués/sautés.
 3. Cycle dev suivant dans `DESCRIPTION`, entrée NEWS. Ne pas toucher `nemeton/PLAN.md`.
-4. Commit sur `ccr-b52c1910-gjp34w`, push. L'orchestrateur ouvre la PR.
+4. Corriger au passage l'entrée NEWS des planchers (PR #334, mineurs du `relecteur`) : le test vérifie que **le plancher déclaré est au moins celui qui introduit** `ExtendedTask` / `input_task_button` / `bind_task_button` (pas « que chaque fonction existe »), et le compte exact d'appels bslib (recompter, ou ne pas donner de chiffre).
+5. Commit sur `ccr-b52c1910-gjp34w`, push. L'orchestrateur ouvre la PR.
 
 ## L'Homme
 
