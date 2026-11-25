@@ -32,6 +32,12 @@ _Modèle de carte :_
 
 ## En cours
 
+- [049-nemeton-era5-restes-039-042](missions/049-nemeton-era5-restes-039-042.md) · nemeton · depuis le cycle 18
+  - Homme : `dev` dans un worktree de nemeton (session cloud), relu par le `relecteur`
+  - Mission : deux tests laissés par 039 et 042 (défaut `timeseries` à travers `regen_sensibilite()`, variable illisible sur la forme réelle du CDS)
+  - Moyens : budget 2 $ ; branche `ccr-b52c1910-gjp34w` ; R installé dans le conteneur
+  - Dépend de : rien
+
 ## Terminé
 
 - [048-plateforme-plafond-reprise](missions/048-plateforme-plafond-reprise.md) · nemetonplateforme · depuis le cycle 16 · relue « prête » après un aller-retour, PR de pilotage fusionnée
