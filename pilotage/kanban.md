@@ -29,14 +29,14 @@ _Modèle de carte :_
 
 ## Planifié
 
+
+## En cours
+
 - [067-nemetonshiny-effet-gestion](missions/067-nemetonshiny-effet-gestion.md) · nemetonshiny · depuis le cycle 18
   - Homme : `dev` dans un worktree de nemetonshiny, relu par le `relecteur`
   - Mission : type de gestion saisi par UGF (liste fermée), tableau `effet_gestion()` dans la synthèse
   - Moyens : budget 5 $ ; branche `ccr-b52c1910-gjp34w`
-  - Dépend de : fusion de nemetonshiny #337
-
-## En cours
-
+  - Dépend de : rien (#337 fusionnée)
 
 ## Terminé
 
