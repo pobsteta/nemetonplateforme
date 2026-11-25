@@ -37,14 +37,13 @@ _Modèle de carte :_
   - Mission : itinéraires admissibles par UGF (raisons d'exclusion) et comparés sous le profil, poids provisoires
   - Moyens : budget 5 $ ; branche `ccr-b52c1910-gjp34w`
   - Dépend de : rien (#335 fusionnée)
-- [065-sommier-plants-aller-pointage](missions/065-sommier-plants-aller-pointage.md) · sommieR · depuis le cycle 18
+## Terminé
+
+- [065-sommier-plants-aller-pointage](missions/065-sommier-plants-aller-pointage.md) · sommieR · depuis le cycle 18 · PR #91 fusionnée (a586121), pas de release
   - Homme : `dev` dans un worktree de sommieR, relu par le `relecteur`
   - Mission : plants vivants versés à l'aller, `SOMMIER_METHODES_POINTAGE`
   - Moyens : budget 4 $ ; PostGIS dans le conteneur ; branche `ccr-b52c1910-gjp34w`
   - Dépend de : rien
-
-## Terminé
-
 - [064-nemeton-deperis-decisions](missions/064-nemeton-deperis-decisions.md) · nemeton · depuis le cycle 18 · PR #704 fusionnée (04849a3), pas de release
   - Homme : `dev` dans un worktree de nemeton, relu par le `relecteur`
   - Mission : décisions DEPERIS de Pascal (délai, 30 m, graine du code) et brief de retour vers Ramulus
