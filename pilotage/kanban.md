@@ -42,14 +42,14 @@ _Modèle de carte :_
   - Mission : `cvat.tif` au codage de Groma (source foretaccess + 1, 255 → 0, format Groma recopié, autre codage refusé)
   - Moyens : budget 2 $ ; branche `ccr-b52c1910-gjp34w`
   - Dépend de : rien
-- [050-nemetonshiny-inventaire-video-carte-parametres](missions/050-nemetonshiny-inventaire-video-carte-parametres.md) · nemetonshiny · depuis le cycle 18
+
+## Terminé
+
+- [050-nemetonshiny-inventaire-video-carte-parametres](missions/050-nemetonshiny-inventaire-video-carte-parametres.md) · nemetonshiny · depuis le cycle 18 · PR #330 fusionnée par Pascal (e8ab0f1), pas de release
   - Homme : `dev` dans un worktree de nemetonshiny (session cloud), relu par le `relecteur`
   - Mission : carte des placettes sélectionnées ou non (clic = bascule), paramètres de génération dans Sources & paramètres, état du CVAT à l'écran
   - Moyens : budget 3 $ ; branche `ccr-b52c1910-gjp34w` ; fusion par Pascal
   - Dépend de : rien
-
-## Terminé
-
 - [053-foretaccess-cvat-nodata-distinct](missions/053-foretaccess-cvat-nodata-distinct.md) · foretaccess · depuis le cycle 18 · PR #173 fusionnée (1940e9c), pas de release
   - Homme : `dev` dans un worktree de foretaccess (session cloud), relu par le `relecteur`
   - Mission : CVAT précalculé en relief 0 à 254, 255 réservé au nodata déclaré (suite de la relecture de 051)
