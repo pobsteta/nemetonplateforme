@@ -118,6 +118,8 @@
 | [046](missions/046-plateforme-rangement-bilan-era5.md) rangement du test du successeur | `nemetonplateforme` | `archiviste` | sonnet | appuyer | 3 oui | 16 |
 | [047](missions/047-plateforme-charge-restes-044.md) restes de la 044 (raison de mesure, ADR) | `nemetonplateforme` | `dev` | sonnet | appuyer | 3 oui | 16 |
 | [048](missions/048-plateforme-plafond-reprise.md) plafond de reprise à 4 $ | `nemetonplateforme` | `dev` | sonnet | appuyer | 3 oui | 16 |
+| [049](missions/049-nemeton-era5-liste-annees-vide.md) liste d'années ERA5 vide | `nemeton` | `dev` | sonnet | appuyer | 3 oui | 18 |
+| [050](missions/050-nemetonshiny-era5-textes-et-test.md) textes et test ERA5 `timeseries` | `nemetonshiny` | `dev` | sonnet | appuyer | 3 oui | 18 |
 
 Chaque mission est exécutée par une session ouverte dans le dépôt du projet (ADR 0001),
 relue par le `relecteur`, puis prouvée et fusionnée par l'orchestrateur (spec § 5).

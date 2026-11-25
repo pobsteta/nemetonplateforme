@@ -10,7 +10,7 @@
 > mission propre à un projet qui a son `pilotage/` reste dans le kanban de ce projet ;
 > ici, sa carte y renvoie par un lien, sans la recopier.
 
-**Dernier cycle :** 17 _(augmenté de 1 à la fin de chaque `/boucle`, même quand elle n'a
+**Dernier cycle :** 18 _(augmenté de 1 à la fin de chaque `/boucle`, même quand elle n'a
 rien lancé. Une carte est immobile quand dernier cycle − N ≥ 2.)_
 
 _Modèle de carte :_
@@ -33,6 +33,17 @@ _Modèle de carte :_
 ## En cours
 
 ## Terminé
+
+- [050-nemetonshiny-era5-textes-et-test](missions/050-nemetonshiny-era5-textes-et-test.md) · nemetonshiny · depuis le cycle 18 · relue « prête », PR nemetonshiny #329 fusionnée sur la demande de Pascal
+  - Homme : `dev` (sonnet) dans le clone de la session, relu par le `relecteur`
+  - Mission : test d'échec ERA5 sur la vraie condition du cœur, commentaires et infobulle `regen_engine_tip` remis d'accord avec `timeseries` ; 2026.11.6.9002, pas de release
+  - Moyens : clone de la session ; tests en CI seulement (`foretaccess` absent du conteneur)
+  - Dépend de : rien
+- [049-nemeton-era5-liste-annees-vide](missions/049-nemeton-era5-liste-annees-vide.md) · nemeton · depuis le cycle 18 · relue « prête », PR nemeton #697 fusionnée sur la demande de Pascal
+  - Homme : `dev` (sonnet) dans le clone de la session, relu par le `relecteur`
+  - Mission : liste d'années ERA5 vide refusée avec un message qui le dit ; 2026.11.45.9000, pas de release
+  - Moyens : clone de la session, R installé dans le conteneur
+  - Dépend de : rien
 
 - [048-plateforme-plafond-reprise](missions/048-plateforme-plafond-reprise.md) · nemetonplateforme · depuis le cycle 16 · relue « prête » après un aller-retour, PR de pilotage fusionnée
   - Homme : `dev` dans un worktree de ce dépôt (sonnet), relu par le `relecteur`
