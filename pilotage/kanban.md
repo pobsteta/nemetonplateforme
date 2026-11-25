@@ -32,6 +32,11 @@ _Modèle de carte :_
 
 ## En cours
 
+- [050-nemetonshiny-inventaire-video-carte-parametres](missions/050-nemetonshiny-inventaire-video-carte-parametres.md) · nemetonshiny · depuis le cycle 18
+  - Homme : `dev` dans un worktree de nemetonshiny (session cloud), relu par le `relecteur`
+  - Mission : carte des placettes sélectionnées ou non (clic = bascule), paramètres de génération dans Sources & paramètres, état du CVAT à l'écran
+  - Moyens : budget 3 $ ; branche `ccr-b52c1910-gjp34w` ; fusion par Pascal
+  - Dépend de : rien
 - [049-nemeton-era5-restes-039-042](missions/049-nemeton-era5-restes-039-042.md) · nemeton · depuis le cycle 18
   - Homme : `dev` dans un worktree de nemeton (session cloud), relu par le `relecteur`
   - Mission : deux tests laissés par 039 et 042 (défaut `timeseries` à travers `regen_sensibilite()`, variable illisible sur la forme réelle du CDS)
