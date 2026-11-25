@@ -15,7 +15,7 @@
 
 **Redite par l'agent :** _à compléter par l'agent avant d'agir — s'il n'y arrive pas, il s'arrête._
 
-## Choix pris par l'orchestrateur (prudents et réversibles, à confirmer par Pascal dans la PR)
+## Choix pris par l'orchestrateur, confirmés par Pascal le 2026-11-25 (« Oui pour les trois choix »)
 
 - **Carte** : Leaflet, dans le volet « Préparer », à côté de la liste des placettes (qui reste). Point vert plein = sélectionnée, point gris creux = désélectionnée. Un clic sur un point bascule sa sélection, et la liste et la carte restent d'accord dans les deux sens. Le fond et le relief se font comme les cartes voisines (`mod_desserte.R` vers l. 900, avec le CVAT en fond s'il existe). Les étiquettes portent l'identifiant de la placette (P001…).
 - **Paramètres** : rayon, diamètre minimal, unité d'azimut et déclinaison passent dans `mod_sources_config`, comme options de l'app. Les défauts sont ceux d'aujourd'hui : 15 m, 7,5 cm, degrés, déclinaison vide (WMM2025 par placette). La vue n'en garde qu'un rappel d'une ligne (valeurs en cours et « À modifier dans Paramètres › Sources & paramètres. »). **La coche « Inclure MNT, MNH et houppiers » reste dans la vue** : c'est un choix propre à chaque génération.
