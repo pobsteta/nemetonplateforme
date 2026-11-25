@@ -32,14 +32,14 @@ _Modèle de carte :_
 
 ## En cours
 
-- [062-sommier-demo-couchey-plants](missions/062-sommier-demo-couchey-plants.md) · sommieR · depuis le cycle 18
+
+## Terminé
+
+- [062-sommier-demo-couchey-plants](missions/062-sommier-demo-couchey-plants.md) · sommieR · depuis le cycle 18 · PR #90 fusionnée (afba50b), pas de release
   - Homme : `dev` dans un worktree de sommieR (session cloud), relu par le `relecteur`
   - Mission : plants pointés et contrôlés (2023, 2025) dans la démo Couchey
   - Moyens : budget 3 $ ; PostGIS dans le conteneur ; branche `ccr-b52c1910-gjp34w`
   - Dépend de : rien
-
-## Terminé
-
 - [061-nemeton-tournee-deperis](missions/061-nemeton-tournee-deperis.md) · nemeton · depuis le cycle 18 · PR #703 fusionnée (8862e55), pas de release
   - Homme : `dev` dans un worktree de nemeton (session cloud), relu par le `relecteur`
   - Mission : `creer_tournee_deperis()` et `importer_deperis()`, validées sur les cas communs de Ramulus
