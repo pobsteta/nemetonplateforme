@@ -37,14 +37,14 @@ _Modèle de carte :_
   - Mission : carte des placettes sélectionnées ou non (clic = bascule), paramètres de génération dans Sources & paramètres, état du CVAT à l'écran
   - Moyens : budget 3 $ ; branche `ccr-b52c1910-gjp34w` ; fusion par Pascal
   - Dépend de : rien
-- [049-nemeton-era5-restes-039-042](missions/049-nemeton-era5-restes-039-042.md) · nemeton · depuis le cycle 18
+
+## Terminé
+
+- [049-nemeton-era5-restes-039-042](missions/049-nemeton-era5-restes-039-042.md) · nemeton · depuis le cycle 18 · PR #698 fusionnée (33e861a), défaut de cache corrigé, pas de release
   - Homme : `dev` dans un worktree de nemeton (session cloud), relu par le `relecteur`
   - Mission : deux tests laissés par 039 et 042 (défaut `timeseries` à travers `regen_sensibilite()`, variable illisible sur la forme réelle du CDS)
   - Moyens : budget 2 $ ; branche `ccr-b52c1910-gjp34w` ; R installé dans le conteneur
   - Dépend de : rien
-
-## Terminé
-
 - [048-plateforme-plafond-reprise](missions/048-plateforme-plafond-reprise.md) · nemetonplateforme · depuis le cycle 16 · relue « prête » après un aller-retour, PR de pilotage fusionnée
   - Homme : `dev` dans un worktree de ce dépôt (sonnet), relu par le `relecteur`
   - Mission : `relance.sh` refuse une reprise au-delà de 4 $ cumulés et borne la passe à ce qui reste
