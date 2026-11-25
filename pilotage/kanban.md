@@ -32,6 +32,11 @@ _Modèle de carte :_
 
 ## En cours
 
+- [059-nemeton-projet-video-parallele-suite](missions/059-nemeton-projet-video-parallele-suite.md) · nemeton · depuis le cycle 18
+  - Homme : `dev` dans un worktree de nemeton (session cloud), relu par le `relecteur`
+  - Mission : placettes et dalles MNT en parallèle, un seul cluster par création
+  - Moyens : budget 3 $ ; branche `ccr-b52c1910-gjp34w`
+  - Dépend de : rien (056 fusionnée)
 - [058-nemetonshiny-progression-projet-video](missions/058-nemetonshiny-progression-projet-video.md) · nemetonshiny · depuis le cycle 18
   - Homme : `dev` dans un worktree de nemetonshiny (session cloud), relu par le `relecteur`
   - Mission : étape, compteur et temps de la création du projet vidéo affichés dans la vue
