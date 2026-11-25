@@ -32,6 +32,11 @@ _Modèle de carte :_
 
 ## En cours
 
+- [061-nemeton-tournee-deperis](missions/061-nemeton-tournee-deperis.md) · nemeton · depuis le cycle 18
+  - Homme : `dev` dans un worktree de nemeton (session cloud), relu par le `relecteur`
+  - Mission : `creer_tournee_deperis()` et `importer_deperis()`, validées sur les cas communs de Ramulus
+  - Moyens : budget 6 $ ; branche `ccr-b52c1910-gjp34w`
+  - Dépend de : rien (Ramulus 010 fusionnée)
 
 ## Terminé
 
