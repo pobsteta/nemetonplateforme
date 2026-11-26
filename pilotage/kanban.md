@@ -32,14 +32,14 @@ _Modèle de carte :_
 
 ## En cours
 
-- [067-nemetonshiny-effet-gestion](missions/067-nemetonshiny-effet-gestion.md) · nemetonshiny · depuis le cycle 18
+
+## Terminé
+
+- [067-nemetonshiny-effet-gestion](missions/067-nemetonshiny-effet-gestion.md) · nemetonshiny · depuis le cycle 18 · PR #338 fusionnée (e717220), pas de release
   - Homme : `dev` dans un worktree de nemetonshiny, relu par le `relecteur`
   - Mission : type de gestion saisi par UGF (liste fermée), tableau `effet_gestion()` dans la synthèse
   - Moyens : budget 5 $ ; branche `ccr-b52c1910-gjp34w`
   - Dépend de : rien (#337 fusionnée)
-
-## Terminé
-
 - [066-nemetonshiny-itineraires](missions/066-nemetonshiny-itineraires.md) · nemetonshiny · depuis le cycle 18 · PR #336 fusionnée (02f36e2), pas de release
   - Homme : `dev` dans un worktree de nemetonshiny, relu par le `relecteur`
   - Mission : itinéraires admissibles par UGF (raisons d'exclusion) et comparés sous le profil, poids provisoires
