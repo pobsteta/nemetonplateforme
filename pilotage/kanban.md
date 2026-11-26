@@ -29,6 +29,7 @@ _Modèle de carte :_
 
 ## Planifié
 
+- [084-nemetonshiny-synthese-sous-onglets](missions/084-nemetonshiny-synthese-sous-onglets.md) · nemetonshiny · après la PR #348
 
 ## En cours
 
