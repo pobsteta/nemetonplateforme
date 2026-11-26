@@ -29,6 +29,9 @@ _Modèle de carte :_
 
 ## Planifié
 
+- 076 nemeton · carte de classes du spike RECONFORT sur la grille IOTA², pour comparer les deux méthodes (demande de Pascal, 2026-11-26) · après #705
+- 075 nemeton · arrêt réel de RECONFORT/FORDEAD : annulation sondée pendant l'ingestion · après #705
+- 074 nemeton · calcul ICD (briefs `pilotage/briefs/brief-nemeton-icd-decoloration.md`) · après #705
 - 073 nemetonshiny · FORDEAD lancé par « Tout calculer » hors zone de calibration, avec avertissement (option A de Pascal) · après 072
 - 069 nemetonshiny · sources pente, desserte, aires protégées pour les itinéraires (décision 3 de Pascal, 2026-11-26) · après 068 (branche de session)
 - 070 nemetonshiny · Marculus, choix des actions à l'export (décision 10) · après 069
