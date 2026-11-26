@@ -29,16 +29,16 @@ _Modèle de carte :_
 
 ## Planifié
 
-- 080 nemetonshiny · source AlphaEarth et calcul de N5 (décision de Pascal) · après la 077
 - 078 nemetonshiny · vue « Ce que les modèles voient » (écart 25) · après 077
 
 ## En cours
 
-- [077-nemetonshiny-n5-embedding-ndp](missions/077-nemetonshiny-n5-embedding-ndp.md) · nemetonshiny · depuis le cycle 18
-  - Homme : `dev`, relu par le `relecteur` · Mission : écarts 20 à 22 (N5, B4/L3 embedding, flag NDP) · Moyens : 4 $ · Dépend de : rien
+- [080-nemetonshiny-source-alphaearth-n5](missions/080-nemetonshiny-source-alphaearth-n5.md) · nemetonshiny · depuis le cycle 18
+  - Homme : `dev`, relu par le `relecteur` · Mission : source AlphaEarth, N5 calculé, B4/L3 embedding · Moyens : 4 $ · Dépend de : rien
 
 ## Terminé
 
+- [077-nemetonshiny-n5-embedding-ndp](missions/077-nemetonshiny-n5-embedding-ndp.md) · nemetonshiny · PR #345 fusionnée (90923f4), pas de release
 - [079-sommier-brief-surculus-aller](missions/079-sommier-brief-surculus-aller.md) · sommieR → surculus · PR sommieR #92 fusionnée en squash (dfac77e), issue surculus#185 ouverte
 - [070-nemetonshiny-marculus-choix-export](missions/070-nemetonshiny-marculus-choix-export.md) · nemetonshiny · PR #344 fusionnée (721215c), pas de release
 - [069-nemetonshiny-itineraires-pente-desserte-protection](missions/069-nemetonshiny-itineraires-pente-desserte-protection.md) · nemetonshiny · PR #343 fusionnée (a7a38a7), pas de release
