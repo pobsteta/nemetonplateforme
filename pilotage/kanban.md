@@ -34,6 +34,11 @@ _Modèle de carte :_
 
 ## En cours
 
+- [071-nemeton-reconfort-lecture-fenetree](missions/071-nemeton-reconfort-lecture-fenetree.md) · nemeton · depuis le cycle 18
+  - Homme : `dev` dans un worktree de nemeton, relu par le `relecteur`
+  - Mission : RECONFORT lit les bandes MUSCATE par fenêtre (IOTA² gardé), comparaison archive/fenêtre et IOTA²/spike
+  - Moyens : budget 6 $ ; branche `ccr-b52c1910-gjp34w`
+  - Dépend de : rien
 - [068-nemetonshiny-reprises-itineraires-effet](missions/068-nemetonshiny-reprises-itineraires-effet.md) · nemetonshiny · depuis le cycle 18
   - Homme : `dev` dans un worktree de nemetonshiny, relu par le `relecteur`
   - Mission : détail des exclusions traduit, libellés complets, référence choisie, UGF exclues affichées, bouton à bordure
