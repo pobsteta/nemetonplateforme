@@ -32,11 +32,11 @@ _Modèle de carte :_
 
 ## En cours
 
-- [078-nemetonshiny-sondes-embeddings](missions/078-nemetonshiny-sondes-embeddings.md) · nemetonshiny · depuis le cycle 18
   - Homme : `dev`, relu par le `relecteur` · Mission : vue « Ce que les modèles voient » (écart 25) · Moyens : 3 $ · Dépend de : rien
 
 ## Terminé
 
+- [078-nemetonshiny-sondes-embeddings](missions/078-nemetonshiny-sondes-embeddings.md) · nemetonshiny · PR #347 fusionnée (2dda57b), pas de release · critère 3 de la spec 066 chez Pascal
 - [080-nemetonshiny-source-alphaearth-n5](missions/080-nemetonshiny-source-alphaearth-n5.md) · nemetonshiny · PR #346 fusionnée (55f66c4), pas de release
 - [081-alphaearthnemeton-release](missions/081-alphaearthnemeton-release.md) · alphaearthnemeton · PR #2 fusionnée (5d35ed6), release v2026.11.1 posée par la CI
 - [077-nemetonshiny-n5-embedding-ndp](missions/077-nemetonshiny-n5-embedding-ndp.md) · nemetonshiny · PR #345 fusionnée (90923f4), pas de release
