@@ -29,15 +29,15 @@ _Modèle de carte :_
 
 ## Planifié
 
-- [084-nemetonshiny-synthese-sous-onglets](missions/084-nemetonshiny-synthese-sous-onglets.md) · nemetonshiny · après la PR #348
 
 ## En cours
 
-- [083-nemetonshiny-schema-sql-et-mosaique](missions/083-nemetonshiny-schema-sql-et-mosaique.md) · nemetonshiny · depuis le 2026-11-26
+- [084-nemetonshiny-synthese-sous-onglets](missions/084-nemetonshiny-synthese-sous-onglets.md) · nemetonshiny · depuis le 2026-11-26
   - Homme : `dev`, relu par le `relecteur` · Mission : vue « Ce que les modèles voient » (écart 25) · Moyens : 3 $ · Dépend de : rien
 
 ## Terminé
 
+- [083-nemetonshiny-schema-sql-et-mosaique](missions/083-nemetonshiny-schema-sql-et-mosaique.md) · nemetonshiny · PR #348 fusionnée (e9925c9), pas de release
 - [082-nemeton-mosaique-dalles-crs](missions/082-nemeton-mosaique-dalles-crs.md) · nemeton · PR #708 fusionnée (d21af7b), pas de release
 - [078-nemetonshiny-sondes-embeddings](missions/078-nemetonshiny-sondes-embeddings.md) · nemetonshiny · PR #347 fusionnée (2dda57b), pas de release · critère 3 de la spec 066 chez Pascal
 - [080-nemetonshiny-source-alphaearth-n5](missions/080-nemetonshiny-source-alphaearth-n5.md) · nemetonshiny · PR #346 fusionnée (55f66c4), pas de release
