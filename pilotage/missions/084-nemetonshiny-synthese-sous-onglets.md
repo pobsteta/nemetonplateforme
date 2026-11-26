@@ -35,3 +35,7 @@ Code, tests, contrôle non ASCII dans `R/`, tests des fichiers touchés, `.claud
 ## L'Homme
 
 `dev`, worktree nemetonshiny ; relu par le `relecteur`. Budget 2 $. Dépend de : PR nemetonshiny #348 fusionnée.
+
+## Révision du 2026-11-26 (Pascal, sur capture)
+
+« Je veux la même chose [que dans Sélection : Carte cadastrale, Carte UGF, Tableau UGF] dans Synthèse : un premier Synthèse du projet, un 2e Ce que la gestion a produit sur ce massif et un dernier Ce que les modèles voient. » Trois onglets `navset_card_tab` comme `R/mod_home.R:215-234`, un module par onglet ; remplace la forme à deux sous-onglets (`navset_card_underline`) du premier rendu (f4906cd5).
