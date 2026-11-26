@@ -36,11 +36,10 @@ _Modèle de carte :_
 
 - [077-nemetonshiny-n5-embedding-ndp](missions/077-nemetonshiny-n5-embedding-ndp.md) · nemetonshiny · depuis le cycle 18
   - Homme : `dev`, relu par le `relecteur` · Mission : écarts 20 à 22 (N5, B4/L3 embedding, flag NDP) · Moyens : 4 $ · Dépend de : rien
-- [079-sommier-brief-surculus-aller](missions/079-sommier-brief-surculus-aller.md) · sommieR → surculus · depuis le cycle 18
-  - Homme : `dev`, relu par le `relecteur` · Mission : brief des trois écarts des plants à l'aller · Moyens : 2 $ · Dépend de : rien
 
 ## Terminé
 
+- [079-sommier-brief-surculus-aller](missions/079-sommier-brief-surculus-aller.md) · sommieR → surculus · PR sommieR #92 fusionnée en squash (dfac77e), issue surculus#185 ouverte
 - [070-nemetonshiny-marculus-choix-export](missions/070-nemetonshiny-marculus-choix-export.md) · nemetonshiny · PR #344 fusionnée (721215c), pas de release
 - [069-nemetonshiny-itineraires-pente-desserte-protection](missions/069-nemetonshiny-itineraires-pente-desserte-protection.md) · nemetonshiny · PR #343 fusionnée (a7a38a7), pas de release
 - [073-nemetonshiny-fordead-tout-calculer-hors-calibration](missions/073-nemetonshiny-fordead-tout-calculer-hors-calibration.md) · nemetonshiny · PR #342 fusionnée (fc5dd83), pas de release
