@@ -32,14 +32,10 @@ _Modèle de carte :_
 
 ## En cours
 
-- [070-nemetonshiny-marculus-choix-export](missions/070-nemetonshiny-marculus-choix-export.md) · nemetonshiny · depuis le cycle 18
-  - Homme : `dev` dans un worktree de nemetonshiny, relu par le `relecteur`
-  - Mission : fenêtre de choix des actions à l'export Marculus
-  - Moyens : budget 3 $ ; branche `ccr-b52c1910-gjp34w`
-  - Dépend de : rien
 
 ## Terminé
 
+- [070-nemetonshiny-marculus-choix-export](missions/070-nemetonshiny-marculus-choix-export.md) · nemetonshiny · PR #344 fusionnée (721215c), pas de release
 - [069-nemetonshiny-itineraires-pente-desserte-protection](missions/069-nemetonshiny-itineraires-pente-desserte-protection.md) · nemetonshiny · PR #343 fusionnée (a7a38a7), pas de release
 - [073-nemetonshiny-fordead-tout-calculer-hors-calibration](missions/073-nemetonshiny-fordead-tout-calculer-hors-calibration.md) · nemetonshiny · PR #342 fusionnée (fc5dd83), pas de release
 - [076-nemeton-reconfort-carte-spike](missions/076-nemeton-reconfort-carte-spike.md) · nemeton · PR #707 fusionnée (cf29142), pas de release
