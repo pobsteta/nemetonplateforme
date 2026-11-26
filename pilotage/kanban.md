@@ -29,6 +29,7 @@ _Modèle de carte :_
 
 ## Planifié
 
+- 080 nemetonshiny · source AlphaEarth et calcul de N5 (décision de Pascal) · après la 077
 - 078 nemetonshiny · vue « Ce que les modèles voient » (écart 25) · après 077
 
 ## En cours
