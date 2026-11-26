@@ -32,11 +32,11 @@ _Modèle de carte :_
 
 ## En cours
 
-- [085-nemeton-mnh-dalles-et-chm-derive](missions/085-nemeton-mnh-dalles-et-chm-derive.md) · nemeton · depuis le 2026-11-26 (urgent)
   - Homme : `dev`, relu par le `relecteur` · Mission : vue « Ce que les modèles voient » (écart 25) · Moyens : 3 $ · Dépend de : rien
 
 ## Terminé
 
+- [085-nemeton-mnh-dalles-et-chm-derive](missions/085-nemeton-mnh-dalles-et-chm-derive.md) · nemeton · PR #709 fusionnée (479ba13), pas de release · à rejouer chez Pascal sur Couchey
 - [086-nemetonshiny-houppiers-cause-reelle](missions/086-nemetonshiny-houppiers-cause-reelle.md) · nemetonshiny · PR #350 fusionnée (2c7cc8a), pas de release
 - [084-nemetonshiny-synthese-sous-onglets](missions/084-nemetonshiny-synthese-sous-onglets.md) · nemetonshiny · PR #349 fusionnée (6f9df89), pas de release
 - [083-nemetonshiny-schema-sql-et-mosaique](missions/083-nemetonshiny-schema-sql-et-mosaique.md) · nemetonshiny · PR #348 fusionnée (e9925c9), pas de release
