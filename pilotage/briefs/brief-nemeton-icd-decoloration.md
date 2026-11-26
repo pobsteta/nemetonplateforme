@@ -58,15 +58,15 @@ Défauts (fonction exportée `icd_poids_defaut()`, data.frame essence × indice 
 | Sapin / épicéa | 0,35 | 0,15 | 0,35 | — | 0,15 | juin – octobre |
 | Douglas | 0,45 | 0,15 | 0,25 | — | 0,15 | avril – septembre |
 
-- **Les poids sont un argument** (`poids = icd_poids_defaut()`), validé : 4 essences, 5 indices, valeurs ≥ 0, **CRre nul pour les résineux** (la note : CRre seulement pour les feuillus). La somme vaut 1 dans les défauts ; ce que fait le cœur d'une somme ≠ 1 est une question ouverte (voir plus bas).
-- Essence par pixel : BD Forêt V2, peuplements purs (TFV FF1G01-01 chêne, FF1-09-09 hêtre, FF2G61-61 sapin/épicéa, FF2-64-64 douglas), avec la lisière de 10 m retirée (§ 18, `buffer_interieur`). Les autres pixels n'ont **pas** d'ICD (statut dit, pas de valeur inventée).
+- **Les poids sont un argument** (`poids = icd_poids_defaut()`), validé : 4 essences, 5 indices, valeurs ≥ 0, **CRre nul pour les résineux** (la note : CRre seulement pour les feuillus). La somme vaut 1 dans les défauts ; **une somme différente de 1 est renormalisée à 1** par essence, et le cœur le dit (message et attribut des poids effectivement utilisés) (Pascal, 2026-11-26).
+- Essence par pixel : BD Forêt V2, peuplements purs (TFV FF1G01-01 chêne, FF1-09-09 hêtre, FF2G61-61 sapin/épicéa, FF2-64-64 douglas), avec la lisière de 10 m retirée (§ 18, `buffer_interieur`). Les autres pixels n'ont **pas** d'ICD (statut dit, pas de valeur inventée) — décidé par Pascal le 2026-11-26.
 
 ### 5. Alerte annuelle et niveaux (§ 8)
 
 - Classes : **Alerte** = ICD < −2 pendant au moins 2 mois valides consécutifs (date d'alerte = premier mois) ; **Surveillance** = ICD < −1,5 au moins un mois ; **Normal** sinon.
 - Niveaux 0 à 4 : 0 normal ; 1 surveillance ; 2 alerte ; 3 alerte forte (alerte et ICD minimal < −3) ; 4 alerte répétée (alerte cette année et sur la saison complète de l'année précédente).
 - Indice « à date » : chaque année recalculée sur les mêmes mois que ceux disponibles l'année en cours (un mois en cours n'est pris que s'il est entamé depuis au moins 20 jours).
-- Seuils (−1,5 / −2 / −3) et persistance (2) en arguments, défauts de la note. `niveaux_decoloration()` existe déjà dans `data-raw/etude_fast_decoloration/fonctions_comparaison.R` : le reprendre dans `R/` plutôt que réécrire.
+- Seuils (−1,5 / −2 / −3), persistance (2) et mois suivis : **fixés aux valeurs de la note** (seuls les poids sont modifiables, Pascal, 2026-11-26) ; constantes internes nommées, pas d'arguments exposés à l'app. `niveaux_decoloration()` existe déjà dans `data-raw/etude_fast_decoloration/fonctions_comparaison.R` : le reprendre dans `R/` plutôt que réécrire.
 
 ### 6. Sorties et accès (pour l'app)
 
@@ -82,11 +82,11 @@ Une fonction `comparer_fast_icd(zone, annee)` (nom à confirmer) : croisement de
 
 ## Tests attendus (sans réseau)
 
-Formules des 5 indices sur valeurs connues ; composite médiane et mois vide ; z avec plancher, année retirée, moins de 4 années → NA ; pixel coupé retiré dès le mois de coupe ; ICD avec poids par défaut et poids modifiés (le résultat change) ; CRre ignoré pour les résineux ; règles d'alerte (persistance, date d'alerte, 5 niveaux, indice à date) ; poids invalides refusés avec message ; série d'un pixel ; comparaison FAST × ICD sur petites cartes fabriquées. Aucun caractère non ASCII dans le code R.
+Formules des 5 indices sur valeurs connues ; composite médiane et mois vide ; z avec plancher, année retirée, moins de 4 années → NA ; pixel coupé retiré dès le mois de coupe ; ICD avec poids par défaut et poids modifiés (le résultat change) ; CRre ignoré pour les résineux ; règles d'alerte (persistance, date d'alerte, 5 niveaux, indice à date) ; poids invalides (négatifs, CRre non nul pour un résineux, essence manquante) refusés avec message ; somme ≠ 1 renormalisée et dite ; série d'un pixel ; comparaison FAST × ICD sur petites cartes fabriquées. Aucun caractère non ASCII dans le code R.
 
-## Questions ouvertes pour Pascal (à trancher avant la spec)
+## Décisions de Pascal (2026-11-26) sur les questions ouvertes
 
-1. Poids dont la somme n'est pas 1 : refuser, renormaliser, ou accepter tels quels ?
-2. Seuils, persistance et mois suivis : modifiables eux aussi, ou seulement les poids ?
-3. Pixels hors des 4 peuplements purs : pas d'ICD (proposé), ou poids génériques feuillus/résineux ?
-4. ICD dans « Tout calculer » : oui (proposé, après RECONFORT) ou non ?
+1. Poids dont la somme n'est pas 1 : **renormalisés à 1**.
+2. Paramètres modifiables : **seulement les poids** (seuils, persistance, mois restent ceux de la note).
+3. Pixels hors des 4 peuplements purs : **pas d'ICD**.
+4. ICD dans « Tout calculer » : **oui**, après RECONFORT.

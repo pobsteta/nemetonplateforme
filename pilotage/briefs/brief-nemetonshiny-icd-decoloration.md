@@ -37,19 +37,19 @@ Dans l'onglet ICD, un bloc « Comparaison avec FAST » pour la zone et l'année 
 
 ### 4. Sources & paramètres : poids de l'ICD (`R/mod_sources_config.R`)
 
-- Une section « ICD — poids de la formule » : tableau 4 essences × 5 indices en `numericInput` (pas 0,05, bornes 0-1), CRre désactivé pour sapin/épicéa et douglas ; rappel de la formule et du sens des signes.
+- Une section « ICD — poids de la formule » : tableau 4 essences × 5 indices en `numericInput` (pas 0,05, bornes 0-1), CRre désactivé pour sapin/épicéa et douglas ; rappel de la formule et du sens des signes. Une somme par essence différente de 1 est acceptée et **renormalisée à 1** par le cœur : l'app affiche la somme saisie et les poids effectivement utilisés. Seuls les poids sont modifiables (pas les seuils ni les mois).
 - Boutons « Valeurs par défaut » (`btn-outline-secondary`, valeurs de `nemeton::icd_poids_defaut()`) et « Enregistrer » (`btn-primary`), comme les paramètres ONF ; enregistrés **par projet** dans ses métadonnées (`set_project_icd_poids()` / `project_icd_poids()` dans un service), relus au calcul.
 - Modifier les poids invalide les résultats ICD affichés (même règle que la mission 068 pour l'effet de la gestion) : la carte dit « poids modifiés, relancer le calcul ».
 - Lecture seule (`deny_if_readonly`) respectée.
 
 ### 5. « Tout calculer »
 
-Étape `sante_icd` après `sante_reconfort` dans `PIPELINE_STEPS` (`R/service_pipeline.R`), sautée avec motif sans zone ou quand le calcul tourne déjà — **si Pascal le confirme** (question 4 du brief cœur).
+Étape `sante_icd` après `sante_reconfort` (et après `sante_fordead` dans la chaîne) dans `PIPELINE_STEPS` (`R/service_pipeline.R`), sautée avec motif sans zone ou quand le calcul tourne déjà — **si Pascal le confirme** (question 4 du brief cœur).
 
 ## Règles de l'app à respecter
 
 i18n partout, clés NMT ≤ 30 caractères, accents en `\uXXXX` ; aucun caractère non ASCII dans le code R ; couleurs de boutons (le calcul de l'ICD est l'action principale de l'onglet, `btn-primary` ; l'ICD n'est **pas** un contenu généré par IA : pas d'ambre) ; tests `testServer` (onglet présent après RECONFORT, clic → modale avec les deux graphiques, seuils tracés, CRre absent pour un résineux, poids enregistrés puis relus et passés au cœur, défauts restaurés, résultats invalidés après changement de poids, notification retirée à l'arrêt, comparaison FAST vide si FAST absent) avec le cœur simulé ; cycle dev, NEWS.
 
-## Questions ouvertes
+## Décisions de Pascal (2026-11-26)
 
-Celles du brief cœur (somme des poids, autres paramètres modifiables, pixels hors peuplements purs, « Tout calculer »).
+Somme des poids renormalisée à 1 ; seuls les poids modifiables ; pas d'ICD hors des 4 peuplements purs (pixels transparents, nombre et motif dits) ; ICD dans « Tout calculer ».
