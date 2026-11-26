@@ -29,26 +29,26 @@ _Modèle de carte :_
 
 ## Planifié
 
-- 076 nemeton · carte de classes du spike RECONFORT sur la grille IOTA², pour comparer les deux méthodes (demande de Pascal, 2026-11-26) · après #705
 - 073 nemetonshiny · FORDEAD lancé par « Tout calculer » hors zone de calibration, avec avertissement (option A de Pascal) · après 072
 - 069 nemetonshiny · sources pente, desserte, aires protégées pour les itinéraires (décision 3 de Pascal, 2026-11-26) · après 068 (branche de session)
 - 070 nemetonshiny · Marculus, choix des actions à l'export (décision 10) · après 069
 
 ## En cours
 
+- [076-nemeton-reconfort-carte-spike](missions/076-nemeton-reconfort-carte-spike.md) · nemeton · depuis le cycle 18
+  - Homme : `dev` dans un worktree de nemeton, relu par le `relecteur`
+  - Mission : carte de classes du spike RECONFORT alignée sur la carte IOTA², pour comparer
+  - Moyens : budget 4 $ ; branche `ccr-b52c1910-gjp34w`
+  - Dépend de : rien
 - [075-nemetonshiny-arret-reel-moteurs-plafonnes](missions/075-nemetonshiny-arret-reel-moteurs-plafonnes.md) · nemetonshiny · depuis le cycle 18
   - Homme : `dev` dans un worktree de nemetonshiny, relu par le `relecteur`
   - Mission : arrêt réel de RECONFORT/FORDEAD par le marqueur de run du cœur
   - Moyens : budget 4 $ ; branche `ccr-b52c1910-gjp34w`
   - Dépend de : rien
-- [074-nemeton-icd-decoloration](missions/074-nemeton-icd-decoloration.md) · nemeton · depuis le cycle 18
-  - Homme : `dev` dans un worktree de nemeton, relu par le `relecteur`
-  - Mission : spec 071 et calcul de l'ICD par zone (poids modifiables, série d'un pixel, comparaison FAST)
-  - Moyens : budget 8 $ ; branche `ccr-b52c1910-gjp34w`
-  - Dépend de : rien
 
 ## Terminé
 
+- [074-nemeton-icd-decoloration](missions/074-nemeton-icd-decoloration.md) · nemeton · PR #706 fusionnée (7a06ef0), pas de release ; mesure réelle sur Sentinel-2 avant release
 - [072-nemetonshiny-toast-reconfort-arret](missions/072-nemetonshiny-toast-reconfort-arret.md) · nemetonshiny · PR #340 fusionnée (2276e44), pas de release
 - [071-nemeton-reconfort-lecture-fenetree](missions/071-nemeton-reconfort-lecture-fenetree.md) · nemeton · PR #705 fusionnée (ca1a252), pas de release
 - [068-nemetonshiny-reprises-itineraires-effet](missions/068-nemetonshiny-reprises-itineraires-effet.md) · nemetonshiny · depuis le cycle 18 · PR #339 fusionnée (de24628), pas de release
