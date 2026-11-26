@@ -29,9 +29,16 @@ _Modèle de carte :_
 
 ## Planifié
 
+- 069 nemetonshiny · sources pente, desserte, aires protégées pour les itinéraires (décision 3 de Pascal, 2026-11-26) · après 068 (branche de session)
+- 070 nemetonshiny · Marculus, choix des actions à l'export (décision 10) · après 069
 
 ## En cours
 
+- [068-nemetonshiny-reprises-itineraires-effet](missions/068-nemetonshiny-reprises-itineraires-effet.md) · nemetonshiny · depuis le cycle 18
+  - Homme : `dev` dans un worktree de nemetonshiny, relu par le `relecteur`
+  - Mission : détail des exclusions traduit, libellés complets, référence choisie, UGF exclues affichées, bouton à bordure
+  - Moyens : budget 4 $ ; branche `ccr-b52c1910-gjp34w`
+  - Dépend de : rien
 
 ## Terminé
 
