@@ -29,6 +29,7 @@ _Modèle de carte :_
 
 ## Planifié
 
+- 073 nemetonshiny · FORDEAD lancé par « Tout calculer » hors zone de calibration, avec avertissement (option A de Pascal) · après 072
 - 072 nemetonshiny · toast RECONFORT qui reste après l'arrêt de « Tout calculer » (constat de Pascal, 2026-11-26) · après fusion de #339, avant 069
 - 069 nemetonshiny · sources pente, desserte, aires protégées pour les itinéraires (décision 3 de Pascal, 2026-11-26) · après 068 (branche de session)
 - 070 nemetonshiny · Marculus, choix des actions à l'export (décision 10) · après 069
