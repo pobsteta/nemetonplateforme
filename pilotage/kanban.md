@@ -32,6 +32,8 @@ _Modèle de carte :_
 
 ## En cours
 
+- [085-nemeton-mnh-dalles-et-chm-derive](missions/085-nemeton-mnh-dalles-et-chm-derive.md) · nemeton · depuis le 2026-11-26 (urgent)
+- [086-nemetonshiny-houppiers-cause-reelle](missions/086-nemetonshiny-houppiers-cause-reelle.md) · nemetonshiny · depuis le 2026-11-26
   - Homme : `dev`, relu par le `relecteur` · Mission : vue « Ce que les modèles voient » (écart 25) · Moyens : 3 $ · Dépend de : rien
 
 ## Terminé
