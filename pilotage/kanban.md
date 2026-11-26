@@ -38,6 +38,7 @@ _Modèle de carte :_
 
 ## Terminé
 
+- [081-alphaearthnemeton-release](missions/081-alphaearthnemeton-release.md) · alphaearthnemeton · PR #2 fusionnée (5d35ed6), release v2026.11.1 posée par la CI
 - [077-nemetonshiny-n5-embedding-ndp](missions/077-nemetonshiny-n5-embedding-ndp.md) · nemetonshiny · PR #345 fusionnée (90923f4), pas de release
 - [079-sommier-brief-surculus-aller](missions/079-sommier-brief-surculus-aller.md) · sommieR → surculus · PR sommieR #92 fusionnée en squash (dfac77e), issue surculus#185 ouverte
 - [070-nemetonshiny-marculus-choix-export](missions/070-nemetonshiny-marculus-choix-export.md) · nemetonshiny · PR #344 fusionnée (721215c), pas de release
