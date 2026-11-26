@@ -32,6 +32,8 @@ _Modèle de carte :_
 
 ## En cours
 
+- [082-nemeton-mosaique-dalles-crs](missions/082-nemeton-mosaique-dalles-crs.md) · nemeton · depuis le 2026-11-26
+- [083-nemetonshiny-schema-sql-et-mosaique](missions/083-nemetonshiny-schema-sql-et-mosaique.md) · nemetonshiny · depuis le 2026-11-26
   - Homme : `dev`, relu par le `relecteur` · Mission : vue « Ce que les modèles voient » (écart 25) · Moyens : 3 $ · Dépend de : rien
 
 ## Terminé
