@@ -39,14 +39,10 @@ _Modèle de carte :_
   - Mission : FORDEAD lancé par « Tout calculer » hors zone de calibration, avec avertissement
   - Moyens : budget 3 $ ; branche `ccr-b52c1910-gjp34w`
   - Dépend de : rien
-- [076-nemeton-reconfort-carte-spike](missions/076-nemeton-reconfort-carte-spike.md) · nemeton · depuis le cycle 18
-  - Homme : `dev` dans un worktree de nemeton, relu par le `relecteur`
-  - Mission : carte de classes du spike RECONFORT alignée sur la carte IOTA², pour comparer
-  - Moyens : budget 4 $ ; branche `ccr-b52c1910-gjp34w`
-  - Dépend de : rien
 
 ## Terminé
 
+- [076-nemeton-reconfort-carte-spike](missions/076-nemeton-reconfort-carte-spike.md) · nemeton · PR #707 fusionnée (cf29142), pas de release
 - [075-nemetonshiny-arret-reel-moteurs-plafonnes](missions/075-nemetonshiny-arret-reel-moteurs-plafonnes.md) · nemetonshiny · PR #341 fusionnée (45057e1), pas de release
 - [074-nemeton-icd-decoloration](missions/074-nemeton-icd-decoloration.md) · nemeton · PR #706 fusionnée (7a06ef0), pas de release ; mesure réelle sur Sentinel-2 avant release
 - [072-nemetonshiny-toast-reconfort-arret](missions/072-nemetonshiny-toast-reconfort-arret.md) · nemetonshiny · PR #340 fusionnée (2276e44), pas de release
