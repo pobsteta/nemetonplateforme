@@ -29,9 +29,14 @@ _Modèle de carte :_
 
 ## Planifié
 
+- 078 nemetonshiny · vue « Ce que les modèles voient » (écart 25) · après 077
 
 ## En cours
 
+- [077-nemetonshiny-n5-embedding-ndp](missions/077-nemetonshiny-n5-embedding-ndp.md) · nemetonshiny · depuis le cycle 18
+  - Homme : `dev`, relu par le `relecteur` · Mission : écarts 20 à 22 (N5, B4/L3 embedding, flag NDP) · Moyens : 4 $ · Dépend de : rien
+- [079-sommier-brief-surculus-aller](missions/079-sommier-brief-surculus-aller.md) · sommieR → surculus · depuis le cycle 18
+  - Homme : `dev`, relu par le `relecteur` · Mission : brief des trois écarts des plants à l'aller · Moyens : 2 $ · Dépend de : rien
 
 ## Terminé
 
