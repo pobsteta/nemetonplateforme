@@ -48,6 +48,9 @@ _Modèle de carte :_
 
 ## Terminé
 
+- [068-nemetonshiny-reprises-itineraires-effet](missions/068-nemetonshiny-reprises-itineraires-effet.md) · nemetonshiny · depuis le cycle 18 · PR #339 fusionnée (de24628), pas de release
+  - Homme : `dev` dans un worktree de nemetonshiny, relu par le `relecteur`
+  - Mission : détail des exclusions traduit, libellés complets, référence choisie, UGF exclues affichées, bouton à bordure
 - [067-nemetonshiny-effet-gestion](missions/067-nemetonshiny-effet-gestion.md) · nemetonshiny · depuis le cycle 18 · PR #338 fusionnée (e717220), pas de release
   - Homme : `dev` dans un worktree de nemetonshiny, relu par le `relecteur`
   - Mission : type de gestion saisi par UGF (liste fermée), tableau `effet_gestion()` dans la synthèse
