@@ -30,21 +30,20 @@ _Modèle de carte :_
 ## Planifié
 
 - 073 nemetonshiny · FORDEAD lancé par « Tout calculer » hors zone de calibration, avec avertissement (option A de Pascal) · après 072
-- 072 nemetonshiny · toast RECONFORT qui reste après l'arrêt de « Tout calculer » (constat de Pascal, 2026-11-26) · après fusion de #339, avant 069
 - 069 nemetonshiny · sources pente, desserte, aires protégées pour les itinéraires (décision 3 de Pascal, 2026-11-26) · après 068 (branche de session)
 - 070 nemetonshiny · Marculus, choix des actions à l'export (décision 10) · après 069
 
 ## En cours
 
+- [072-nemetonshiny-toast-reconfort-arret](missions/072-nemetonshiny-toast-reconfort-arret.md) · nemetonshiny · depuis le cycle 18
+  - Homme : `dev` dans un worktree de nemetonshiny, relu par le `relecteur`
+  - Mission : notifications de progression retirées à l'arrêt, arrêt réel du moteur Python (kill_tree), message clair sur verrou RECONFORT
+  - Moyens : budget 4 $ ; branche `ccr-b52c1910-gjp34w`
+  - Dépend de : rien
 - [071-nemeton-reconfort-lecture-fenetree](missions/071-nemeton-reconfort-lecture-fenetree.md) · nemeton · depuis le cycle 18
   - Homme : `dev` dans un worktree de nemeton, relu par le `relecteur`
   - Mission : RECONFORT lit les bandes MUSCATE par fenêtre (IOTA² gardé), comparaison archive/fenêtre et IOTA²/spike
   - Moyens : budget 6 $ ; branche `ccr-b52c1910-gjp34w`
-  - Dépend de : rien
-- [068-nemetonshiny-reprises-itineraires-effet](missions/068-nemetonshiny-reprises-itineraires-effet.md) · nemetonshiny · depuis le cycle 18
-  - Homme : `dev` dans un worktree de nemetonshiny, relu par le `relecteur`
-  - Mission : détail des exclusions traduit, libellés complets, référence choisie, UGF exclues affichées, bouton à bordure
-  - Moyens : budget 4 $ ; branche `ccr-b52c1910-gjp34w`
   - Dépend de : rien
 
 ## Terminé
