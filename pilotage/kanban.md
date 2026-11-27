@@ -30,9 +30,9 @@ _Modèle de carte :_
 ## Planifié
 
 - [096-nemeton-source-s2-globale](missions/096-nemeton-source-s2-globale.md) · nemeton · après #710, 089 et 095
-- [089-nemeton-reconfort-repli-archive](missions/089-nemeton-reconfort-repli-archive.md) · nemeton · après la PR #710
 
 ## En cours
+- [089-nemeton-reconfort-repli-archive](missions/089-nemeton-reconfort-repli-archive.md) · nemeton (worktree wt-089) · depuis le 2026-11-27
 - [097-nemetonshiny-marculus-format-csv-9](missions/097-nemetonshiny-marculus-format-csv-9.md) · nemetonshiny (worktree wt-097) · depuis le 2026-11-27
 
   - Homme : `dev`, relu par le `relecteur` · Mission : vue « Ce que les modèles voient » (écart 25) · Moyens : 3 $ · Dépend de : rien
