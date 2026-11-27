@@ -706,3 +706,19 @@
 2026-11-27 · fusion · 097 · nemetonshiny PR #353 fusionnée (commit de fusion 17f8115) sur 5b16c037f : les 6 contrôles sont verts (R-CMD-check, R-CMD-check-oldrel, tests, version-consistency, pkgdown, coverage) · cycle dev 2026.11.6.9027, pas de release · les volumes du format CSV 9 de Marculus sont lus par l'app.
 2026-11-27 · fusion · 089 · nemeton PR #712 fusionnée (commit de fusion 2fae116) sur c6c536069 : R-CMD-check, tests, version-consistency, pkgdown et coverage verts · cycle dev 2026.11.46.9001, pas de release · reste à vérifier chez Pascal, sur un vrai run RECONFORT, que l'avertissement `future` « added connections » a disparu · prochaine mission : 096 (choix global de la source S2).
 2026-11-27 · décision · Pascal · source Sentinel-2 par défaut **par méthode** : chaque méthode reste sur sa source de calage (RECONFORT = THEIA, FAST/FORDEAD/ICD = Sen2Cor) ; le choix global par projet reste possible. Cela remplace « THEIA par défaut partout » à la lumière des études 092 et 093 (non interchangeables) · fiche 096 mise à jour, lancement : `dev` dans le worktree `/home/user/wt-096` (branche `travail-096` issue d'origin/main 2fae116), budget 6 $.
+2026-11-27 · dev · 096 · rendu, sha 9ba9f1dbc. Rejoué par l'orchestrateur :
+  - source-s2 76/0/0, reconfort-pipeline 198/0/0, isolate 56/0/4 ;
+  - icd 209/0/0, fordead-pipeline 109/0/0, fast-alert-raster 77/0/1.
+  - Comparaison des deux sources sur Couchey : non faite, faute de cache Sen2Cor, de PostGIS et de fordead.
+2026-11-27 · relecture · 096 · verdict « à corriger ».
+  - Caractères non ASCII et message en français dans `R/source_s2.R:82-83` : bloquant pour la CI.
+  - Le repli MUSCATE de la voie par défaut a été retiré, alors que la fiche exige « à l'identique ».
+  - Nouvel avertissement pour RECONFORT quand `acquisition = "sen2cor"` est explicite.
+  - Conflit de sens sur `validee`.
+  - Heuristique de panne en cours de lecture trop étroite (la forme GDAL `HTTP response code …: 503` n'est pas reconnue) et sans bornes ; 401/403 non classés en cours de série.
+  - Une recherche THEIA qui échoue rend une table vide sans déclencher le repli.
+  - Métadonnées incohérentes : `source_s2` imbriqué pour l'ICD, `repli_sen2cor` faux après un repli, `demandee` faux pour RECONFORT.
+  - Mineur : résultats FORDEAD dans un dossier commun aux deux sources ; avertissement FAST à chaque lecture ; un test fige le texte cli « skipped ».
+2026-11-27 · décision · orchestrateur (consigne de Pascal « projets existants à l'identique ») · sans `source_s2`, le repli MUSCATE historique est rétabli ; il n'est restreint à `c("cdse","pc")` que si `source_s2 = "sen2cor"` est écrit.
+2026-11-27 · décision · Pascal · « supprimer `validee` » : le champ disparaît des métadonnées (run_meta, meta.json, tags GeoTIFF `VALIDEE`, retour de `s2_source_resoudre()`), y compris la voie Sen2Cor de RECONFORT posée par la 095 ; restent `calee_sur` et la source effective, et l'app déduit « indicatif » en les comparant. L'app ne lit pas aujourd'hui `validee` de RECONFORT (vérifié par grep dans nemetonshiny/R).
+2026-11-27 · relance · 096 · corrections confiées à un nouveau `dev` (le premier s'est arrêté au redémarrage du conteneur), même worktree `/home/user/wt-096`.
