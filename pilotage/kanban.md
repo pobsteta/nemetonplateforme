@@ -29,9 +29,11 @@ _Modèle de carte :_
 
 ## Planifié
 
+- [088-nemetonshiny-onglet-icd](missions/088-nemetonshiny-onglet-icd.md) · nemetonshiny · après la release nemeton 2026.11.46
 
 ## En cours
 
+- [087-nemeton-release-2026-11-46](missions/087-nemeton-release-2026-11-46.md) · nemeton · depuis le 2026-11-27
   - Homme : `dev`, relu par le `relecteur` · Mission : vue « Ce que les modèles voient » (écart 25) · Moyens : 3 $ · Dépend de : rien
 
 ## Terminé
