@@ -1,0 +1,3 @@
+votes identiques a ceux de la 091 : True
+classe identique a IOTA2 : 25 / 30
+ecart absolu moyen des votes : 70.6

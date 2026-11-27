@@ -1,0 +1,6 @@
+pile,maja_ok_pile_ko,maja_ko_pile_ok,z,accord_pile_avec_iota2,accord_maja_avec_iota2
+s2c,152,45,7.62,0.697,0.804
+s2c_affine_par_date,164,91,4.57,0.731,0.804
+s2c_affine_totale,114,73,3.0,0.763,0.804
+s2c_biais_seul,112,61,3.88,0.753,0.804
+s2c_regression_inverse,232,33,12.22,0.605,0.804

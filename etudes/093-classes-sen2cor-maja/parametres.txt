@@ -1,0 +1,13 @@
+coef_par_date_CRswir_a_b: (np.float64(0.10942602248491058), np.float64(0.8980838099414025))
+coef_par_date_CRre_a_b: (np.float64(0.14562205998620945), np.float64(0.8258999002710233))
+coef_total_CRswir_a_b: (0.0448235241660653, 0.965566920558972)
+coef_total_CRre_a_b: (0.0494069782099931, 0.965683839810507)
+jours_maja_avec_au_moins_un_pixel_valide: 59
+jours_sen2cor_avec_au_moins_un_pixel_valide: 103
+coef_regression_inverse_CRswir_a_b: (np.float64(0.06408067948829684), np.float64(0.9251963257233594))
+coef_regression_inverse_CRre_a_b: (np.float64(0.11733667936424023), np.float64(0.8157916699425048))
+biais_moyen_par_date_CRswir_CRre: (np.float64(0.011215741943559105), np.float64(0.025805809194198708))
+obs_valides_par_pixel_maja_med_min_max: (40.0, 33, 46)
+obs_valides_par_pixel_s2c_med_min_max: (53.0, 37, 62)
+obs_valides_maja_memes_jours_que_s2c_med: 40.0
+obs_valides_s2c_aux_jours_maja_med_min_max: (46.0, 35, 52)

@@ -1,0 +1,12 @@
+pile,classe1,classe2,classe3,non_predits
+maja,350,182,468,0
+s2c,298,123,579,0
+s2c_affine_par_date,517,158,325,0
+s2c_affine_totale,402,150,448,0
+s2c_biais_seul,358,150,492,0
+s2c_regression_inverse,203,135,662,0
+maja_memes_jours_que_s2c,348,181,471,0
+s2c_memes_jours_que_maja,260,114,626,0
+maja_jusqu_au_29_oct,354,192,454,0
+s2c_jusqu_au_29_oct,300,133,567,0
+iota2,501,98,401,0
