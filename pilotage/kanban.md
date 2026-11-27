@@ -29,9 +29,9 @@ _Modèle de carte :_
 
 ## Planifié
 
-- [096-nemeton-source-s2-globale](missions/096-nemeton-source-s2-globale.md) · nemeton · après #710, 089 et 095
 
 ## En cours
+- [096-nemeton-source-s2-globale](missions/096-nemeton-source-s2-globale.md) · nemeton (worktree wt-096) · depuis le 2026-11-27
 
   - Homme : `dev`, relu par le `relecteur` · Mission : vue « Ce que les modèles voient » (écart 25) · Moyens : 3 $ · Dépend de : rien
 
