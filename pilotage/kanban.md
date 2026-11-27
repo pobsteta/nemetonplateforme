@@ -34,6 +34,8 @@ _Modèle de carte :_
 
 ## En cours
 
+- [091-etude-modele-reconfort-v3](missions/091-etude-modele-reconfort-v3.md) · nemetonplateforme (étude) · depuis le 2026-11-27
+- [092-etude-sen2cor-contre-maja](missions/092-etude-sen2cor-contre-maja.md) · nemetonplateforme (étude) · depuis le 2026-11-27, côté MAJA en attente de THEIA
 - [087-nemeton-release-2026-11-46](missions/087-nemeton-release-2026-11-46.md) · nemeton · depuis le 2026-11-27
   - Homme : `dev`, relu par le `relecteur` · Mission : vue « Ce que les modèles voient » (écart 25) · Moyens : 3 $ · Dépend de : rien
 
