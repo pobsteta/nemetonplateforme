@@ -722,3 +722,11 @@
 2026-11-27 · décision · orchestrateur (consigne de Pascal « projets existants à l'identique ») · sans `source_s2`, le repli MUSCATE historique est rétabli ; il n'est restreint à `c("cdse","pc")` que si `source_s2 = "sen2cor"` est écrit.
 2026-11-27 · décision · Pascal · « supprimer `validee` » : le champ disparaît des métadonnées (run_meta, meta.json, tags GeoTIFF `VALIDEE`, retour de `s2_source_resoudre()`), y compris la voie Sen2Cor de RECONFORT posée par la 095 ; restent `calee_sur` et la source effective, et l'app déduit « indicatif » en les comparant. L'app ne lit pas aujourd'hui `validee` de RECONFORT (vérifié par grep dans nemetonshiny/R).
 2026-11-27 · relance · 096 · corrections confiées à un nouveau `dev` (le premier s'est arrêté au redémarrage du conteneur), même worktree `/home/user/wt-096`.
+2026-11-27 · dev · 096 · corrections faites (c6e03b403, nouveau commit, pas de force-push) :
+  - les 8 points de la relecture ;
+  - `validee` supprimé ;
+  - le repli MUSCATE rétabli sans `source_s2` ;
+  - bug trouvé et corrigé : le repli de l'ICD en cours de série était rattrapé par le gestionnaire `error`.
+  Ajout hors liste : la conversion CLM → SCL est gardée par l'option `nemeton.s2_muscate_clm`, posée seulement quand THEIA est demandé.
+  Rejoué par l'orchestrateur : source-s2 137/0/0, icd 242/0/0, fordead-pipeline 139/0/0, fast-alert-raster 93/0/1, reconfort-pipeline 219/0/0 (22 warnings, comme main), reconfort-sen2cor 39/0/0 ; ASCII propre.
+  PR nemeton #713 ouverte en brouillon, abonnée.

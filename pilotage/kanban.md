@@ -31,7 +31,7 @@ _Modèle de carte :_
 
 
 ## En cours
-- [096-nemeton-source-s2-globale](missions/096-nemeton-source-s2-globale.md) · nemeton (worktree wt-096) · depuis le 2026-11-27
+- [096-nemeton-source-s2-globale](missions/096-nemeton-source-s2-globale.md) · nemeton · PR #713 en CI · depuis le 2026-11-27
 
   - Homme : `dev`, relu par le `relecteur` · Mission : vue « Ce que les modèles voient » (écart 25) · Moyens : 3 $ · Dépend de : rien
 
