@@ -692,3 +692,4 @@
   - Rejoué par l'orchestrateur : pipeline 198/0/0, sen2cor 38/0/0, isolate 52/0/4, fenetre 57/0/1, ingest 123/1/0. Le dev donne l'échec d'ingest (l. 802) comme identique sur origin/main ; la CI de main était verte, c'est donc vraisemblablement propre au conteneur. La relecture le vérifie.
   - Relecture en cours.
   - Questions du dev : l'avertissement de repli est en français alors que le CLAUDE.md de nemeton veut l'anglais (je suivrai le CLAUDE.md du dépôt) ; `causes_repli` est désormais écrit pour toutes les voies.
+2026-11-27 · décision · Pascal · « oui, messages en anglais » : l'avertissement de repli de la 089 (et tout message cli de nemeton) est écrit en anglais, comme le veut le CLAUDE.md de nemeton ; à corriger après la relecture.
