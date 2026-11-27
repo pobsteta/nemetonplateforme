@@ -34,12 +34,12 @@ _Modèle de carte :_
 
 ## En cours
 
-- [090-nemetonshiny-message-erreur-lisible](missions/090-nemetonshiny-message-erreur-lisible.md) · nemetonshiny · depuis le 2026-11-27
 - [087-nemeton-release-2026-11-46](missions/087-nemeton-release-2026-11-46.md) · nemeton · depuis le 2026-11-27
   - Homme : `dev`, relu par le `relecteur` · Mission : vue « Ce que les modèles voient » (écart 25) · Moyens : 3 $ · Dépend de : rien
 
 ## Terminé
 
+- [090-nemetonshiny-message-erreur-lisible](missions/090-nemetonshiny-message-erreur-lisible.md) · nemetonshiny · PR #351 fusionnée (1334911), pas de release
 - [085-nemeton-mnh-dalles-et-chm-derive](missions/085-nemeton-mnh-dalles-et-chm-derive.md) · nemeton · PR #709 fusionnée (479ba13), pas de release · à rejouer chez Pascal sur Couchey
 - [086-nemetonshiny-houppiers-cause-reelle](missions/086-nemetonshiny-houppiers-cause-reelle.md) · nemetonshiny · PR #350 fusionnée (2c7cc8a), pas de release
 - [084-nemetonshiny-synthese-sous-onglets](missions/084-nemetonshiny-synthese-sous-onglets.md) · nemetonshiny · PR #349 fusionnée (6f9df89), pas de release
