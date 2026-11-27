@@ -19,6 +19,13 @@
 #   --max-scenes=0                   0 = toutes ; sinon les N premieres dates
 #   --foret=oui|non                  masque arbres ESA WorldCover (via PC)
 #   --scl=4,5                        classes SCL gardees cote Sen2Cor
+#   --maja-dir=<dossier>             cote MAJA LOCAL : dossier `extracted/T31TFN`
+#        (scenes SENTINEL2*_FRE_B*.tif et MASKS/*_CLM_R2 deja decoupees, L93 10 m) ;
+#        remplace la lecture THEIA, la grille et l'emprise viennent des scenes
+#   --oso=<fichier>                  masque feuillus OSO (1 = feuillus), optionnel
+#   --nuages-pc=15 --clair-maja=0.6  filtres de ciel clair (scene PC ; part de
+#        pixels forestiers sans nuage cote MAJA) ; --n-dates=12 dates retenues,
+#        reparties sur la periode
 #   --sortie=<dossier>               CSV (defaut : dossier du script)
 #   --cache=<dossier>                matrices lues, hors depot (defaut : tempdir)
 #
@@ -45,7 +52,9 @@ lire_options <- function(args = commandArgs(trailingOnly = TRUE)) {
   o <- list(cote = "les-deux", bbox = "4.935,47.215,4.975,47.250",
             tuile = "31TFN", debut = "2023-06-01", fin = "2023-08-31",
             nuages = "30", `max-scenes` = "0", foret = "oui", scl = "4,5",
-            sortie = NA_character_, cache = NA_character_)
+            sortie = NA_character_, cache = NA_character_,
+            `maja-dir` = NA_character_, oso = NA_character_,
+            `nuages-pc` = "15", `clair-maja` = "0.6", `n-dates` = "12")
   for (a in args) {
     m <- regmatches(a, regexec("^--([a-z-]+)=(.*)$", a))[[1]]
     if (length(m) == 3L) o[[m[2]]] <- m[3]
@@ -53,6 +62,9 @@ lire_options <- function(args = commandArgs(trailingOnly = TRUE)) {
   o$bbox <- as.numeric(strsplit(o$bbox, ",")[[1]])
   o$scl <- as.integer(strsplit(o$scl, ",")[[1]])
   o$nuages <- as.numeric(o$nuages)
+  o$`nuages-pc` <- as.numeric(o$`nuages-pc`)
+  o$`clair-maja` <- as.numeric(o$`clair-maja`)
+  o$`n-dates` <- as.integer(o$`n-dates`)
   o$`max-scenes` <- as.integer(o$`max-scenes`)
   o
 }
@@ -148,6 +160,106 @@ lire_scene_theia <- function(ft, grille, cache) {
   res <- list(date = dt, scene_id = id, refl = refl, ok = ok)
   saveRDS(res, f)
   res
+}
+
+# MAJA local : une scene decoupee (dossier) -> memes sorties.
+lire_scene_maja_locale <- function(dossier, grille, cache) {
+  id <- basename(dossier)
+  f <- file.path(cache, paste0("majaloc_", id, ".rds"))
+  if (file.exists(f)) return(readRDS(f))
+  lec <- function(rel) fenetre_sur_grille(file.path(dossier, rel), grille)
+  refl <- vapply(BANDES, function(b) {
+    v <- lec(sprintf("%s_FRE_%s.tif", id, sub("^B0", "B", b)))
+    out <- v / 10000
+    out[is.na(v) | v <= -10000] <- NA_real_
+    out
+  }, numeric(terra::ncell(grille)))
+  m <- function(k) lec(file.path("MASKS", sprintf("%s_%s_R2.tif", id, k)))
+  clm <- m("CLM"); sat <- m("SAT"); edg <- m("EDG")
+  ok <- !is.na(clm) & clm == 0 & !is.na(sat) & sat == 0 & !is.na(edg) & edg == 0
+  dt <- as.Date(sub(".*_(20[0-9]{6})-.*", "\\1", id), "%Y%m%d")
+  res <- list(date = dt, scene_id = id, refl = refl, ok = ok)
+  saveRDS(res, f)
+  res
+}
+
+# Mesure sur les scenes MAJA locales contre Planetary Computer, memes jours.
+principal_local <- function(o) {
+  racine <- tryCatch(dirname(normalizePath(sub("^--file=", "", grep("^--file=",
+              commandArgs(), value = TRUE)[1]))), error = function(e) ".")
+  sortie <- if (is.na(o$sortie)) racine else o$sortie
+  cache <- if (is.na(o$cache)) file.path(tempdir(), "cache092") else o$cache
+  dir.create(cache, showWarnings = FALSE, recursive = TRUE)
+  dir.create(sortie, showWarnings = FALSE, recursive = TRUE)
+  dossiers <- sort(list.dirs(o$`maja-dir`, recursive = FALSE))
+  dossiers <- dossiers[grepl("^SENTINEL2", basename(dossiers))]
+  d_maja <- as.Date(sub(".*_(20[0-9]{6})-.*", "\\1", basename(dossiers)), "%Y%m%d")
+  # grille = celle des scenes locales (L93, 10 m)
+  r0 <- terra::rast(Sys.glob(file.path(dossiers[1], "*_FRE_B4.tif"))[1])
+  grille <- terra::rast(terra::ext(r0), resolution = 10, crs = "EPSG:2154")
+  bb <- terra::ext(terra::project(terra::as.polygons(terra::ext(grille), crs = "EPSG:2154"), "EPSG:4326"))
+  o$bbox <- as.numeric(bb[c(1, 3, 2, 4)])
+  cat(sprintf("Grille : %d x %d ; %d scenes MAJA locales\n", ncol(grille), nrow(grille), length(dossiers)))
+
+  wc <- masque_foret(grille)
+  oso <- rep(TRUE, terra::ncell(grille))
+  if (!is.na(o$oso)) {
+    oso <- fenetre_sur_grille(o$oso, grille) == 1
+    oso[is.na(oso)] <- FALSE
+  }
+  foret <- wc & oso
+  cat(sprintf("Pixels : arbres WorldCover %d ; feuillus OSO %d ; les deux %d\n",
+              sum(wc), sum(oso), sum(foret)))
+
+  o$debut <- format(min(d_maja)); o$fin <- format(max(d_maja))
+  o$nuages <- o$`nuages-pc`
+  pc <- .nm(".dedup_s2_reprocessed")(scenes_pc(o))
+  pc <- pc[order(pc$obs_date), , drop = FALSE]
+  communs <- intersect(format(pc$obs_date), format(d_maja))
+  cat(sprintf("PC (nuages <= %g %%) : %d scenes ; jours communs : %d\n",
+              o$`nuages-pc`, nrow(pc), length(communs)))
+
+  # ciel clair cote MAJA : part des pixels forestiers valides
+  cand <- do.call(rbind, lapply(communs, function(j) {
+    a <- lire_scene_maja_locale(dossiers[which(format(d_maja) == j)[1]], grille, cache)
+    data.frame(date = j, part_clair_maja = mean(a$ok[foret] & stats::complete.cases(a$refl)[foret]))
+  }))
+  print(cand)
+  cand <- cand[cand$part_clair_maja >= o$`clair-maja`, , drop = FALSE]
+  if (nrow(cand) > o$`n-dates`) {
+    cand <- cand[unique(round(seq(1, nrow(cand), length.out = o$`n-dates`))), , drop = FALSE]
+  }
+  cat("Dates retenues :", paste(cand$date, collapse = " "), "\n")
+
+  res <- list(); dsp <- list(); pooled <- list()
+  for (j in cand$date) {
+    a <- lire_scene_maja_locale(dossiers[which(format(d_maja) == j)[1]], grille, cache)
+    b <- lire_scene_pc(pc[format(pc$obs_date) == j, , drop = FALSE][1, ], grille, o$scl, cache)
+    res[[length(res) + 1L]] <- cbind(comparer_paire(a, b, foret, "MAJA FRE", "Sen2Cor"),
+                                     nuages_pc = pc$cloud_pct[format(pc$obs_date) == j][1])
+    dsp[[length(dsp) + 1L]] <- dispersion_cote(list(a), foret, "MAJA")
+    dsp[[length(dsp) + 1L]] <- dispersion_cote(list(b), foret, "Sen2Cor")
+    # pixels appaires gardes pour le total (sous-echantillon 20 000 par date)
+    ok <- a$ok & b$ok & foret & stats::complete.cases(a$refl) & stats::complete.cases(b$refl)
+    ix <- which(ok); set.seed(92)
+    if (length(ix) > 20000L) ix <- sample(ix, 20000L)
+    ia <- indices_de(a$refl[ix, , drop = FALSE]); ib <- indices_de(b$refl[ix, , drop = FALSE])
+    pooled[[length(pooled) + 1L]] <- data.frame(date = j, ia_swir = ia$CRswir, ib_swir = ib$CRswir,
+                                                ia_re = ia$CRre, ib_re = ib$CRre)
+  }
+  resultats <- do.call(rbind, res)
+  P <- do.call(rbind, pooled)
+  tot <- rbind(cbind(date = "toutes", reference = "MAJA FRE", compare = "Sen2Cor", indice = "CRswir",
+                     stats_ecart(P$ia_swir, P$ib_swir)),
+               cbind(date = "toutes", reference = "MAJA FRE", compare = "Sen2Cor", indice = "CRre",
+                     stats_ecart(P$ia_re, P$ib_re)))
+  # biais par date : dispersion des biais entre dates
+  utils::write.csv(resultats, file.path(sortie, "ecarts_par_date.csv"), row.names = FALSE)
+  utils::write.csv(tot, file.path(sortie, "ecarts_total.csv"), row.names = FALSE)
+  utils::write.csv(do.call(rbind, dsp), file.path(sortie, "dispersion_par_date.csv"), row.names = FALSE)
+  print(resultats[, c("date", "indice", "n", "biais", "ecart_type_d", "rmse", "cor", "pente", "ordonnee")])
+  print(tot)
+  invisible(resultats)
 }
 
 `%||%` <- function(a, b) if (is.null(a) || (length(a) == 1L && is.na(a))) b else a
@@ -345,5 +457,5 @@ principal <- function(o) {
 
 if (sys.nframe() == 0L) {
   o <- lire_options()
-  principal(o)
+  if (!is.na(o$`maja-dir`)) principal_local(o) else principal(o)
 }
