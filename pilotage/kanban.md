@@ -34,6 +34,8 @@ _Modèle de carte :_
 
 ## En cours
 
+- [093-etude-classes-sen2cor-maja](missions/093-etude-classes-sen2cor-maja.md) · nemetonplateforme (étude) · depuis le 2026-11-27
+- [094-marculus-correction-emerge](missions/094-marculus-correction-emerge.md) · marculus · depuis le 2026-11-27
 - [087-nemeton-release-2026-11-46](missions/087-nemeton-release-2026-11-46.md) · nemeton · depuis le 2026-11-27
   - Homme : `dev`, relu par le `relecteur` · Mission : vue « Ce que les modèles voient » (écart 25) · Moyens : 3 $ · Dépend de : rien
 
