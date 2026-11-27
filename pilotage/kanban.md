@@ -34,13 +34,13 @@ _Modèle de carte :_
 
 ## En cours
 
-- [093-etude-classes-sen2cor-maja](missions/093-etude-classes-sen2cor-maja.md) · nemetonplateforme (étude) · depuis le 2026-11-27
 - [094-marculus-correction-emerge](missions/094-marculus-correction-emerge.md) · marculus · depuis le 2026-11-27
 - [087-nemeton-release-2026-11-46](missions/087-nemeton-release-2026-11-46.md) · nemeton · depuis le 2026-11-27
   - Homme : `dev`, relu par le `relecteur` · Mission : vue « Ce que les modèles voient » (écart 25) · Moyens : 3 $ · Dépend de : rien
 
 ## Terminé
 
+- [093-etude-classes-sen2cor-maja](missions/093-etude-classes-sen2cor-maja.md) · étude · rapport `etudes/093-classes-sen2cor-maja/rapport.md` (bfbc2aa) · verdict : non partageable tel quel
 - [092-etude-sen2cor-contre-maja](missions/092-etude-sen2cor-contre-maja.md) · étude · rapport `etudes/092-sen2cor-contre-maja/rapport.md` (a25e71e) · verdict : non interchangeables tels quels
 - [091-etude-modele-reconfort-v3](missions/091-etude-modele-reconfort-v3.md) · étude · rapport `etudes/091-modele-reconfort-v3/rapport.md` (2b90d80) · verdict : faisable avec réserve, 4 à 6 j
 - [090-nemetonshiny-message-erreur-lisible](missions/090-nemetonshiny-message-erreur-lisible.md) · nemetonshiny · PR #351 fusionnée (1334911), pas de release
