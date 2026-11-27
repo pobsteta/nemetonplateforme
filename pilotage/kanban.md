@@ -34,12 +34,12 @@ _Modèle de carte :_
 
 ## En cours
 
-- [092-etude-sen2cor-contre-maja](missions/092-etude-sen2cor-contre-maja.md) · nemetonplateforme (étude) · script et côté Sen2Cor rendus (f25520a) ; côté MAJA à lancer chez Pascal quand THEIA reviendra
 - [087-nemeton-release-2026-11-46](missions/087-nemeton-release-2026-11-46.md) · nemeton · depuis le 2026-11-27
   - Homme : `dev`, relu par le `relecteur` · Mission : vue « Ce que les modèles voient » (écart 25) · Moyens : 3 $ · Dépend de : rien
 
 ## Terminé
 
+- [092-etude-sen2cor-contre-maja](missions/092-etude-sen2cor-contre-maja.md) · étude · rapport `etudes/092-sen2cor-contre-maja/rapport.md` (a25e71e) · verdict : non interchangeables tels quels
 - [091-etude-modele-reconfort-v3](missions/091-etude-modele-reconfort-v3.md) · étude · rapport `etudes/091-modele-reconfort-v3/rapport.md` (2b90d80) · verdict : faisable avec réserve, 4 à 6 j
 - [090-nemetonshiny-message-erreur-lisible](missions/090-nemetonshiny-message-erreur-lisible.md) · nemetonshiny · PR #351 fusionnée (1334911), pas de release
 - [085-nemeton-mnh-dalles-et-chm-derive](missions/085-nemeton-mnh-dalles-et-chm-derive.md) · nemeton · PR #709 fusionnée (479ba13), pas de release · à rejouer chez Pascal sur Couchey
