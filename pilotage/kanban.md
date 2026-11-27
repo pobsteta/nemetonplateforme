@@ -29,6 +29,7 @@ _Modèle de carte :_
 
 ## Planifié
 
+- [096-nemeton-source-s2-globale](missions/096-nemeton-source-s2-globale.md) · nemeton · après #710, 089 et 095
 - [089-nemeton-reconfort-repli-archive](missions/089-nemeton-reconfort-repli-archive.md) · nemeton · après la PR #710
 - [088-nemetonshiny-onglet-icd](missions/088-nemetonshiny-onglet-icd.md) · nemetonshiny · après la release nemeton 2026.11.46
 
