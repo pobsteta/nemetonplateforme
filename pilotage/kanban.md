@@ -33,11 +33,11 @@ _Modèle de carte :_
 
 ## En cours
 - [089-nemeton-reconfort-repli-archive](missions/089-nemeton-reconfort-repli-archive.md) · nemeton (worktree wt-089) · depuis le 2026-11-27
-- [097-nemetonshiny-marculus-format-csv-9](missions/097-nemetonshiny-marculus-format-csv-9.md) · nemetonshiny (worktree wt-097) · depuis le 2026-11-27
 
   - Homme : `dev`, relu par le `relecteur` · Mission : vue « Ce que les modèles voient » (écart 25) · Moyens : 3 $ · Dépend de : rien
 
 ## Terminé
+- [097-nemetonshiny-marculus-format-csv-9](missions/097-nemetonshiny-marculus-format-csv-9.md) · nemetonshiny · PR #353 fusionnée (17f8115), pas de release · aérien lu mais non affiché (Pascal)
 
 - [087-nemeton-release-2026-11-46](missions/087-nemeton-release-2026-11-46.md) · nemeton · PR #710 fusionnée (2b3dd8d) · release 2026.11.46
 - [088-nemetonshiny-onglet-icd](missions/088-nemetonshiny-onglet-icd.md) · nemetonshiny · PR #352 fusionnée (37e2388), pas de release
