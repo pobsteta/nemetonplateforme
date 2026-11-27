@@ -693,3 +693,12 @@
   - Relecture en cours.
   - Questions du dev : l'avertissement de repli est en français alors que le CLAUDE.md de nemeton veut l'anglais (je suivrai le CLAUDE.md du dépôt) ; `causes_repli` est désormais écrit pour toutes les voies.
 2026-11-27 · décision · Pascal · « oui, messages en anglais » : l'avertissement de repli de la 089 (et tout message cli de nemeton) est écrit en anglais, comme le veut le CLAUDE.md de nemeton ; à corriger après la relecture.
+2026-11-27 · relecture · 089 · verdict « à corriger » ; renvoyé au dev.
+  - Corrections demandées :
+    - un caractère non ASCII dans un commentaire de `R/isolate.R` ;
+    - `processx::supervisor_kill()` tue tous les enfants supervisés de la session : un second `run_memory_capped()` imbriqué ou simultané verrait son fils tué. Correction : compteur d'appels en cours, avec un test ;
+    - avertissement de repli traduit en anglais (décision de Pascal) ;
+    - indentation du `.Rd`.
+  - Vérifié conforme : classement des erreurs (pas de repli sur une erreur qui n'est pas de réseau, 401/403 sans repli) ; voies imposées jamais remplacées ; ordre THEIA → GEODES → Sen2Cor et `causes_repli` ; repli conda inchangé ; pas de réseau dans les tests.
+  - Échecs déjà présents confirmés identiques sur origin/main : `test-reconfort-ingest.R` (délai du téléchargement figé) et `test-reconfort-validity.R` (BD Forêt).
+  - Limite notée : un `httr2_failure` levé par un téléchargement S3 de la voie fenêtre déclenche lui aussi le repli ; les scènes déjà rognées restent dans `extracted/`.
