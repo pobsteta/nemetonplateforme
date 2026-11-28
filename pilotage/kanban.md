@@ -31,7 +31,7 @@ _Modèle de carte :_
 
 
 ## En cours
-- [101-nemeton-p4-rendement-net](missions/101-nemeton-p4-rendement-net.md) · nemeton (worktree wt-101) · depuis le 2026-11-28
+- [101-nemeton-p4-rendement-net](missions/101-nemeton-p4-rendement-net.md) · nemeton · PR #717 en CI · depuis le 2026-11-28
 
   - Homme : `dev`, relu par le `relecteur` · Mission : vue « Ce que les modèles voient » (écart 25) · Moyens : 3 $ · Dépend de : rien
 
