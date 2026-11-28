@@ -741,3 +741,18 @@
   - 16 fichiers de tests verts selon le dev ; contre-épreuve sur origin/main.
   - Ce que le dev donne lui-même comme non prouvé : la transmission runtime de FAST, FORDEAD et RECONFORT (prouvée par lecture du texte seulement) ; les avertissements bruts du cœur non interceptés (code mort) ; les caches de masque et de résultat FAST non suffixés ; le plan de validation FAST non adapté.
   - Relecture en cours.
+2026-11-28 · relecture · 099 · verdict « à corriger ».
+  - Ce qui tient :
+    - transmission juste et rétrocompatible pour les quatre méthodes, prouvée par un essai R ; le test sur le texte des sources ne prouve rien et doit devenir un stub ;
+    - aucun mélange de résultats FAST : les clés de hachage portent les identifiants de scènes, qui diffèrent entre sources.
+  - Défauts :
+    - (A) le plan de validation (FAST et FORDEAD, 4 endroits) et `.reconcile_fordead_state` lisent encore les anciens dossiers ;
+    - (B1) un repli récent sur Sen2Cor est masqué par un ancien dossier `_theia` (reproduit) ;
+    - (B2) un run ancien, sans `source_s2`, est étiqueté « THEIA indicatif » quand le projet est réglé sur THEIA (reproduit) ;
+    - (C) le texte de repli est faux pour RECONFORT THEIA → GEODES, et du code mort maintient `test-i18n_keys_used.R` au vert ;
+    - le témoin FAST n'est pas invalidé au lancement d'un run.
+2026-11-28 · décision · orchestrateur (exactitude de l'affichage, sans choix de valeur ; dit à Pascal) :
+  - la carte affiche toujours le résultat le plus récent des deux dossiers, avec sa vraie source et la ligne de repli ;
+  - un run sans `source_s2` inscrite prend le défaut de sa méthode ;
+  - l'`output_dir` FORDEAD est lui aussi suffixé `_theia`, pour qu'aucun dossier ne soit commun aux deux sources.
+  Corrections renvoyées au dev.
