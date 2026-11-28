@@ -756,3 +756,4 @@
   - un run sans `source_s2` inscrite prend le défaut de sa méthode ;
   - l'`output_dir` FORDEAD est lui aussi suffixé `_theia`, pour qu'aucun dossier ne soit commun aux deux sources.
   Corrections renvoyées au dev.
+2026-11-28 · dev · 099 · corrections faites (a3839b1d7) : inventaire des lectures, lecture du résultat le plus récent, défaut de la méthode pour les runs anciens, repli de voie RECONFORT, code mort retiré, témoin FAST invalidé au lancement, stubs de transmission · rejoué par l'orchestrateur : source_s2 126/0/0, validation_sampling 39/0/0, service_monitoring 181/0/0, mod_monitoring_icd 85/0/0, i18n_keys_used 3/0/0, sources_config 87/0/0 ; ASCII propre · limite inscrite dans la PR : dans le plan de validation, les lectures « dernier masque par date » peuvent servir le masque de l'autre source juste après un changement de source · PR nemetonshiny #354 ouverte en brouillon, abonnée.
