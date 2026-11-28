@@ -33,11 +33,11 @@ _Modèle de carte :_
 
 ## En cours
 - [103-nemetonshiny-p4-exposition](missions/103-nemetonshiny-p4-exposition.md) · nemetonshiny · PR #356 en CI · depuis le 2026-11-28
-- [104-nemeton-p4-actions-candidates](missions/104-nemeton-p4-actions-candidates.md) · nemeton · PR #719 en CI · depuis le 2026-11-28
 
   - Homme : `dev`, relu par le `relecteur` · Mission : vue « Ce que les modèles voient » (écart 25) · Moyens : 3 $ · Dépend de : rien
 
 ## Terminé
+- [104-nemeton-p4-actions-candidates](missions/104-nemeton-p4-actions-candidates.md) · nemeton · PR #719 fusionnée (4b81e1d) le 2026-11-28 à 21 h 25, heure de Paris, pas de release
 - [102-nemeton-release-2026-11-48](missions/102-nemeton-release-2026-11-48.md) · nemeton · PR #718 fusionnée, **release v2026.11.48** publiée le 2026-11-28 à 21 h 04, heure de Paris
 - [101-nemeton-p4-rendement-net](missions/101-nemeton-p4-rendement-net.md) · nemeton · PR #717 fusionnée (e036f3a), pas de release · M4 (app) après la release
 - [100-nemetonshiny-versions-aide](missions/100-nemetonshiny-versions-aide.md) · nemetonshiny · PR #355 fusionnée (ac4cfc0), pas de release
