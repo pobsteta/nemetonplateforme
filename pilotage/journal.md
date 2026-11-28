@@ -862,3 +862,5 @@
   - Rejoué par l'orchestrateur : p4-actions 198/0/0, p4-rendement-net 44/0/0, i18n 461/0/0, data 314/0/0 ; ASCII.
   - PR nemeton #719 ouverte en brouillon, abonnée.
 2026-11-28 · ci · 104 · nemeton #719 : R-CMD-check rouge (WARNING : `id_field` et `vocation_field` non documentés dans `p4_contexte_llm.Rd`) · corrigé par l'orchestrateur : roxygen et Rd identiques à une régénération, la section « Rd \\usage » de R CMD check passe en local · CI relancée.
+2026-11-28 · release · 102 · **nemeton v2026.11.48 publiée** par `release.yml` (21 h 04, heure de Paris), avec les PR #715, #716, #717 et #718 ; la #716 (spec 072) est fusionnée.
+2026-11-28 · ci · 103 · tests rejoués par l'orchestrateur avec nemeton 2026.11.48 installé depuis le tag : p4_exposition 157/0/0, domain_ug 107/0/0, service_synthesis 83/0/0, i18n_keys_used 3/0/0 · PR nemetonshiny #356 ouverte en brouillon, abonnée.
