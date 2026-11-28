@@ -31,9 +31,147 @@ _Modèle de carte :_
 
 
 ## En cours
+- [105-nemetonshiny-p4-plan-actions](missions/105-nemetonshiny-p4-plan-actions.md) · nemetonshiny · confiée au `dev` · fusion après la release nemeton v2026.11.49 · depuis le 2026-11-28
+- [106-nemeton-release-2026-11-49](missions/106-nemeton-release-2026-11-49.md) · nemeton · PR #720 en CI · depuis le 2026-11-28
+
+  - Homme : `dev`, relu par le `relecteur` · Mission : vue « Ce que les modèles voient » (écart 25) · Moyens : 3 $ · Dépend de : rien
 
 ## Terminé
+- [103-nemetonshiny-p4-exposition](missions/103-nemetonshiny-p4-exposition.md) · nemetonshiny · PR #356 fusionnée (55f3f16) le 2026-11-28 à 22 h 05, heure de Paris, pas de release
+- [104-nemeton-p4-actions-candidates](missions/104-nemeton-p4-actions-candidates.md) · nemeton · PR #719 fusionnée (4b81e1d) le 2026-11-28 à 21 h 25, heure de Paris, pas de release
+- [102-nemeton-release-2026-11-48](missions/102-nemeton-release-2026-11-48.md) · nemeton · PR #718 fusionnée, **release v2026.11.48** publiée le 2026-11-28 à 21 h 04, heure de Paris
+- [101-nemeton-p4-rendement-net](missions/101-nemeton-p4-rendement-net.md) · nemeton · PR #717 fusionnée (e036f3a), pas de release · M4 (app) après la release
+- [100-nemetonshiny-versions-aide](missions/100-nemetonshiny-versions-aide.md) · nemetonshiny · PR #355 fusionnée (ac4cfc0), pas de release
+- [099-nemetonshiny-source-s2](missions/099-nemetonshiny-source-s2.md) · nemetonshiny · PR #354 fusionnée (149c3a5), pas de release · affichage à voir à l'écran par Pascal
+- [098-nemeton-release-2026-11-47](missions/098-nemeton-release-2026-11-47.md) · nemeton · PR #714 fusionnée (d095b66), **release v2026.11.47** publiée le 2026-11-28 08:22 UTC · retour en cycle dev : PR #715
+- [096-nemeton-source-s2-globale](missions/096-nemeton-source-s2-globale.md) · nemeton · PR #713 fusionnée (f63346f), pas de release · comparaison Couchey non faite · suite : mission app (réglage et affichage de la source)
+- [089-nemeton-reconfort-repli-archive](missions/089-nemeton-reconfort-repli-archive.md) · nemeton · PR #712 fusionnée (2fae116), pas de release · avertissement future à confirmer chez Pascal
+- [097-nemetonshiny-marculus-format-csv-9](missions/097-nemetonshiny-marculus-format-csv-9.md) · nemetonshiny · PR #353 fusionnée (17f8115), pas de release · aérien lu mais non affiché (Pascal)
 
+- [087-nemeton-release-2026-11-46](missions/087-nemeton-release-2026-11-46.md) · nemeton · PR #710 fusionnée (2b3dd8d) · release 2026.11.46
+- [088-nemetonshiny-onglet-icd](missions/088-nemetonshiny-onglet-icd.md) · nemetonshiny · PR #352 fusionnée (37e2388), pas de release
+- [095-nemeton-reconfort-sen2cor](missions/095-nemeton-reconfort-sen2cor.md) · nemeton · PR #711 fusionnée (9274d35), pas de release · voie Sen2Cor indicative
+- [094-marculus-correction-emerge](missions/094-marculus-correction-emerge.md) · marculus · PR #82 fusionnée (squash 1e7c0a0), release par la CI · écran à vérifier sur le téléphone
+- [093-etude-classes-sen2cor-maja](missions/093-etude-classes-sen2cor-maja.md) · étude · rapport `etudes/093-classes-sen2cor-maja/rapport.md` (bfbc2aa) · verdict : non partageable tel quel
+- [092-etude-sen2cor-contre-maja](missions/092-etude-sen2cor-contre-maja.md) · étude · rapport `etudes/092-sen2cor-contre-maja/rapport.md` (a25e71e) · verdict : non interchangeables tels quels
+- [091-etude-modele-reconfort-v3](missions/091-etude-modele-reconfort-v3.md) · étude · rapport `etudes/091-modele-reconfort-v3/rapport.md` (2b90d80) · verdict : faisable avec réserve, 4 à 6 j
+- [090-nemetonshiny-message-erreur-lisible](missions/090-nemetonshiny-message-erreur-lisible.md) · nemetonshiny · PR #351 fusionnée (1334911), pas de release
+- [085-nemeton-mnh-dalles-et-chm-derive](missions/085-nemeton-mnh-dalles-et-chm-derive.md) · nemeton · PR #709 fusionnée (479ba13), pas de release · à rejouer chez Pascal sur Couchey
+- [086-nemetonshiny-houppiers-cause-reelle](missions/086-nemetonshiny-houppiers-cause-reelle.md) · nemetonshiny · PR #350 fusionnée (2c7cc8a), pas de release
+- [084-nemetonshiny-synthese-sous-onglets](missions/084-nemetonshiny-synthese-sous-onglets.md) · nemetonshiny · PR #349 fusionnée (6f9df89), pas de release
+- [083-nemetonshiny-schema-sql-et-mosaique](missions/083-nemetonshiny-schema-sql-et-mosaique.md) · nemetonshiny · PR #348 fusionnée (e9925c9), pas de release
+- [082-nemeton-mosaique-dalles-crs](missions/082-nemeton-mosaique-dalles-crs.md) · nemeton · PR #708 fusionnée (d21af7b), pas de release
+- [078-nemetonshiny-sondes-embeddings](missions/078-nemetonshiny-sondes-embeddings.md) · nemetonshiny · PR #347 fusionnée (2dda57b), pas de release · critère 3 de la spec 066 chez Pascal
+- [080-nemetonshiny-source-alphaearth-n5](missions/080-nemetonshiny-source-alphaearth-n5.md) · nemetonshiny · PR #346 fusionnée (55f66c4), pas de release
+- [081-alphaearthnemeton-release](missions/081-alphaearthnemeton-release.md) · alphaearthnemeton · PR #2 fusionnée (5d35ed6), release v2026.11.1 posée par la CI
+- [077-nemetonshiny-n5-embedding-ndp](missions/077-nemetonshiny-n5-embedding-ndp.md) · nemetonshiny · PR #345 fusionnée (90923f4), pas de release
+- [079-sommier-brief-surculus-aller](missions/079-sommier-brief-surculus-aller.md) · sommieR → surculus · PR sommieR #92 fusionnée en squash (dfac77e), issue surculus#185 ouverte
+- [070-nemetonshiny-marculus-choix-export](missions/070-nemetonshiny-marculus-choix-export.md) · nemetonshiny · PR #344 fusionnée (721215c), pas de release
+- [069-nemetonshiny-itineraires-pente-desserte-protection](missions/069-nemetonshiny-itineraires-pente-desserte-protection.md) · nemetonshiny · PR #343 fusionnée (a7a38a7), pas de release
+- [073-nemetonshiny-fordead-tout-calculer-hors-calibration](missions/073-nemetonshiny-fordead-tout-calculer-hors-calibration.md) · nemetonshiny · PR #342 fusionnée (fc5dd83), pas de release
+- [076-nemeton-reconfort-carte-spike](missions/076-nemeton-reconfort-carte-spike.md) · nemeton · PR #707 fusionnée (cf29142), pas de release
+- [075-nemetonshiny-arret-reel-moteurs-plafonnes](missions/075-nemetonshiny-arret-reel-moteurs-plafonnes.md) · nemetonshiny · PR #341 fusionnée (45057e1), pas de release
+- [074-nemeton-icd-decoloration](missions/074-nemeton-icd-decoloration.md) · nemeton · PR #706 fusionnée (7a06ef0), pas de release ; mesure réelle sur Sentinel-2 avant release
+- [072-nemetonshiny-toast-reconfort-arret](missions/072-nemetonshiny-toast-reconfort-arret.md) · nemetonshiny · PR #340 fusionnée (2276e44), pas de release
+- [071-nemeton-reconfort-lecture-fenetree](missions/071-nemeton-reconfort-lecture-fenetree.md) · nemeton · PR #705 fusionnée (ca1a252), pas de release
+- [068-nemetonshiny-reprises-itineraires-effet](missions/068-nemetonshiny-reprises-itineraires-effet.md) · nemetonshiny · depuis le cycle 18 · PR #339 fusionnée (de24628), pas de release
+  - Homme : `dev` dans un worktree de nemetonshiny, relu par le `relecteur`
+  - Mission : détail des exclusions traduit, libellés complets, référence choisie, UGF exclues affichées, bouton à bordure
+- [067-nemetonshiny-effet-gestion](missions/067-nemetonshiny-effet-gestion.md) · nemetonshiny · depuis le cycle 18 · PR #338 fusionnée (e717220), pas de release
+  - Homme : `dev` dans un worktree de nemetonshiny, relu par le `relecteur`
+  - Mission : type de gestion saisi par UGF (liste fermée), tableau `effet_gestion()` dans la synthèse
+  - Moyens : budget 5 $ ; branche `ccr-b52c1910-gjp34w`
+  - Dépend de : rien (#337 fusionnée)
+- [066-nemetonshiny-itineraires](missions/066-nemetonshiny-itineraires.md) · nemetonshiny · depuis le cycle 18 · PR #336 fusionnée (02f36e2), pas de release
+  - Homme : `dev` dans un worktree de nemetonshiny, relu par le `relecteur`
+  - Mission : itinéraires admissibles par UGF (raisons d'exclusion) et comparés sous le profil, poids provisoires
+  - Moyens : budget 5 $ ; branche `ccr-b52c1910-gjp34w`
+  - Dépend de : rien (#335 fusionnée)
+- [065-sommier-plants-aller-pointage](missions/065-sommier-plants-aller-pointage.md) · sommieR · depuis le cycle 18 · PR #91 fusionnée (a586121), pas de release
+  - Homme : `dev` dans un worktree de sommieR, relu par le `relecteur`
+  - Mission : plants vivants versés à l'aller, `SOMMIER_METHODES_POINTAGE`
+  - Moyens : budget 4 $ ; PostGIS dans le conteneur ; branche `ccr-b52c1910-gjp34w`
+  - Dépend de : rien
+- [064-nemeton-deperis-decisions](missions/064-nemeton-deperis-decisions.md) · nemeton · depuis le cycle 18 · PR #704 fusionnée (04849a3), pas de release
+  - Homme : `dev` dans un worktree de nemeton, relu par le `relecteur`
+  - Mission : décisions DEPERIS de Pascal (délai, 30 m, graine du code) et brief de retour vers Ramulus
+  - Moyens : budget 3 $ ; branche `ccr-b52c1910-gjp34w`
+  - Dépend de : rien
+- [063-nemetonshiny-b5-stratification](missions/063-nemetonshiny-b5-stratification.md) · nemetonshiny · depuis le cycle 18 · PR #335 fusionnée (f71798b), pas de release
+  - Homme : `dev` dans un worktree de nemetonshiny (session cloud), relu par le `relecteur`
+  - Mission : B5 calculé avec le nuage, statuts traduits, couche carte, profil vertical dans la fiche UGF
+  - Moyens : budget 5 $ ; branche `ccr-b52c1910-gjp34w`
+  - Dépend de : rien (#334 fusionnée)
+- [062-sommier-demo-couchey-plants](missions/062-sommier-demo-couchey-plants.md) · sommieR · depuis le cycle 18 · PR #90 fusionnée (afba50b), pas de release
+  - Homme : `dev` dans un worktree de sommieR (session cloud), relu par le `relecteur`
+  - Mission : plants pointés et contrôlés (2023, 2025) dans la démo Couchey
+  - Moyens : budget 3 $ ; PostGIS dans le conteneur ; branche `ccr-b52c1910-gjp34w`
+  - Dépend de : rien
+- [061-nemeton-tournee-deperis](missions/061-nemeton-tournee-deperis.md) · nemeton · depuis le cycle 18 · PR #703 fusionnée (8862e55), pas de release
+  - Homme : `dev` dans un worktree de nemeton (session cloud), relu par le `relecteur`
+  - Mission : `creer_tournee_deperis()` et `importer_deperis()`, validées sur les cas communs de Ramulus
+  - Moyens : budget 6 $ ; branche `ccr-b52c1910-gjp34w`
+  - Dépend de : rien (Ramulus 010 fusionnée)
+- [060-nemeton-reconfort-spike-rust](missions/060-nemeton-reconfort-spike-rust.md) · nemeton · depuis le cycle 18 · PR #702 fusionnée (890bc55), pas de release
+  - Homme : `dev` dans un worktree de nemeton (session cloud), relu par le `relecteur`
+  - Mission : crate Rust CRswir/CRre + repli R, pipeline d'apprentissage RECONFORT sur placettes synth_
+  - Moyens : budget 5 $ ; branche `ccr-b52c1910-gjp34w` ; ADR 0003
+  - Dépend de : rien (notes DEPERIS réelles : plus tard)
+- [059-nemeton-projet-video-parallele-suite](missions/059-nemeton-projet-video-parallele-suite.md) · nemeton · depuis le cycle 18 · PR #701 fusionnée (12e74eb), pas de release
+  - Homme : `dev` dans un worktree de nemeton (session cloud), relu par le `relecteur`
+  - Mission : placettes et dalles MNT en parallèle, un seul cluster par création
+  - Moyens : budget 3 $ ; branche `ccr-b52c1910-gjp34w`
+  - Dépend de : rien (056 fusionnée)
+- [058-nemetonshiny-progression-projet-video](missions/058-nemetonshiny-progression-projet-video.md) · nemetonshiny · depuis le cycle 18 · PR #332 fusionnée (aeb8e89), pas de release
+  - Homme : `dev` dans un worktree de nemetonshiny (session cloud), relu par le `relecteur`
+  - Mission : étape, compteur et temps de la création du projet vidéo affichés dans la vue
+  - Moyens : budget 3 $ ; branche `ccr-b52c1910-gjp34w`
+  - Dépend de : rien (cœur simulé) ; effet réel avec nemeton #700
+- [056-nemeton-projet-video-rapide-et-suivi](missions/056-nemeton-projet-video-rapide-et-suivi.md) · nemeton · depuis le cycle 18 · PR #700 fusionnée (f685248), pas de release
+  - Homme : `dev` dans un worktree de nemeton (session cloud), relu par le `relecteur`
+  - Mission : houppiers en parallèle, rasters ouverts une fois, progression par étape avec durée
+  - Moyens : budget 3 $ ; branche `ccr-b52c1910-gjp34w`
+  - Dépend de : rien
+- [057-sommier-plants-robustesse](missions/057-sommier-plants-robustesse.md) · sommieR · depuis le cycle 18 · PR #89 fusionnée (56291b0), pas de release
+  - Homme : `dev` dans un worktree de sommieR (session cloud), relu par le `relecteur`
+  - Mission : unicité du numéro de plant en base, jour de contrôle en heure de Paris, test d'import du mort omis
+  - Moyens : budget 2 $ ; PostGIS dans le conteneur ; branche `ccr-b52c1910-gjp34w`
+  - Dépend de : rien (054 fusionnée)
+- [055-nemetonshiny-cvat-erreur-codage](missions/055-nemetonshiny-cvat-erreur-codage.md) · nemetonshiny · depuis le cycle 18 · PR #331 fusionnée (2738d03), pas de release
+  - Homme : `dev` dans un worktree de nemetonshiny (session cloud), relu par le `relecteur`
+  - Mission : reprise sans relief et message quand nemeton refuse le codage du CVAT
+  - Moyens : budget 2 $ ; branche `ccr-b52c1910-gjp34w` ; fusion par Pascal
+  - Dépend de : rien (cœur simulé) ; à fusionner avant la prochaine release de nemeton
+- [054-sommier-lot2-plants](missions/054-sommier-lot2-plants.md) · sommieR · depuis le cycle 18 · PR #88 fusionnée (29c3c62), pas de release
+  - Homme : `dev` dans un worktree de sommieR (session cloud), relu par le `relecteur`
+  - Mission : plants pointés et suivis de Surculus au registre 6 (`plant`, `r6-1.3.0`), import des couches de plants
+  - Moyens : budget 4 $ ; PostGIS dans le conteneur ; branche `ccr-b52c1910-gjp34w`
+  - Dépend de : rien (052 fusionnée)
+- [051-nemeton-cvat-conversion-foretaccess](missions/051-nemeton-cvat-conversion-foretaccess.md) · nemeton · depuis le cycle 18 · PR #699 fusionnée (ae887f6), pas de release
+  - Homme : `dev` dans un worktree de nemeton (session cloud), relu par le `relecteur`
+  - Mission : `cvat.tif` au codage de Groma (source foretaccess + 1, 255 → 0, format Groma recopié, autre codage refusé)
+  - Moyens : budget 2 $ ; branche `ccr-b52c1910-gjp34w`
+  - Dépend de : rien
+- [050-nemetonshiny-inventaire-video-carte-parametres](missions/050-nemetonshiny-inventaire-video-carte-parametres.md) · nemetonshiny · depuis le cycle 18 · PR #330 fusionnée par Pascal (e8ab0f1), pas de release
+  - Homme : `dev` dans un worktree de nemetonshiny (session cloud), relu par le `relecteur`
+  - Mission : carte des placettes sélectionnées ou non (clic = bascule), paramètres de génération dans Sources & paramètres, état du CVAT à l'écran
+  - Moyens : budget 3 $ ; branche `ccr-b52c1910-gjp34w` ; fusion par Pascal
+  - Dépend de : rien
+- [053-foretaccess-cvat-nodata-distinct](missions/053-foretaccess-cvat-nodata-distinct.md) · foretaccess · depuis le cycle 18 · PR #173 fusionnée (1940e9c), pas de release
+  - Homme : `dev` dans un worktree de foretaccess (session cloud), relu par le `relecteur`
+  - Mission : CVAT précalculé en relief 0 à 254, 255 réservé au nodata déclaré (suite de la relecture de 051)
+  - Moyens : budget 2 $ ; branche `ccr-b52c1910-gjp34w`
+  - Dépend de : rien
+- [052-sommier-position-mesuree-controle](missions/052-sommier-position-mesuree-controle.md) · sommieR · depuis le cycle 18 · PR #87 fusionnée (988d6c8), pas de release
+  - Homme : `dev` dans un worktree de sommieR (session cloud), relu par le `relecteur`
+  - Mission : position mesurée du contrôle de placette gardée, importée de `positions_controles` et exposée dans `v_controle_plantation`
+  - Moyens : budget 3 $ ; PostGIS dans le conteneur ; branche `ccr-b52c1910-gjp34w`
+  - Dépend de : rien
+- [049-nemeton-era5-restes-039-042](missions/049-nemeton-era5-restes-039-042.md) · nemeton · depuis le cycle 18 · PR #698 fusionnée (33e861a), défaut de cache corrigé, pas de release
+  - Homme : `dev` dans un worktree de nemeton (session cloud), relu par le `relecteur`
+  - Mission : deux tests laissés par 039 et 042 (défaut `timeseries` à travers `regen_sensibilite()`, variable illisible sur la forme réelle du CDS)
+  - Moyens : budget 2 $ ; branche `ccr-b52c1910-gjp34w` ; R installé dans le conteneur
+  - Dépend de : rien
 - [048-plateforme-plafond-reprise](missions/048-plateforme-plafond-reprise.md) · nemetonplateforme · depuis le cycle 16 · relue « prête » après un aller-retour, PR de pilotage fusionnée
   - Homme : `dev` dans un worktree de ce dépôt (sonnet), relu par le `relecteur`
   - Mission : `relance.sh` refuse une reprise au-delà de 4 $ cumulés et borne la passe à ce qui reste
