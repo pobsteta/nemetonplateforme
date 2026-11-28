@@ -32,7 +32,7 @@ _Modèle de carte :_
 
 
 ## En cours
-- [106-nemeton-release-2026-11-49](missions/106-nemeton-release-2026-11-49.md) · nemeton · confiée au `dev` · depuis le 2026-11-28
+- [106-nemeton-release-2026-11-49](missions/106-nemeton-release-2026-11-49.md) · nemeton · PR #720 en CI · depuis le 2026-11-28
 - [103-nemetonshiny-p4-exposition](missions/103-nemetonshiny-p4-exposition.md) · nemetonshiny · PR #356 en CI · depuis le 2026-11-28
 
   - Homme : `dev`, relu par le `relecteur` · Mission : vue « Ce que les modèles voient » (écart 25) · Moyens : 3 $ · Dépend de : rien
