@@ -855,3 +855,9 @@
   - Question de sens remontée : P4 compte aussi dans le score quand l'UGF est en « signal seulement » (NDP < 3), donc dans tous les projets actuels.
   - PR à ouvrir après la publication de v2026.11.48.
 2026-11-28 · décision · Pascal · P4 compte dans le score de la famille Production même en « signal seulement » (NDP < 3) : le comportement livré par la 103 (db79857eb) est confirmé.
+2026-11-28 · dev · 104 · corrections faites (77c1ec20e).
+  - Contenu : invariants des gardes figés dans le code ; `capitaliser` sans récolte ; `conserver` toujours présenté ; identifiants `ugf_<n>` avec table de correspondance ; validateur durci.
+  - Écart à la relecture : le delta d'aléa n'est pas masqué par R5, puisqu'il est ajouté à chaque score lu ; c'est vérifié et documenté.
+  - Fusion de main (release 2026.11.48), conflits de version réglés par l'orchestrateur (4cdbf3587, DESCRIPTION en 2026.11.48.9000).
+  - Rejoué par l'orchestrateur : p4-actions 198/0/0, p4-rendement-net 44/0/0, i18n 461/0/0, data 314/0/0 ; ASCII.
+  - PR nemeton #719 ouverte en brouillon, abonnée.
