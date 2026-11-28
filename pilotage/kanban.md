@@ -28,16 +28,16 @@ _Modèle de carte :_
 ## Validé
 
 ## Planifié
-- 105-nemetonshiny-p4-plan-actions (étage 3 LLM et étage 4 validation, brief spec 072 partie B) · après la 104 et sa release
+- [105-nemetonshiny-p4-plan-actions](missions/105-nemetonshiny-p4-plan-actions.md) (étage 3 LLM et étage 4 validation, brief spec 072 partie B) · attend la release nemeton v2026.11.49 (PR #720)
 
 
 ## En cours
 - [106-nemeton-release-2026-11-49](missions/106-nemeton-release-2026-11-49.md) · nemeton · PR #720 en CI · depuis le 2026-11-28
-- [103-nemetonshiny-p4-exposition](missions/103-nemetonshiny-p4-exposition.md) · nemetonshiny · PR #356 en CI · depuis le 2026-11-28
 
   - Homme : `dev`, relu par le `relecteur` · Mission : vue « Ce que les modèles voient » (écart 25) · Moyens : 3 $ · Dépend de : rien
 
 ## Terminé
+- [103-nemetonshiny-p4-exposition](missions/103-nemetonshiny-p4-exposition.md) · nemetonshiny · PR #356 fusionnée (55f3f16) le 2026-11-28 à 22 h 05, heure de Paris, pas de release
 - [104-nemeton-p4-actions-candidates](missions/104-nemeton-p4-actions-candidates.md) · nemeton · PR #719 fusionnée (4b81e1d) le 2026-11-28 à 21 h 25, heure de Paris, pas de release
 - [102-nemeton-release-2026-11-48](missions/102-nemeton-release-2026-11-48.md) · nemeton · PR #718 fusionnée, **release v2026.11.48** publiée le 2026-11-28 à 21 h 04, heure de Paris
 - [101-nemeton-p4-rendement-net](missions/101-nemeton-p4-rendement-net.md) · nemeton · PR #717 fusionnée (e036f3a), pas de release · M4 (app) après la release
