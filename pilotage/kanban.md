@@ -31,11 +31,11 @@ _Modèle de carte :_
 
 
 ## En cours
-- [101-nemeton-p4-rendement-net](missions/101-nemeton-p4-rendement-net.md) · nemeton · PR #717 en CI · depuis le 2026-11-28
 
   - Homme : `dev`, relu par le `relecteur` · Mission : vue « Ce que les modèles voient » (écart 25) · Moyens : 3 $ · Dépend de : rien
 
 ## Terminé
+- [101-nemeton-p4-rendement-net](missions/101-nemeton-p4-rendement-net.md) · nemeton · PR #717 fusionnée (e036f3a), pas de release · M4 (app) après la release
 - [100-nemetonshiny-versions-aide](missions/100-nemetonshiny-versions-aide.md) · nemetonshiny · PR #355 fusionnée (ac4cfc0), pas de release
 - [099-nemetonshiny-source-s2](missions/099-nemetonshiny-source-s2.md) · nemetonshiny · PR #354 fusionnée (149c3a5), pas de release · affichage à voir à l'écran par Pascal
 - [098-nemeton-release-2026-11-47](missions/098-nemeton-release-2026-11-47.md) · nemeton · PR #714 fusionnée (d095b66), **release v2026.11.47** publiée le 2026-11-28 08:22 UTC · retour en cycle dev : PR #715
