@@ -28,10 +28,10 @@ _Modèle de carte :_
 ## Validé
 
 ## Planifié
-- [105-nemetonshiny-p4-plan-actions](missions/105-nemetonshiny-p4-plan-actions.md) (étage 3 LLM et étage 4 validation, brief spec 072 partie B) · attend la release nemeton v2026.11.49 (PR #720)
 
 
 ## En cours
+- [105-nemetonshiny-p4-plan-actions](missions/105-nemetonshiny-p4-plan-actions.md) · nemetonshiny · confiée au `dev` · fusion après la release nemeton v2026.11.49 · depuis le 2026-11-28
 - [106-nemeton-release-2026-11-49](missions/106-nemeton-release-2026-11-49.md) · nemeton · PR #720 en CI · depuis le 2026-11-28
 
   - Homme : `dev`, relu par le `relecteur` · Mission : vue « Ce que les modèles voient » (écart 25) · Moyens : 3 $ · Dépend de : rien
