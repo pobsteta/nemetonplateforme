@@ -825,3 +825,10 @@
   - Tableau du brief retrouvé : UGF 3 au rang 1 avec 617,4 €/an (le brief écrit 617, en arrondissant 0,93545 à 0,935) ; UGF 1 concentrante tempête.
   - Tests : p4-actions 140/0/0 et contre-épreuves par mutations.
   - Les valeurs du YAML sont des hypothèses du dev, à faire relire par un forestier. Questions A à F notées dans `actions.md` § 15.6.
+2026-11-28 · décision · Pascal · prix du bois : « rien pour l'instant ». P4 affiche un message clair « prix absents » quand capital, gain ou prix manquent ; leur saisie fera l'objet d'une mission à part.
+2026-11-28 · décision · Pascal · format UG : « accepter le schéma 2 ». Une app antérieure ne lit plus un projet qui déclare une vocation ; le dire dans NEWS.
+2026-11-28 · décision · orchestrateur (choix prudent et réversible, dit à Pascal) :
+  - une UGF sans vocation, dans un projet qui en déclare ailleurs, est affichée « vocation non déclarée », sans décision ni badge « signal seulement » ; son P4 ne compte pas dans la famille P ;
+  - `schema_ug: 1` explicite est accepté comme la v1 ;
+  - `schema_ug: 2.5` est refusé.
+  Corrections de la 103 renvoyées au dev.
