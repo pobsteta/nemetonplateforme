@@ -28,9 +28,12 @@ _Modèle de carte :_
 ## Validé
 
 ## Planifié
+- 105-nemetonshiny-p4-plan-actions (étage 3 LLM et étage 4 validation, brief spec 072 partie B) · après la 104 et sa release
 
 
 ## En cours
+- [103-nemetonshiny-p4-exposition](missions/103-nemetonshiny-p4-exposition.md) · nemetonshiny (worktree wt-103) · depuis le 2026-11-28
+- [104-nemeton-p4-actions-candidates](missions/104-nemeton-p4-actions-candidates.md) · nemeton (worktree wt-104) · depuis le 2026-11-28
 - [102-nemeton-release-2026-11-48](missions/102-nemeton-release-2026-11-48.md) · nemeton (worktree wt-102) · depuis le 2026-11-28
 
   - Homme : `dev`, relu par le `relecteur` · Mission : vue « Ce que les modèles voient » (écart 25) · Moyens : 3 $ · Dépend de : rien

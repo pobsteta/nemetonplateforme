@@ -793,3 +793,8 @@
 2026-11-28 · fusion · 101 · nemeton PR #717 fusionnée (commit de fusion e036f3a) sur b3cdf771b vers 19 h 35, heure de Paris : les 8 contrôles sont verts, codecov compris · P4 (spec 072, M0 à M3) est sur main en cycle dev 2026.11.47.9001, pas de release · la PR #716 (la spec seule) est désormais contenue dans main · prochaine étape : la release du cœur, à décider par Pascal, puis la mission app M4.
 2026-11-28 · décision · Pascal · « Oui, publie 2026.11.48 » : release du cœur avec P4 · mission 102 ouverte, `dev` dans le worktree /home/user/wt-102 (branche travail-102 issue d'origin/main e036f3aca).
 2026-11-28 · dev · 102 · release préparée (c3aedebc9) : DESCRIPTION, NEWS et CITATION.cff en 2026.11.48 (2026-11-28), version-consistency vert en local, aucun changement cassant · PR nemeton #718 ouverte en brouillon, abonnée.
+2026-11-28 · décision · Pascal · brief app de la spec 072 : « A puis B d'affilée ».
+  - 103 (app, partie A : exposer P4) et 104 (cœur, partie B étage 2 : moteur de règles et actions candidates, matrice provisoire) sont lancées en parallèle, dans deux dépôts différents.
+  - 105 (app, étage 3 LLM et étage 4 validation) est planifiée après la release qui contiendra la 104.
+  - La relecture de la matrice signal-action par un forestier, que le brief exige avant la mise en service, reste à la charge de Pascal.
+  - La 103 se teste contre le cœur de main e036f3a, installé dans scratchpad/rlib-103 (même code P4 que la future 2026.11.48).
