@@ -736,3 +736,8 @@
 2026-11-28 · fusion · 098 · nemeton PR #714 fusionnée (commit de fusion d095b66) sur b7c9970b6 : les 8 contrôles sont verts (R-CMD-check, tests, version-consistency, pkgdown, coverage, codecov) · tag `v2026.11.47` et release attendus de `release.yml` une fois la CI de main passée ; vérification prévue vers 08:35 UTC · ensuite : mission nemetonshiny « source S2 ».
 2026-11-28 · release · 098 · **nemeton v2026.11.47 publiée** par `release.yml` (2026-11-28 08:22 UTC), avec les PR #711 à #714 · retour en cycle dev `2026.11.47.9000` : PR nemeton #715, faite par l'orchestrateur (une ligne de DESCRIPTION).
 2026-11-28 · lancement · 099 · nemetonshiny, réglage et affichage de la source Sentinel-2 (fiche `missions/099-nemetonshiny-source-s2.md`), y compris l'affichage « indicatif » de RECONFORT sur Sen2Cor (095) et les replis (089) · `dev` dans le worktree `/home/user/wt-099` (branche `travail-099` issue d'origin/main 17f8115f2), budget 5 $.
+2026-11-28 · dev · 099 · rendu, sha 11c9359de (nemetonshiny `ccr-b52c1910-gjp34w`).
+  - Contenu : réglage `source_s2` dans Sources & paramètres (« par méthode » = clé absente), transmis aux quatre méthodes, lecture des dossiers `_theia`, ligne « Source » avec le badge « indicatif » (`text-bg-warning`) et la ligne de repli, message « clés THEIA » sans pile d'appels.
+  - 16 fichiers de tests verts selon le dev ; contre-épreuve sur origin/main.
+  - Ce que le dev donne lui-même comme non prouvé : la transmission runtime de FAST, FORDEAD et RECONFORT (prouvée par lecture du texte seulement) ; les avertissements bruts du cœur non interceptés (code mort) ; les caches de masque et de résultat FAST non suffixés ; le plan de validation FAST non adapté.
+  - Relecture en cours.
