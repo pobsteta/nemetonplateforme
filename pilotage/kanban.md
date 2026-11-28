@@ -31,11 +31,11 @@ _Modèle de carte :_
 
 
 ## En cours
-- [099-nemetonshiny-source-s2](missions/099-nemetonshiny-source-s2.md) · nemetonshiny (worktree wt-099) · depuis le 2026-11-28
 
   - Homme : `dev`, relu par le `relecteur` · Mission : vue « Ce que les modèles voient » (écart 25) · Moyens : 3 $ · Dépend de : rien
 
 ## Terminé
+- [099-nemetonshiny-source-s2](missions/099-nemetonshiny-source-s2.md) · nemetonshiny · PR #354 fusionnée (149c3a5), pas de release · affichage à voir à l'écran par Pascal
 - [098-nemeton-release-2026-11-47](missions/098-nemeton-release-2026-11-47.md) · nemeton · PR #714 fusionnée (d095b66), **release v2026.11.47** publiée le 2026-11-28 08:22 UTC · retour en cycle dev : PR #715
 - [096-nemeton-source-s2-globale](missions/096-nemeton-source-s2-globale.md) · nemeton · PR #713 fusionnée (f63346f), pas de release · comparaison Couchey non faite · suite : mission app (réglage et affichage de la source)
 - [089-nemeton-reconfort-repli-archive](missions/089-nemeton-reconfort-repli-archive.md) · nemeton · PR #712 fusionnée (2fae116), pas de release · avertissement future à confirmer chez Pascal
