@@ -31,6 +31,7 @@ _Modèle de carte :_
 
 
 ## En cours
+- [098-nemeton-release-2026-11-47](missions/098-nemeton-release-2026-11-47.md) · nemeton (worktree wt-098) · depuis le 2026-11-28
 
   - Homme : `dev`, relu par le `relecteur` · Mission : vue « Ce que les modèles voient » (écart 25) · Moyens : 3 $ · Dépend de : rien
 
