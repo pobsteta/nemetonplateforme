@@ -31,6 +31,7 @@ _Modèle de carte :_
 
 
 ## En cours
+- [100-nemetonshiny-versions-aide](missions/100-nemetonshiny-versions-aide.md) · nemetonshiny (worktree wt-100) · depuis le 2026-11-28
 
   - Homme : `dev`, relu par le `relecteur` · Mission : vue « Ce que les modèles voient » (écart 25) · Moyens : 3 $ · Dépend de : rien
 
