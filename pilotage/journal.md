@@ -778,3 +778,10 @@
   - Point grave soulevé par le dev, confié à la relecture : la normalisation par lot (`normalize_indicators()`, min-max sans inversion) produit peut-être des `R*_norm` orientés « haut = risque », ce qui inverserait P4 sur de vraies données.
   - Questions de sens notées par le dev : `yaml` en Imports, axes de repli par vocation inventés, NDP inconnu traité comme signal, P2 en indice de station refusé, géométrique `NA` avec `perte_saisie`.
   - Relecture en cours.
+2026-11-28 · relecture · 101 · verdict « à corriger ».
+  - (1, grave, prouvé par exécution) `normalize_indicators()`, la normalisation par lot en min-max sans inversion, produit des R*_norm « haut = risque ». P4 inverse alors les pertes sans aucun message : cor(pertes, R2) = −0,80 au lieu de +0,91. La chaîne unitaire `normalize_indicator()`, qu'utilisent l'app et massif_demo_units, est juste.
+  - (2) R5 présent sans `R5_norm` est ignoré sans message.
+  - (3, mineur) une tolérance relative dans un test redondant.
+  - Conforme : référence exacte, non-régression stricte (`create_family_index`, `compute_general_index`), paramètres, CI, décompte 45/14.
+2026-11-28 · décision · Pascal · sens des R*_norm : **refuser l'incohérence**. Quand la colonne brute Ri est présente, P4 compare Ri_norm à `normalize_indicator("Ri", Ri)` et lève une erreur claire en cas d'écart. La spec dit que les _norm doivent venir de `normalize_indicator()`.
+2026-11-28 · décision · orchestrateur · R5 présent sans `R5_norm` est refusé comme R1 (cohérence du garde). P4 sans source reste silencieux, comme B4, R5 et T3. La table des axes de repli par vocation reste provisoire, à arrêter avec les questions du § 13. Corrections renvoyées au dev.
