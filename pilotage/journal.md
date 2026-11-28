@@ -770,3 +770,11 @@
 2026-11-28 · constat · Pascal · mise à jour faite sur son PC : la fenêtre « ? » Aide affiche bien les versions (mission 100 vérifiée à l'écran).
 2026-11-28 · constat · deux briefs demandés par Pascal : un seul trouvé dans les dépôts, la spec 072 « P4 rendement net du risque » et son `brief-nemetonshiny.md`, écrits par une autre session sur `origin/claude/spec-072-p4-rendement-net` de nemeton (da000494c, f5f923d21), non fusionnés · le second est peut-être dans `~/dev/briefs/` sur le PC de Pascal, que cette session ne voit pas.
 2026-11-28 · décision · Pascal · « fais le dev de la spec 072 côté cœur » : spec 072 validée pour le développement, jalons M0 à M3 (côté app M4 plus tard) · mission 101 ouverte, `dev` dans le worktree `/home/user/wt-101` (branche `travail-101` issue d'origin/main e7eea9076, avec la branche de la spec fusionnée), budget 8 $.
+2026-11-28 · dev · 101 · jalons M0 à M3 livrés et poussés : f8a65901e (M0), 48ed0f017 (M1), 530feb177 (M2), ac554c52b (M3).
+  - Jeu de référence du § 10 retrouvé sans écart, synthèse, ruine, géométrique et Pareto compris.
+  - Non-régression stricte de `famille_production` sur `massif_demo_units` ; `list_indicators()` passe à 45 indicateurs, dont 14 conditionnels, et 31 sans les conditionnels.
+  - `yaml` en Imports, `FactoMineR` en Suggests.
+  - Rejoué par l'orchestrateur : p4-parametres 19/0/0, p4-rendement-net 38/0/0, p4-capital-gain 24/0/0, p4-foret 36/0/0, data 314/0/0, indicators-core 282/0/0 plus 1 erreur (`flowAccumulation`, déjà présente sur main) ; code ASCII.
+  - Point grave soulevé par le dev, confié à la relecture : la normalisation par lot (`normalize_indicators()`, min-max sans inversion) produit peut-être des `R*_norm` orientés « haut = risque », ce qui inverserait P4 sur de vraies données.
+  - Questions de sens notées par le dev : `yaml` en Imports, axes de repli par vocation inventés, NDP inconnu traité comme signal, P2 en indice de station refusé, géométrique `NA` avec `perte_saisie`.
+  - Relecture en cours.
