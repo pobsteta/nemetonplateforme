@@ -865,3 +865,4 @@
 2026-11-28 · release · 102 · **nemeton v2026.11.48 publiée** par `release.yml` (21 h 04, heure de Paris), avec les PR #715, #716, #717 et #718 ; la #716 (spec 072) est fusionnée.
 2026-11-28 · ci · 103 · tests rejoués par l'orchestrateur avec nemeton 2026.11.48 installé depuis le tag : p4_exposition 157/0/0, domain_ug 107/0/0, service_synthesis 83/0/0, i18n_keys_used 3/0/0 · PR nemetonshiny #356 ouverte en brouillon, abonnée.
 2026-11-28 · fusion · 104 · nemeton #719 fusionnée par l'orchestrateur (4b81e1d, 21 h 25, heure de Paris), CI verte sur 98452fc (R-CMD-check, tests, coverage, pkgdown, version-consistency, codecov patch 92,9 %) · pas de release : la 105 attend une release du cœur qui contient la 104.
+2026-11-28 · décision · 106 · Pascal : « Oui, publie 2026.11.49 » (21 h 33, heure de Paris) · fiche 106 écrite, confiée au `dev` (worktree /home/user/wt-106).
