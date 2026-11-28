@@ -804,3 +804,24 @@
   - Limites signalées : P4 ne se calcule que si le projet fournit capital et gain, ou des prix. Les prix du cœur sont vides et l'app n'a aucune interface pour les saisir.
   - Questions de sens : P4 doit-il entrer dans `famille_production` et le score global ? Où saisir prix et paramètres ? Un `ugs.json` en schéma 2 est illisible par une app antérieure. Onglet dédié ou carte ?
   - Relecture en cours.
+2026-11-28 · décision · Pascal · « P4 entre dans le score de la famille Production et le score global, dès maintenant » : dès qu'une vocation est déclarée, `P4_norm` compte dans `famille_production`.
+2026-11-28 · relecture · 103 · verdict « à corriger » (le rapport a été récupéré après le redémarrage du conteneur).
+  - Bloquant (B1) : le plancher `nemeton (>= 2026.11.48)` impose d'attendre la publication de `v2026.11.48`, PR #718.
+  - M1 : une UGF sans vocation affiche à tort le badge « Signal seulement ».
+  - M2 : quand les prix ou le capital manquent, l'app affiche un message générique au lieu d'exploiter `p4_status`, et un avertissement parasite s'affiche.
+  - M3 : `p4_unites()` et `download_gpkg` ne sont pas protégés ; l'export GeoPackage échoue en entier.
+  - M4 : non-ASCII et texte cli figé dans les tests.
+  - Mineurs :
+    - m1 : un schéma futur est mis de côté sans message ;
+    - m2 : une app antérieure ne lit pas le schéma 2 ;
+    - m3 : cas limites de `.ug_schema_lire` (2.5 accepté, null) ;
+    - m4 : « Appliquer » écrase la perte saisie.
+  - Conforme : projets existants identiques à l'octet près, aucune logique métier, valeurs du cœur.
+2026-11-28 · dev · 104 · rendu, un commit local non poussé (5cba63792), en attente de #718.
+  - Livré :
+    - extension de spec `actions.md` (§ 15) ;
+    - `p4_regles_actions.yml` provisoire et son validateur ;
+    - six fonctions : `p4_actions_candidates`, `p4_options`, `p4_prioriser`, `p4_contexte_llm`, `p4_regles_actions`, `p4_valider_regles_actions`.
+  - Tableau du brief retrouvé : UGF 3 au rang 1 avec 617,4 €/an (le brief écrit 617, en arrondissant 0,93545 à 0,935) ; UGF 1 concentrante tempête.
+  - Tests : p4-actions 140/0/0 et contre-épreuves par mutations.
+  - Les valeurs du YAML sont des hypothèses du dev, à faire relire par un forestier. Questions A à F notées dans `actions.md` § 15.6.
