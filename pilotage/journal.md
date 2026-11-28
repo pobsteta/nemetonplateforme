@@ -861,3 +861,4 @@
   - Fusion de main (release 2026.11.48), conflits de version réglés par l'orchestrateur (4cdbf3587, DESCRIPTION en 2026.11.48.9000).
   - Rejoué par l'orchestrateur : p4-actions 198/0/0, p4-rendement-net 44/0/0, i18n 461/0/0, data 314/0/0 ; ASCII.
   - PR nemeton #719 ouverte en brouillon, abonnée.
+2026-11-28 · ci · 104 · nemeton #719 : R-CMD-check rouge (WARNING : `id_field` et `vocation_field` non documentés dans `p4_contexte_llm.Rd`) · corrigé par l'orchestrateur : roxygen et Rd identiques à une régénération, la section « Rd \\usage » de R CMD check passe en local · CI relancée.
