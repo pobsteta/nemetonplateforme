@@ -25,6 +25,17 @@ _Modèle de carte :_
 
 ## Bac à sable
 
+- [049-nemeton-p4-rendement-net](missions/049-nemeton-p4-rendement-net.md) · nemeton · depuis le cycle 17
+  - Homme : `dev` dans une session ouverte dans nemeton (sonnet), relu par le `relecteur`
+  - Mission : indicateur conditionnel P4, rendement net du risque, jalons M0 et M1 de la spec 072 ; budget à fixer par Pascal
+  - Moyens : spec 072 de nemeton (PR nemeton #716, non fusionnée)
+  - Dépend de : validation de la spec 072 par Pascal
+- [050-nemetonshiny-p4-exposition](missions/050-nemetonshiny-p4-exposition.md) · nemetonshiny · depuis le cycle 17
+  - Homme : `dev` dans une session ouverte dans nemetonshiny (sonnet), relu par le `relecteur`
+  - Mission : exposer P4 dans l'app (vocation par UGF, affichage, i18n, export), partie A du brief ; budget à fixer par Pascal
+  - Moyens : brief `brief-nemetonshiny.md` de la spec 072
+  - Dépend de : release de nemeton issue de la mission 049
+
 ## Validé
 
 ## Planifié
