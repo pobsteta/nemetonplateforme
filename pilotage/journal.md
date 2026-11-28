@@ -854,3 +854,4 @@
   - Tests du dev : 15 fichiers verts, dont test-p4_exposition 157/0.
   - Question de sens remontée : P4 compte aussi dans le score quand l'UGF est en « signal seulement » (NDP < 3), donc dans tous les projets actuels.
   - PR à ouvrir après la publication de v2026.11.48.
+2026-11-28 · décision · Pascal · P4 compte dans le score de la famille Production même en « signal seulement » (NDP < 3) : le comportement livré par la 103 (db79857eb) est confirmé.
