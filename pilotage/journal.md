@@ -843,3 +843,14 @@
   - (c) `conserver` toujours présenté comme référence, même dominé, et marqué « dominé » ;
   - (d) identifiants d'UGF toujours `ugf_<n>` dans le contexte LLM, avec la table de correspondance rendue à part.
   - Les questions de matrice (axes protégés par vocation, signal seulement acquisition ou suivi, aléas lus au-dessus du seuil ou dominant seul) restent provisoires, pour le forestier et Pascal.
+2026-11-28 · fusion · 102 · nemeton PR #718 (release 2026.11.48) fusionnée vers 20 h 25, heure de Paris (commit de fusion 3756449), avec les 6 contrôles verts · tag et release attendus de `release.yml` après la CI de main ; vérification prévue à 21 h 15, heure de Paris.
+2026-11-28 · dev · 103 · corrections faites (db79857eb, poussé sur nemetonshiny `ccr-b52c1910-gjp34w`).
+  - Décisions appliquées :
+    - P4 entre dans `famille_production` via `add_p4_to_indicators()` et `create_family_index()` du cœur ;
+    - message « prix ou capital à fournir » ;
+    - schéma 2 dit dans la NEWS ;
+    - déclaration partielle : « vocation non déclarée », écartée de P4.
+  - Corrections de la relecture faites : M3 (export protégé), M4 (classes de condition, ASCII), m1, m4, m5, ainsi que les cas limites du schéma.
+  - Tests du dev : 15 fichiers verts, dont test-p4_exposition 157/0.
+  - Question de sens remontée : P4 compte aussi dans le score quand l'UGF est en « signal seulement » (NDP < 3), donc dans tous les projets actuels.
+  - PR à ouvrir après la publication de v2026.11.48.
