@@ -869,3 +869,11 @@
 2026-11-28 · pr · 106 · le `dev` a fait le commit a50062560 (DESCRIPTION = NEWS = CITATION = 2026.11.49, PLAN.md ; CHANGELOG non touché, comme à la 2026.11.48), contrôlé par l'orchestrateur (version-consistency rejoué, NAMESPACE : 6 exports ajoutés, aucun retiré) · PR nemeton #720 ouverte en brouillon, abonnée.
 2026-11-28 · fusion · 103 · nemetonshiny #356 fusionnée par l'orchestrateur (55f3f16, 22 h 05, heure de Paris), CI verte sur db79857 (R-CMD-check, oldrel, tests, coverage, pkgdown, version-consistency) · P4 exposé dans l'app, sans release · la 105 attend la release nemeton 2026.11.49.
 2026-11-28 · confié · 105 · au `dev` (worktree /home/user/wt-105, partie de nemetonshiny main 55f3f16), 22 h 08, heure de Paris · tests contre nemeton main 4b81e1d (code identique à la release 2026.11.49 en CI, PR #720), comme pour la 103 · la fusion attendra la release.
+2026-11-28 · rapport · 105 · le `dev` rend le commit 3b67bcb56 (nemetonshiny, travail-105) : service et module du plan P4, sortie du LLM validée contre un schéma strict et rejetée en bloc, repli sur le plan dégradé du cœur, `data/plan_p4.json` version 1, bloc `p4` dans 21 profils, 61 clés i18n · `poids_p4` provisoires : fort pour les profils dont P est prioritaire, faible pour naturaliste, moyen pour les autres.
+  - Rejoué par l'orchestrateur (nemeton main 4b81e1d, plancher abaissé à .48 dans une copie seulement) : p4_plan 352/0/0, p4_exposition 157/0/0, llm_prompts 362/0/0, i18n_keys_used 3/0/0, mod_synthesis 33/0/0, app_ui 64/0/0 ; aucun caractère non ASCII dans le nouveau code R.
+  - Questions ouvertes pour Pascal :
+    1. Une action P4 validée doit-elle devenir une action du plan Kanban ?
+    2. UGF sans option à arbitrer (UGF 2 et 4 de la forêt de référence) : la liste seulement ?
+    3. Rejet en bloc de la réponse du LLM ou reprise partielle ?
+    4. Seuils d'alerte des profils : aucun n'est défini.
+  - Confié au `relecteur`.
