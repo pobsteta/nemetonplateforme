@@ -798,3 +798,9 @@
   - 105 (app, étage 3 LLM et étage 4 validation) est planifiée après la release qui contiendra la 104.
   - La relecture de la matrice signal-action par un forestier, que le brief exige avant la mise en service, reste à la charge de Pascal.
   - La 103 se teste contre le cœur de main e036f3a, installé dans scratchpad/rlib-103 (même code P4 que la future 2026.11.48).
+2026-11-28 · dev · 103 · rendu, sha 7cdae92a7 (nemetonshiny).
+  - Livré : schéma UG versionné, écrit seulement si une vocation ou une perte est déclarée (sinon fichier plat identique) ; `R/service_p4.R` et `R/mod_p4.R` ; affichage famille P, synthèse, Pareto et ruine ; export GeoPackage et Quarto ; 51 clés i18n.
+  - Tests du dev : 16 fichiers verts, dont test-p4_exposition 88/0.
+  - Limites signalées : P4 ne se calcule que si le projet fournit capital et gain, ou des prix. Les prix du cœur sont vides et l'app n'a aucune interface pour les saisir.
+  - Questions de sens : P4 doit-il entrer dans `famille_production` et le score global ? Où saisir prix et paramètres ? Un `ugs.json` en schéma 2 est illisible par une app antérieure. Onglet dédié ou carte ?
+  - Relecture en cours.
