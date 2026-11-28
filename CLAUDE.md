@@ -104,3 +104,9 @@ d'origine, lu dans le plugin 0.7.0, est dans l'ADR.)
   (`.claude/test-command` de ce projet).
 - **Formats ouverts, logiciels libres** de préférence (test du successeur).
 - **Jamais de push direct sur `main`**, dans aucun dépôt. Tout passe par une PR.
+- **Heures à l'heure de Paris** (`Europe/Paris` : UTC+1 en hiver, UTC+2 en été). Toute heure
+  donnée à Pascal, dans un point, un rappel, le journal ou une fiche, est l'heure de Paris
+  et le dit (« 19 h 41, heure de Paris »). Les horodatages des outils sont en UTC : on les
+  convertit avant de les écrire. Pour programmer un rappel ou un point, on calcule l'heure de
+  Paris visée, puis on la passe au format `AAAA-MM-JJTHH:MM:SS[Europe/Paris]` (décision de
+  Pascal du 2026-11-28).
